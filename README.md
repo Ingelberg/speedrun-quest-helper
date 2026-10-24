@@ -1,4 +1,4 @@
-# Speedrun Quest Guide
+# Speedrun Quest Helper
 
 > **This plugin is vibe coded.** Claude (an AI coding assistant) wrote it with my direction and in-game testing. Cook's Assistant and X Marks the Spot have been played through and tweaked in-game, but not every line has been hand-reviewed.
 
@@ -8,7 +8,7 @@ A RuneLite plugin for [Quest Speedrunning](https://oldschool.runescape.wiki/w/Qu
 
 It is made for the in-game Quest Speedrunning mode and its trophy times, not for speedrun.com runs: the speedrun.com rules don't allow Plugin Hub plugins.
 
-If you also use Quest Helper, its highlights show up alongside these. You can turn them off in Quest Helper's settings while you speedrun.
+It is a separate plugin from Quest Helper, which guides normal quest completion. If you use both, Quest Helper's highlights show up alongside these, and you can turn them off in Quest Helper's settings while you speedrun.
 
 The plugin only switches on while you are logged in to a speedrunning world. Elsewhere it has no sidebar button, no overlays and no hotkeys.
 
@@ -56,3 +56,5 @@ python -I tools/convert.py wiki src/main/resources/com/speedrunguide/guides.json
 ## Credits
 
 The guide text comes from the [OSRS Wiki](https://oldschool.runescape.wiki/w/Quest_Speedrunning) speedrun guides and is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).
+
+Quest progress values, NPC and object ids and some coordinates come from [Quest Helper](https://github.com/Zoinkwiz/quest-helper) (BSD 2-Clause).

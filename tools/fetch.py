@@ -23,7 +23,7 @@ def main():
         url = "https://oldschool.runescape.wiki/api.php?" + urllib.parse.urlencode({
             "action": "parse", "page": q + "/Speedrun guide", "prop": "wikitext|revid",
             "format": "json", "redirects": 1})
-        req = urllib.request.Request(url, headers={"User-Agent": "speedrun-quest-guide RuneLite plugin data builder"})
+        req = urllib.request.Request(url, headers={"User-Agent": "speedrun-quest-helper RuneLite plugin data builder"})
         page = json.load(urllib.request.urlopen(req))["parse"]
         with open(os.path.join(out, q.replace("'", "").replace(" ", "_") + ".wiki"), "w", encoding="utf-8") as f:
             f.write(page["wikitext"]["*"])

@@ -61,7 +61,7 @@ import net.runelite.client.util.ImageUtil;
  */
 @Slf4j
 @PluginDescriptor(
-	name = "Speedrun Quest Guide",
+	name = "Speedrun Quest Helper",
 	description = "OSRS Wiki speedrun routes for Quest Speedrunning, step by step, with dialogue option highlights",
 	tags = {"quest", "speedrun", "speedrunning", "guide", "helper", "trophy", "route", "wiki"}
 )
@@ -189,7 +189,7 @@ public class SpeedrunGuidePlugin extends Plugin
 
 		panel = new GuidePanel(this);
 		navButton = NavigationButton.builder()
-			.tooltip("Speedrun Quest Guide")
+			.tooltip("Speedrun Quest Helper")
 			.icon(ImageUtil.loadImageResource(getClass(), "icon.png"))
 			.priority(8)
 			.panel(panel)
@@ -373,7 +373,7 @@ public class SpeedrunGuidePlugin extends Plugin
 	{
 		chatMessageManager.queue(QueuedMessage.builder()
 			.type(ChatMessageType.GAMEMESSAGE)
-			.runeLiteFormattedMessage(new ChatMessageBuilder().append("[Speedrun Guide] " + message).build())
+			.runeLiteFormattedMessage(new ChatMessageBuilder().append("[Speedrun Quest Helper] " + message).build())
 			.build());
 	}
 
@@ -417,7 +417,7 @@ public class SpeedrunGuidePlugin extends Plugin
 			MenuEntry e = entries[i];
 			boolean buy = "Buy 1".equals(e.getOption()) && GuideText.matchesName(now.getShop(), e.getTarget());
 			boolean npcOption = now.getLeftClick() != null && now.getLeftClick().equals(e.getOption())
-				&& e.getNpc() != null && GuideText.matchesName(now.getNpcs(), e.getNpc().getName());
+				&& e.getNpc() != null && Guide.wantsNpc(now, e.getNpc().getName(), e.getNpc().getId());
 			if (buy || npcOption)
 			{
 				MenuEntry top = entries[entries.length - 1];

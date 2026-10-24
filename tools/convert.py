@@ -342,7 +342,7 @@ def start_step(sections):
     return 0
 
 
-ROUTE_FIELDS = ("npcs", "shop", "ground", "target", "done", "progress", "via", "digArea", "use", "leftClick", "objects", "spot", "useOption", "pick", "widget", "pathWithin")
+ROUTE_FIELDS = ("npcs", "npcIds", "objectIds", "shop", "ground", "target", "done", "progress", "via", "digArea", "use", "leftClick", "objects", "spot", "useOption", "pick", "widget", "pathWithin")
 
 
 def apply_routes(name, sections, routes):
@@ -411,4 +411,5 @@ def main():
                    "quests": quests}, f, ensure_ascii=False, indent=1)
 
 
-main()
+if __name__ == "__main__":
+    main()

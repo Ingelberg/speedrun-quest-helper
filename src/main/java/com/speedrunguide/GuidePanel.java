@@ -66,7 +66,7 @@ class GuidePanel extends PluginPanel
 		JPanel top = new JPanel();
 		top.setLayout(new BoxLayout(top, BoxLayout.Y_AXIS));
 
-		JLabel title = new JLabel("Speedrun Quest Guide");
+		JLabel title = new JLabel("Speedrun Quest Helper");
 		title.setFont(FontManager.getRunescapeBoldFont());
 		title.setForeground(Color.WHITE);
 		title.setAlignmentX(LEFT_ALIGNMENT);

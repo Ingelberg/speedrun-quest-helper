@@ -118,11 +118,11 @@ class RouteTracker
 		WorldPoint here = player.getWorldLocation();
 
 		List<NPC> foundNpcs = new ArrayList<>();
-		if (!step.getNpcs().isEmpty())
+		if (!step.getNpcs().isEmpty() || !step.getNpcIds().isEmpty())
 		{
 			for (NPC npc : view.npcs())
 			{
-				if (GuideText.matchesName(step.getNpcs(), npc.getName()))
+				if (Guide.wantsNpc(step, npc.getName(), npc.getId()))
 				{
 					foundNpcs.add(npc);
 				}
@@ -130,7 +130,7 @@ class RouteTracker
 		}
 		List<GroundItem> foundItems = new ArrayList<>();
 		List<TileObject> foundObjects = new ArrayList<>();
-		if (!step.getGround().isEmpty() || !step.getObjects().isEmpty())
+		if (!step.getGround().isEmpty() || !step.getObjects().isEmpty() || !step.getObjectIds().isEmpty())
 		{
 			scan(view, step, here, foundItems, foundObjects);
 		}
@@ -314,11 +314,11 @@ class RouteTracker
 						}
 					}
 				}
-				if (!step.getObjects().isEmpty() && near(tile.getWorldLocation(), anchors))
+				if ((!step.getObjects().isEmpty() || !step.getObjectIds().isEmpty()) && near(tile.getWorldLocation(), anchors))
 				{
 					for (TileObject object : objectsOn(tile))
 					{
-						if (GuideText.matchesName(step.getObjects(), objectName(object.getId())))
+						if (Guide.wantsObject(step, objectName(object.getId()), object.getId()))
 						{
 							objects.add(object);
 						}

@@ -63,6 +63,8 @@ public class Guide
 		private boolean note;
 		/** NPCs to talk to, outlined in the world. */
 		private List<String> npcs = Collections.emptyList();
+		/** NPC ids to outline as well, for NPCs whose name is shared with others. */
+		private List<Integer> npcIds = Collections.emptyList();
 		/** Items to buy, outlined in shops with Buy 1 as their left click. */
 		private List<String> shop = Collections.emptyList();
 		/** Items to pick up, outlined on the ground. */
@@ -86,6 +88,8 @@ public class Guide
 		private String leftClick;
 		/** Objects to outline when near the target or a waypoint, such as the wheat or a ladder. */
 		private List<String> objects = Collections.emptyList();
+		/** Object ids to outline as well (Quest Helper's), for objects with common names such as Door. */
+		private List<Integer> objectIds = Collections.emptyList();
 		/** A tile filled and labelled on its own, such as where to wait for a wandering NPC. */
 		@Nullable
 		private Target spot;
@@ -186,6 +190,18 @@ public class Guide
 			steps = Collections.unmodifiableList(all);
 		}
 		return steps;
+	}
+
+	/** Whether an NPC is one the step asks for, by name or id. */
+	static boolean wantsNpc(Step step, @Nullable String name, int id)
+	{
+		return step.getNpcIds().contains(id) || GuideText.matchesName(step.getNpcs(), name);
+	}
+
+	/** Whether an object is one the step asks for, by name or id. */
+	static boolean wantsObject(Step step, @Nullable String name, int id)
+	{
+		return step.getObjectIds().contains(id) || GuideText.matchesName(step.getObjects(), name);
 	}
 
 	@Nullable

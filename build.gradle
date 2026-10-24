@@ -33,7 +33,7 @@ tasks.withType(JavaCompile) {
 
 tasks.register('run', JavaExec) {
     group = 'application'
-    description = 'Launches RuneLite with Speedrun Quest Guide loaded'
+    description = 'Launches RuneLite with Speedrun Quest Helper loaded'
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'com.speedrunguide.SpeedrunGuidePluginTest'
     // ExternalPluginManager.loadBuiltin refuses to run without assertions enabled.
