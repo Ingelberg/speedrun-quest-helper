@@ -1,0 +1,4695 @@
+{
+ "source": "https://oldschool.runescape.wiki",
+ "license": "CC BY-NC-SA 3.0",
+ "quests": [
+  {
+   "name": "X Marks the Spot",
+   "page": "X_Marks_the_Spot/Speedrun_guide",
+   "revision": 15086687,
+   "start": "Speak to Veos in The Sheared Ram in Lumbridge.",
+   "skills": [
+    "Agility 10"
+   ],
+   "items": [
+    "100 Coins",
+    "1 Energy potion(4)"
+   ],
+   "trophies": {
+    "bronze": "3:15",
+    "silver": "2:30",
+    "gold": "2:00",
+    "platinum": "1:45",
+    "diamond": "1:40"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Speak to Veos.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Can I help?"
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ],
+       "npcs": [
+        "Veos"
+       ],
+       "target": {
+        "x": 3228,
+        "y": 3242,
+        "plane": 0,
+        "label": "Veos"
+       },
+       "progress": [
+        0,
+        1
+       ]
+      },
+      {
+       "text": "Purchase a spade from the Lumbridge General Store.",
+       "npcs": [
+        "Shop keeper",
+        "Shop assistant"
+       ],
+       "shop": [
+        "Spade"
+       ],
+       "target": {
+        "x": 3211,
+        "y": 3247,
+        "plane": 0,
+        "label": "General store"
+       },
+       "done": {
+        "have": "Spade"
+       },
+       "progress": [
+        2
+       ]
+      },
+      {
+       "text": "Dig at the first clue spot: from Bob's Brilliant Axes, 1 east, 7 north, 5 west and 1 south, just west of the bush outside the shop.",
+       "target": {
+        "x": 3230,
+        "y": 3209,
+        "plane": 0,
+        "label": "Dig here"
+       },
+       "done": {
+        "haveId": 23068
+       },
+       "digArea": [
+        [
+         3230,
+         3209
+        ]
+       ]
+      },
+      {
+       "text": "Dig at the second clue spot: behind Lumbridge Castle by the kitchen door, on the tile south-west of the large crate.",
+       "target": {
+        "x": 3203,
+        "y": 3213,
+        "plane": 0,
+        "label": "Dig here"
+       },
+       "done": {
+        "haveId": 23069
+       },
+       "progress": [
+        3
+       ],
+       "digArea": [
+        [
+         3203,
+         3213
+        ],
+        [
+         3203,
+         3212
+        ]
+       ]
+      },
+      {
+       "text": "Dig at the third clue spot: east of Draynor Village, at the south-west corner of the wheat field, north-west of the jail.",
+       "target": {
+        "x": 3108,
+        "y": 3262,
+        "plane": 0,
+        "label": "Dig here"
+       },
+       "done": {
+        "haveId": 23070
+       },
+       "progress": [
+        4
+       ],
+       "via": [
+        {
+         "x": 3191,
+         "y": 3210,
+         "plane": 0
+        },
+        {
+         "x": 3175,
+         "y": 3228,
+         "plane": 0
+        },
+        {
+         "x": 3156,
+         "y": 3241,
+         "plane": 0
+        },
+        {
+         "x": 3139,
+         "y": 3253,
+         "plane": 0
+        },
+        {
+         "x": 3119,
+         "y": 3259,
+         "plane": 0
+        }
+       ],
+       "digArea": [
+        [
+         3108,
+         3262
+        ],
+        [
+         3109,
+         3264
+        ]
+       ]
+      },
+      {
+       "text": "Dig in the centre of the Draynor Village pig pen, north of the market, for the ancient casket.",
+       "target": {
+        "x": 3077,
+        "y": 3260,
+        "plane": 0,
+        "label": "Dig here"
+       },
+       "done": {
+        "haveId": 23071
+       },
+       "progress": [
+        5
+       ],
+       "digArea": [
+        [
+         3077,
+         3260
+        ],
+        [
+         3078,
+         3259
+        ]
+       ]
+      },
+      {
+       "text": "Use the ancient casket on Veos at the end of the route instead of talking to him, as this saves several seconds.",
+       "npcs": [
+        "Veos"
+       ],
+       "target": {
+        "x": 3054,
+        "y": 3245,
+        "plane": 0,
+        "label": "Veos"
+       },
+       "progress": [
+        6,
+        7
+       ],
+       "use": [
+        "Ancient casket"
+       ]
+      }
+     ],
+     "images": [
+      {
+       "file": "X Marks the Spot - speedrun route.png",
+       "caption": "Optimised routing is key for this speedrun; the route above minimises the player's pathfinding around objects."
+      },
+      {
+       "file": "X Marks the Spot - first clue.png",
+       "caption": "The first clue location."
+      },
+      {
+       "file": "X Marks the Spot - second clue.png",
+       "caption": "The second clue location."
+      },
+      {
+       "file": "X Marks the Spot - third clue.png",
+       "caption": "The third clue location."
+      },
+      {
+       "file": "X Marks the Spot - fourth clue.png",
+       "caption": "The fourth clue location."
+      }
+     ]
+    }
+   ],
+   "startStep": 0,
+   "progress": {
+    "varbit": 8063
+   }
+  },
+  {
+   "name": "Cook's Assistant",
+   "page": "Cook's_Assistant/Speedrun_guide",
+   "revision": 15320247,
+   "start": "Speak to the Cook in the kitchen of Lumbridge Castle.",
+   "skills": [
+    "Agility 10"
+   ],
+   "items": [
+    "100 Coins",
+    "Energy potion(4)"
+   ],
+   "trophies": {
+    "bronze": "3:30",
+    "silver": "2:45",
+    "gold": "2:15",
+    "platinum": "2:00",
+    "diamond": "1:45"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to the Cook in Lumbridge Castle's kitchen.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "What's Wrong?"
+        },
+        {
+         "key": "1",
+         "text": "Can I help?"
+        }
+       ],
+       "npcs": [
+        "Cook"
+       ],
+       "target": {
+        "x": 3206,
+        "y": 3214,
+        "plane": 0,
+        "label": "Cook"
+       },
+       "progress": [
+        0
+       ],
+       "spot": {
+        "x": 3208,
+        "y": 3215,
+        "plane": 0,
+        "label": "Wait till the Cook is here"
+       }
+      },
+      {
+       "text": "Pick up a pot from next to the Cook.",
+       "ground": [
+        "Pot"
+       ],
+       "target": {
+        "x": 3209,
+        "y": 3214,
+        "plane": 0,
+        "label": "Pot"
+       },
+       "done": {
+        "have": "Pot"
+       },
+       "progress": [
+        1
+       ]
+      },
+      {
+       "text": "Buy a compost from Fayeth at the farming patch west of the castle. Empty the compost to receive a bucket.",
+       "npcs": [
+        "Fayeth"
+       ],
+       "shop": [
+        "Compost"
+       ],
+       "target": {
+        "x": 3195,
+        "y": 3234,
+        "plane": 0,
+        "label": "Fayeth"
+       },
+       "done": {
+        "have": "Compost"
+       },
+       "leftClick": "Trade"
+      },
+      {
+       "text": "Run north to Fred the Farmer and grab the Egg that spawns in front of his house.",
+       "ground": [
+        "Egg"
+       ],
+       "target": {
+        "x": 3189,
+        "y": 3279,
+        "plane": 0,
+        "label": "Egg"
+       },
+       "done": {
+        "have": "Egg"
+       },
+       "use": [
+        "Compost"
+       ],
+       "useOption": "Empty",
+       "pick": "south"
+      },
+      {
+       "text": "Pick some grain from the wheat outside the Mill Lane Mill.",
+       "target": {
+        "x": 3161,
+        "y": 3292,
+        "plane": 0,
+        "label": "Wheat"
+       },
+       "done": {
+        "have": "Grain"
+       },
+       "objects": [
+        "Wheat"
+       ],
+       "pick": "south"
+      },
+      {
+       "text": "Climb up to the top floor of the mill and use the grain on the hopper. <i>Climbing the east side of the ladder saves 2 ticks.</i>",
+       "target": {
+        "x": 3166,
+        "y": 3307,
+        "plane": 2,
+        "label": "Hopper"
+       },
+       "done": {
+        "lack": "Grain"
+       },
+       "via": [
+        {
+         "x": 3164,
+         "y": 3307,
+         "plane": 0
+        },
+        {
+         "x": 3164,
+         "y": 3307,
+         "plane": 1
+        }
+       ],
+       "use": [
+        "Grain"
+       ],
+       "objects": [
+        "Hopper",
+        "Ladder"
+       ]
+      },
+      {
+       "text": "Pull the lever (the hopper controls).",
+       "target": {
+        "x": 3166,
+        "y": 3305,
+        "plane": 2,
+        "label": "Lever"
+       },
+       "done": {
+        "varbit": 4920,
+        "value": 1
+       },
+       "objects": [
+        "Hopper controls"
+       ]
+      },
+      {
+       "text": "Climb down and take the flour from the flour bin with your empty pot.",
+       "target": {
+        "x": 3166,
+        "y": 3306,
+        "plane": 0,
+        "label": "Flour bin"
+       },
+       "done": {
+        "have": "Pot of flour"
+       },
+       "via": [
+        {
+         "x": 3164,
+         "y": 3307,
+         "plane": 2
+        },
+        {
+         "x": 3164,
+         "y": 3307,
+         "plane": 1
+        }
+       ],
+       "use": [
+        "Pot"
+       ],
+       "objects": [
+        "Flour bin",
+        "Ladder"
+       ]
+      },
+      {
+       "text": "Run north into the cow pen and milk the dairy cow.",
+       "target": {
+        "x": 3172,
+        "y": 3317,
+        "plane": 0,
+        "label": "Dairy cow"
+       },
+       "done": {
+        "have": "Bucket of milk"
+       },
+       "use": [
+        "Bucket"
+       ],
+       "objects": [
+        "Dairy cow"
+       ]
+      },
+      {
+       "text": "Begin casting Lumbridge Home Teleport as soon as the milk appears in your inventory, and run to the cook.",
+       "npcs": [
+        "Cook"
+       ],
+       "target": {
+        "x": 3206,
+        "y": 3214,
+        "plane": 0,
+        "label": "Cook"
+       },
+       "done": {
+        "arrive": 3
+       },
+       "use": [
+        "Egg",
+        "Pot of flour",
+        "Bucket of milk"
+       ],
+       "widget": 14286854,
+       "pathWithin": 25
+      },
+      {
+       "text": "Talk to the Cook.",
+       "npcs": [
+        "Cook"
+       ],
+       "target": {
+        "x": 3206,
+        "y": 3214,
+        "plane": 0,
+        "label": "Cook"
+       },
+       "use": [
+        "Egg",
+        "Pot of flour",
+        "Bucket of milk"
+       ]
+      }
+     ]
+    }
+   ],
+   "startStep": 0,
+   "progress": {
+    "varp": 29
+   },
+   "tips": [
+    {
+     "heading": "General",
+     "paragraphs": [
+      "Pathing manually to climb the east side of the mill's ladder on the way up and down will save 2 ticks.",
+      "Starting the quest with the Cook in a good spot where you can instantly grab the pot can save 1 tick.",
+      "After the first line of dialogue with the Cook, you can use your egg on him while holding space to give him two items during the same tick, saving 1 tick.",
+      "A combination of luck for where you spawn after home teleporting and where the cook is standing can save 2 ticks."
+     ]
+    },
+    {
+     "heading": "Chickens",
+     "paragraphs": [
+      "When poisoned, instead of getting poisoned, some monsters will start their internal timer. For chickens, this timer makes them lay an egg every so often. Getting an alt to poison 2 chickens before your run and positioning them on the path can save a few seconds.",
+      "To set up a poison alt, load A Kingdom Divided and go into the catacombs. Run south to the ankou and afk them until you get a weapon poison drop. Lower your stats at the nearby aberrant spectres so you do not kill the chickens. Get a dagger at the warriors' guild and poison it.",
+      "(Not recommended) A dragon spear is not easily obtainable, but can be used to lure a chicken onto the bridge across the river lum, allowing you to milk the closer cow in the east pen, in combination with a pot of flour drop."
+     ]
+    },
+    {
+     "heading": "Imps",
+     "paragraphs": [
+      "Monsters damaged by you will still be damaged after restarting a speedrun. Ironman rules still apply, so another player cannot deal damage to it. This means you can damage an imp down to 1 hp before the run starts, position it near Fayeth, start the run, then punch the imp to death when the run starts for a low chance at a pot of flour, egg, or bucket.",
+      "An alt can splash on the imp to hold it in place better. A splashing alt can be set up easily by loading the Dragon Slayer II preset and getting vambraces at the Champions' Guild.",
+      "After you press to start the quest speedrun, but before the timer starts, if an imp dies its loot will not disappear when the run starts. With good timing and precise imp positioning, you can cast a spell, then start the dialogue with the Cook. If you're fast enough, the imp will die after you press 1. Then you can wait around and make sure a chicken laid an egg before starting the run if you got a pot of flour drop."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Vampyre Slayer",
+   "page": "Vampyre_Slayer/Speedrun_guide",
+   "revision": 14855174,
+   "start": "Speak to Morgan in his house in Draynor Village, just north of Ned's house.",
+   "skills": [
+    "Agility 30",
+    "Hitpoints 30",
+    "Attack 30",
+    "Strength 30",
+    "Defence 30",
+    "Ranged 30",
+    "Magic 30",
+    "Prayer 30"
+   ],
+   "items": [
+    "8,000 Coins",
+    "2 Energy potion(4)",
+    "5 Tuna"
+   ],
+   "trophies": {
+    "bronze": "6:15",
+    "silver": "4:45",
+    "gold": "3:45",
+    "platinum": "3:15",
+    "diamond": "2:50"
+   },
+   "sections": [
+    {
+     "title": "Pre-Quest Recommended Set-up",
+     "steps": [
+      {
+       "text": "Go upstairs in Morgan's house and open the cupboard. Then go back downstairs."
+      },
+      {
+       "text": "Decide on which weapon to use for the final fight. The most viable options are:",
+       "notes": [
+        "Goblin paint cannon, a 3-tick Melee weapon without stats. It is fast and the quickest to obtain as it can be bought from Diango together with the Chronicle, but not as powerful as the other options. Potentially the fastest option.",
+        "Adamant sword, the strongest option. While the strongest option, it takes the longest to obtain as it has to be bought in the Varrock Sword Shop.",
+        "Training Bow, a Ranged alternative which can be claimed from the Ranged combat tutor along the path to the general store."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Morgan in Draynor Village about a vampyre.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Ok, I'm up for an adventure."
+        }
+       ]
+      },
+      {
+       "text": "Go upstairs in Morgan's house and take garlic from the cupboard."
+      },
+      {
+       "text": "Go back downstairs and run to Diango in Draynor Village Market and purchase a Chronicle and a Teleport Card.",
+       "notes": [
+        "If choosing to fight Count Draynor with melee using a Goblin paint cannon, buy it from Diango now (Skip claiming the bow and arrows from the Ranged combat tutor later on).",
+        "Use the Teleport Card on the Chronicle to give it 1 charge."
+       ]
+      },
+      {
+       "text": "Teleport using the chronicle to go to the Champions Guild.",
+       "notes": [
+        "If choosing to fight Count Draynor with melee using an adamant sword, buy it from the sword shop across the street from the Blue Moon Inn now (Skip claiming the bow and arrows from the Ranged combat tutor later on)."
+       ]
+      },
+      {
+       "text": "Go to the Blue Moon Inn and buy a beer from the Bartender.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "A glass of your finest ale please."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Dr Harlow. After he asks for a beer the second time, you can safely click out of the dialogue.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Morgan needs your help!"
+        }
+       ]
+      },
+      {
+       "text": "Talk to Dr Harlow again and receive a stake."
+      },
+      {
+       "text": "Cast Lumbridge Home Teleport and go to the Ranged combat tutor and claim items."
+      },
+      {
+       "text": "After receiving your Training Bow purchase a hammer from the Lumbridge General Store."
+      },
+      {
+       "text": "Run to Draynor Manor and enter through the back entrance.",
+       "notes": [
+        "Make sure to equip your bow and arrows or Goblin paint cannon while running there.",
+        "The back door entrance is on the south-east side of Draynor Manor and leads directly into the kitchen."
+       ]
+      },
+      {
+       "text": "Go downstairs directly next to the kitchen."
+      },
+      {
+       "text": "Open the coffin and kill Count Draynor. (You do not need to use the hammer/stake on him. Just kill him with them in your inventory)",
+       "notes": [
+        "This part is RNG dependent. It is recommended to put your bow on Rapid and activate Hawk Eye prayer or your Goblin paint cannon on Accurate and activate Improved Reflexes prayer."
+       ]
+      }
+     ]
+    }
+   ],
+   "startStep": 2,
+   "kills": [
+    "Count Draynor <i>(level 34)</i>"
+   ]
+  },
+  {
+   "name": "Ernest the Chicken",
+   "page": "Ernest_the_Chicken/Speedrun_guide",
+   "revision": 14766887,
+   "start": "Speak to Veronica, south of Draynor Manor by the gate.",
+   "skills": [
+    "Agility 10"
+   ],
+   "items": [
+    "Energy potion(4)",
+    "2 Tuna"
+   ],
+   "trophies": {
+    "bronze": "5:45",
+    "silver": "5:00",
+    "gold": "4:30",
+    "platinum": "4:15",
+    "diamond": "3:45"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Veronica.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Aha, sounds like a quest. I'll help."
+        }
+       ]
+      },
+      {
+       "text": "Start moving towards the door and drop the two tuna in your inventory."
+      },
+      {
+       "text": "Pick up the fish food on the 1st floor, in the room south of the stairs containing the ghost."
+      },
+      {
+       "text": "Pick up poison from the room south of the kitchen, on the west side of the ground floor."
+      },
+      {
+       "text": "Use the fish food on the poison to make poisoned fish food."
+      },
+      {
+       "text": "Search the bookcase on the western ground floor."
+      },
+      {
+       "text": "Climb down the ladder and complete the lever puzzle.",
+       "notes": [
+        "Pull levers B then A down.",
+        "Pull lever D down.",
+        "Pull levers B, then A up.",
+        "Pull levers E, then F down.",
+        "Pull lever C down.",
+        "Pull lever E up.",
+        "Pick up the oil can.",
+        "Finish the Energy Potion at any point while completing the long runs to follow."
+       ]
+      },
+      {
+       "text": "Go up the ladder and pull the lever to exit the bookcases."
+      },
+      {
+       "text": "Pick up the spade in the far eastern room on the ground floor."
+      },
+      {
+       "text": "Exit out the back door in the same room."
+      },
+      {
+       "text": "Go north around the back of the manor to the west to the compost heap."
+      },
+      {
+       "text": "Search the compost heap to get a key."
+      },
+      {
+       "text": "Drop the spade to save run energy"
+      },
+      {
+       "text": "Go south and use the poisoned fish food on the fountain in the south-west corner of the grounds."
+      },
+      {
+       "text": "Search the poisoned fountain to retrieve a pressure gauge. (There is dialogue here while searching so hold space bar)."
+      },
+      {
+       "text": "Return to the manor and pick up the rubber tube in the room north of the stairs on the ground floor containing an aggressive skeleton."
+      },
+      {
+       "text": "Climb up the stairs, then climb up the spiral staircase to the west."
+      },
+      {
+       "text": "Talk to Professor Oddenstein.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'm looking for a guy called Ernest."
+        },
+        {
+         "key": "2",
+         "text": "Change him back this instant!"
+        }
+       ]
+      },
+      {
+       "text": "Talk to him again to give him the items."
+      },
+      {
+       "text": "Once Oddenstein has stopped talking, change your attack style to skip Ernest's dialogue and instantly complete the quest."
+      }
+     ],
+     "images": [
+      {
+       "file": "Ernest the Chicken - Oil can map.png",
+       "caption": ""
+      }
+     ]
+    }
+   ],
+   "startStep": 0
+  },
+  {
+   "name": "Black Knights' Fortress",
+   "page": "Black_Knights'_Fortress/Speedrun_guide",
+   "revision": 14966356,
+   "start": "Speak to Sir Amik Varze on the 2nd floor of the White Knights' Castle's western tower in Falador.",
+   "skills": [
+    "Hitpoints 10",
+    "Attack 10",
+    "Strength 10",
+    "Defence 10",
+    "Ranged 10",
+    "Magic 10",
+    "Prayer 10",
+    "Agility 30"
+   ],
+   "items": [
+    "300 Coins",
+    "3 Energy potion(4)",
+    "5 Tuna"
+   ],
+   "trophies": {
+    "bronze": "8:30",
+    "silver": "7:00",
+    "gold": "6:00",
+    "platinum": "5:30",
+    "diamond": "5:00"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Sir Amik Varze.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I seek a quest!"
+        },
+        {
+         "key": "1",
+         "text": "I laugh in the face of danger!"
+        },
+        {
+         "key": "1",
+         "text": "Ok, I'll do my best."
+        }
+       ]
+      },
+      {
+       "text": "Climb down the staircases twice and exit the White Knights' Castle."
+      },
+      {
+       "text": "Run to Wayne's Chains south of the castle, and purchase an iron chainbody from him."
+      },
+      {
+       "text": "Cast Lumbridge Home Teleport."
+      },
+      {
+       "text": "Run south-east to Count Check.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Where can I learn more?"
+        },
+        {
+         "key": "1",
+         "text": "Yes please, teleport me to the Stronghold of Security."
+        }
+       ]
+      },
+      {
+       "text": "Purchase a bronze med helm from Peksa in Barbarian Village."
+      },
+      {
+       "text": "Run north-west to the Edgeville Monastery. Equip the helm and chainbody."
+      },
+      {
+       "text": "Pick a cabbage from the patch. <b>Pay attention in case you get a cabbage seed instead!</b>"
+      },
+      {
+       "text": "Make your way to the Black Knights' Fortress."
+      },
+      {
+       "text": "Enter the fortress through the sturdy door (toward the south, on the left stretch of the hallway)."
+      },
+      {
+       "text": "Push the wall in front of you and climb-up the ladder twice."
+      },
+      {
+       "text": "Climb-down the ladder to the south, go through the eastern door and climb-up the ladder."
+      },
+      {
+       "text": "Climb-down the eastern ladder, go south through the door and climb-down the ladder."
+      },
+      {
+       "text": "Listen-at grill on the eastern wall."
+      },
+      {
+       "text": "After going through the conversation, go back to the entrance using the same route."
+      },
+      {
+       "text": "Go through the eastern door into the dining area (you need to finish the conversation with the guard).",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I don't care. I'm going in anyway."
+        }
+       ]
+      },
+      {
+       "text": "Run north and climb-up the ladder, run east and then south, and push the wall."
+      },
+      {
+       "text": "Use cabbage on the hole."
+      },
+      {
+       "text": "Partially skip the cutscene by spam-clicking the ground after the cabbage falls into the cauldron."
+      },
+      {
+       "text": "After the cutscene, run back and talk to Sir Amik Varze. Drop your armour and remaining tuna along the way to conserve run energy."
+      }
+     ]
+    }
+   ],
+   "startStep": 0
+  },
+  {
+   "name": "Demon Slayer",
+   "page": "Demon_Slayer/Speedrun_guide",
+   "revision": 15014371,
+   "start": "Speak to Aris in the tent on the western side of Varrock Square.",
+   "skills": [
+    "Agility 30",
+    "Hitpoints 25",
+    "Attack 25",
+    "Strength 25",
+    "Defence 25",
+    "Ranged 25",
+    "Magic 25",
+    "Prayer 25"
+   ],
+   "items": [
+    "5,000 Coins",
+    "4 Energy potion(4)",
+    "5 Tuna"
+   ],
+   "trophies": {
+    "bronze": "16:00",
+    "silver": "12:15",
+    "gold": "9:45",
+    "platinum": "8:30",
+    "diamond": "7:30"
+   },
+   "sections": [
+    {
+     "title": "Pre-Quest Recommended Set-up",
+     "steps": [
+      {
+       "text": "Set NPC 'Attack' Options to \"Always right-click\" under Settings &gt; Control Settings to prevent accidentally targeting the Giant rats when collecting bones"
+      },
+      {
+       "text": "Enable \"Shift drop\" under All Settings &gt; Controls to quickly drop items"
+      },
+      {
+       "text": "Select Logout &gt; World Switcher. Sort by the fourth column to show speedrunning worlds, and disable the warning message for hopping."
+      },
+      {
+       "text": "Pre-open Varrock Palace (castle) doors (optional)"
+      },
+      {
+       "text": "Set the Grouping menu to teleport to Soul Wars."
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Aris just south-west of Varrock Square.",
+       "notes": [
+        "<b>Note: Make sure you note down the incantation said during the cutscene! The order will also change with every reset. The speedrunning timer will not start until the cutscene ends.</b>",
+        "It can be helpful to note the sequence dialogue option numbers corresponding to the incantation as well: 1 - Carlem; 2 - Aber; 3 - Camerinthum; 4 - Purchai; 5 - Gabindo."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        },
+        {
+         "key": "1",
+         "text": "How am I meant to fight a demon who can destroy cities?"
+        },
+        {
+         "key": "3",
+         "text": "So how did Wally kill Delrith?"
+        }
+       ]
+      },
+      {
+       "text": "Run north to the Varrock Castle past the courtyard, dropping your tuna on the way there."
+      },
+      {
+       "text": "Talk to Sir Prysin in the south-west room of the castle with the training dummy.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Aris said I should come and talk to you."
+        },
+        {
+         "key": "1",
+         "text": "I need to find Silverlight."
+        },
+        {
+         "key": "2",
+         "text": "He's back and unfortunately I've got to deal with him."
+        },
+        {
+         "key": "1",
+         "text": "And why is this a problem?"
+        }
+       ]
+      },
+      {
+       "text": "Run north-west to the corner of the castle and take the stairs upwards two times to the 2nd floor, then talk to Captain Rovin to receive the first key, then climb back down to the ground floor.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Yes I know, but this is important."
+        },
+        {
+         "key": "1",
+         "text": "There's a demon who wants to invade the city."
+        },
+        {
+         "key": "2",
+         "text": "Yes, very."
+        },
+        {
+         "key": "2",
+         "text": "It's not them who are going to fight the demon, it's me."
+        },
+        {
+         "key": "3",
+         "text": "Sir Prysin said you would give me the key."
+        },
+        {
+         "key": "1",
+         "text": "Why did he give you one of the keys then?"
+        }
+       ]
+      },
+      {
+       "text": "Run to the kitchen to the north-east, then climb up the western stairs, grab the bucket on the floor two tiles east, and climb back downstairs."
+      },
+      {
+       "text": "Use the bucket on the kitchen sink to fill it up, and then use the bucket of water on the drain outside of the kitchen wall. Drop the bucket and run southwards through the castle to the eastern entrance."
+      },
+      {
+       "text": "Climb down the manhole to the Varrock Sewers east of the castle, outside the wall."
+      },
+      {
+       "text": "Follow the path slightly west, then start running north. While running, select Soul Wars from the Grouping tab and drink an energy potion. Drop any empty vials. Continue down to the end and pick up the rusty key from the floor. <i>Hit space bar quickly to dismiss the dialogue when picking up the key.</i>",
+       "notes": [
+        "The rusty key can be hard to spot. It is located in the first divot to the west, before the water, on a pentagon-shaped tile."
+       ]
+      },
+      {
+       "text": "Teleport to Soul Wars using the Grouping (minigame) tab."
+      },
+      {
+       "text": "Use the Soul Wars bank chest to deposit both the rusty key and first key."
+      },
+      {
+       "text": "Exit the portal to Edgeville. Enter Edgeville Dungeon through the trapdoor in the south-eastern corner of the building directly south of the Edgeville bank.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Edgeville"
+        }
+       ]
+      },
+      {
+       "text": "Drink another energy potion and drop the vials. <b>You should now have 25 empty inventory spaces, coins, and 2 energy potions.</b>"
+      },
+      {
+       "text": "Run briefly north, and collect the three bones against the walls.",
+       "notes": [
+        "The bones are located in the south-west corner, slightly north along the wall, and just east before the northern passage. Turn your camera to see the bones in the south-west corner if you are having difficulty."
+       ]
+      },
+      {
+       "text": "Run east to reach a small room with 3 Giant rats and four bone spawns. Pick them up and prepare to hop worlds. <b>Be careful not to attack the Giant rats as you will not be able to world-hop immediately!</b>",
+       "notes": [
+        "The four bone spawns include two to the north, one to the west, and one to the east.",
+        "<b>Note:</b> The timer does not stop when hopping worlds."
+       ]
+      },
+      {
+       "text": "Hop worlds and continue to collect the 4 bones until you have 25. Immediately use Lumbridge Home Teleport."
+      },
+      {
+       "text": "Run west through the Lumbridge Castle to get to Draynor Village, drinking any extra energy potions and dropping empty vials if you can."
+      },
+      {
+       "text": "<b>While running/walking</b> to Draynor Village bank, set up your offensive quick prayers such as Superhuman Strength and Improved Reflexes. Walk for approximately 8-10 seconds since the weight of the bones will drain run energy faster. <i>Keeping 5-10 run energy by walking here is recommended if you want more consistent timing against the fight with Delrith</i> while resetting aggression from the Dark wizards."
+      },
+      {
+       "text": "Use the Draynor Village bank and withdraw both the rusty key and first key."
+      },
+      {
+       "text": "Run to Diango and drop 3 bones before trading with him."
+      },
+      {
+       "text": "Buy a Chronicle and two teleport cards. Add the teleport charges to the Chronicle and <b>wield</b> it."
+      },
+      {
+       "text": "Drop your coins, then pick up the 3 bones you dropped.",
+       "notes": [
+        "<b>You should now have a Chronicle with <i>2 charges</i> wielded, the rusty key and first key, 25 bones, and you may have 1 energy potion left.</b>"
+       ]
+      },
+      {
+       "text": "Run to the Wizards' Tower directly south of Draynor Village bank."
+      },
+      {
+       "text": "Climb the spiral staircase <b>once</b> upwards to the 1st floor, then talk to Wizard Traiborn in the eastern room..",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I need to get a key given to you by Sir Prysin"
+        },
+        {
+         "key": "3",
+         "text": "Well, have you got any keys knocking around?"
+        },
+        {
+         "key": "2",
+         "text": "I'll get the bones for you."
+        }
+       ]
+      },
+      {
+       "text": "Use one of the bones on him to complete the delivery."
+      },
+      {
+       "text": "As soon as you get the third key, use your wielded Chronicle to teleport to the Champions' Guild."
+      },
+      {
+       "text": "Run back to Sir Prysin in Varrock Palace in the south-west room with the training dummy. Talk to him; a brief stall will occur while he gets retrieves it from the cabinet nearby. He will give you Silverlight and it will <b>automatically equip</b>."
+      },
+      {
+       "text": "Teleport with the wielded Chronicle once again to the Champions' Guild and begin running east.",
+       "notes": [
+        "<b>The upcoming fight takes place in a single-way combat zone. Any attack by the Dark wizards will prevent you from attacking Delrith. Read below for more information, and be prepared to <i>reset aggression</i> multiple times if needed.</b>"
+       ]
+      },
+      {
+       "text": "Run to the Stone Circle south of Varrock. Stay to the south."
+      },
+      {
+       "text": "Activate your quick prayers when you get close to the stone circle. Run along the eastern edge of the southern-most section of the circle, on top of the stones, to begin a cutscene. <b>Complete all cutscene dialogue or you will have to re-watch it!</b>"
+      },
+      {
+       "text": "Initiate combat with Delrith while avoiding the Dark wizards.",
+       "notes": [
+        "If you are attacked by a Dark wizard, you can leave the cutscene area and reenter to lose aggression. See the image below for the best tiles."
+       ]
+      },
+      {
+       "text": "As soon as you can, select <b>Banish</b> on Delrith, and then recite the incantation you learned in the initial cutscene."
+      }
+     ],
+     "images": [
+      {
+       "file": "Demon Slayer - speedrun stone circle reset tiles.png",
+       "caption": "Tiles to use to reset the fight if you need to reset aggression after getting attacked by a dark wizard."
+      }
+     ]
+    }
+   ],
+   "startStep": 5,
+   "kills": [
+    "Delrith <i>(level 27)</i>"
+   ]
+  },
+  {
+   "name": "Prince Ali Rescue",
+   "page": "Prince_Ali_Rescue/Speedrun_guide",
+   "revision": 15109950,
+   "start": "Speak to Chancellor Hassan in the palace at Al Kharid.",
+   "skills": [
+    "Agility 30",
+    "Hitpoints 25",
+    "Attack 25",
+    "Strength 25",
+    "Defence 25",
+    "Ranged 25",
+    "Magic 25",
+    "Prayer 25",
+    "Mining 30",
+    "Firemaking 30",
+    "Woodcutting 30"
+   ],
+   "items": [
+    "100 Coins",
+    "1 Stamina potion(4)",
+    "3 energy potion(4)",
+    "2 tuna"
+   ],
+   "trophies": {
+    "bronze": "17:00",
+    "silver": "14:00",
+    "gold": "12:00",
+    "platinum": "11:00",
+    "diamond": "9:30"
+   },
+   "sections": [
+    {
+     "title": "Pre-quest set-up",
+     "steps": [
+      {
+       "text": "Set the Grouping menu to teleport to Giants' Foundry."
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Chancellor Hassan",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Is there anything I can help you with?"
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Osman. <b>Finish listening to him or Lady Keli will not talk to you. You do not need to pick any dialogue options afterwards.</b>"
+      },
+      {
+       "text": "Go to Ali Morrisane's shop and buy:",
+       "notes": [
+        "2 buckets",
+        "1 bronze pickaxe",
+        "1 pot",
+        "1 tinderbox"
+       ]
+      },
+      {
+       "text": "Run northwards to the south-east Varrock mine and mine one copper ore. Keep west of the unicorns and bears for a shortcut.",
+       "notes": [
+        "(Optional) Tuna can be eaten as a form of tick manipulation to mine quicker. This is not required for a platinum time."
+       ]
+      },
+      {
+       "text": "Pick one bunch of redberries from the redberry bush north-west."
+      },
+      {
+       "text": "Run to the south-west Varrock mine and mine one tin ore and clay. You may pass north of the circle with dark wizards for a faster route."
+      },
+      {
+       "text": "Purchase a pink skirt from Thessalia's Fine Clothes."
+      },
+      {
+       "text": "Purchase shears from the Varrock general store."
+      },
+      {
+       "text": "Use Lumbridge Home Teleport and fill the two buckets with water from the nearby fountain."
+      },
+      {
+       "text": "Use one bucket of water on the clay while running to the next objective."
+      },
+      {
+       "text": "Purchase three beers from the bartender in The Sheared Ram.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'll have a beer please."
+        }
+       ]
+      },
+      {
+       "text": "Talk to the woodsman tutor nearby, icon on the minimap to get a bronze axe.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Any advice for an advanced woodcutter?"
+        }
+       ]
+      },
+      {
+       "text": "Run westwards and shear three sheep for wool."
+      },
+      {
+       "text": "Exit the sheep enclosure the same way you came in and pick two onions from behind Fred the Farmers house. <b>Pay attention in case you get an onion seed instead!</b>"
+      },
+      {
+       "text": "Head north to the Mill Lane Mill and pick some grain outside. Climb up to the top floor of the mill and use the grain with the hopper, then pull the lever. Climb down and take the flour from the flour bin with the pot."
+      },
+      {
+       "text": "Head to the jail and talk to Lady Keli. to get the the key imprint.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Heard of you? You're famous in Gielinor!"
+        },
+        {
+         "key": "1",
+         "text": "What's your latest plan then?"
+        },
+        {
+         "key": "2",
+         "text": "How do you know someone won't try to free him?"
+        },
+        {
+         "key": "1",
+         "text": "Could I see the key please?"
+        },
+        {
+         "key": "1",
+         "text": "Could I touch the key for a moment please?"
+        }
+       ]
+      },
+      {
+       "text": "Run eastwards to Lumbridge Castle courtyard."
+      },
+      {
+       "text": "Chop a log on the way there and light a fire."
+      },
+      {
+       "text": "Use copper ore or tin ore on the furnace further north to smelt a bronze bar."
+      },
+      {
+       "text": "Use the key print and bronze bar on the furnace to create the bronze key."
+      },
+      {
+       "text": "Run back to Lumbridge Castle."
+      },
+      {
+       "text": "Climb up the stairs once and use the spinning wheel in the southern room to make three balls of wool."
+      },
+      {
+       "text": "Pick up the ashes on the way to the next objective."
+      },
+      {
+       "text": "Run to Ned in Draynor Village."
+      },
+      {
+       "text": "Talk to Ned. to get a wig.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Could you make other things apart from rope?"
+        },
+        {
+         "key": "2",
+         "text": "Well... that's an interesting thought. Yes, I think I could do something. Give me three balls of wool and I might be able to do it."
+        },
+        {
+         "key": "1",
+         "text": "I have them here. Please make me a wig."
+        }
+       ]
+      },
+      {
+       "text": "Buy a rope from Ned."
+      },
+      {
+       "text": "Talk to Aggie. to get paste.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Can you make skin paste?"
+        },
+        {
+         "key": "1",
+         "text": "Yes please. Mix me some skin paste."
+        }
+       ]
+      },
+      {
+       "text": "Right-click <b>Use</b> the onion on her to get the yellow dye."
+      },
+      {
+       "text": "Use the yellow dye on the wig while running to the next objective."
+      },
+      {
+       "text": "Talk to Leela."
+      },
+      {
+       "text": "Use a beer on Joe until all three disappear from your inventory."
+      },
+      {
+       "text": "Use the rope on Lady Keli."
+      },
+      {
+       "text": "Open the prison gate and talk to Prince Ali."
+      },
+      {
+       "text": "Minigame teleport to Giants' Foundry."
+      },
+      {
+       "text": "Return to Chancellor Hassan to complete the quest."
+      }
+     ]
+    }
+   ],
+   "startStep": 1,
+   "tips": [
+    {
+     "heading": "Mining",
+     "paragraphs": [
+      "Clicking to mine with a bronze pickaxe will start an 8 tick timer, at the end of which your character will have a chance to mine a rock. This is the same skilling timer as most other skilling and combat options, so with some clever routing you can reduce your wait quite a bit. You will start your skilling timer on some other action, then arrive at a rock when the skilling timer is about to end.",
+      "To do this, you will click on this tree without an axe. This sets your skilling timer to 3. You then run for 4 ticks to the tin rock. If you eat a tuna on the way, you can add a 3 tick delay to your skilling timer and arrive at the rock at the right time. Once the tin ore is mined, you can eat another tuna and immediately click the clay rock. This adds 3 to your skilling timer and takes 1 tick to move there, which works perfectly."
+     ]
+    },
+    {
+     "heading": "Alts",
+     "paragraphs": [
+      "Alts can help with mining similarly to above. If you lure a unicorn, you can punch it at a good time on the way to the copper rock, saving 7 ticks.",
+      "There are a lot of NPCs in this quest with decently large wander ranges. Here is the order of preference you would want to use an alt to hold them to save the most time on average:",
+      "• Unicorn",
+      "• Thesselia",
+      "• Aggie",
+      "• Ned",
+      "• Chancellor Hassan",
+      "• Joe + Keli (same alt can hold both, though need to be careful and retalk during minigame tele)",
+      "• Shop keeper",
+      "• Mugger",
+      "• Osman",
+      "• Leela",
+      "• Prince Ali"
+     ]
+    },
+    {
+     "heading": "Deathwarping",
+     "paragraphs": [
+      "With very good luck, you can die to the guards while picking nettles at the end to save a little bit of time. On average, this method is a bit slower than the Giants' Foundry teleport, but with the best hit RNG it will save time. Note that you do not need 10gp to get through the gate after you have saved Prince Ali.",
+      "Dying faster means getting back to Lumbridge faster. When picking nettles, you want to make sure both guards are able to hit you. By picking the north nettle, then switching to the nettle one south, then back to the north one, you can make sure the guards aren't stacked on each other."
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Below Ice Mountain",
+   "page": "Below_Ice_Mountain/Speedrun_guide",
+   "revision": 15273708,
+   "start": "Willow on the path south of Ice Mountain",
+   "skills": [
+    "Hitpoints 30",
+    "Attack 30",
+    "Strength 30",
+    "Defence 30",
+    "Ranged 30",
+    "Magic 30",
+    "Prayer 30",
+    "Mining 30",
+    "Agility 30",
+    "Cooking 30"
+   ],
+   "items": [
+    "500 Coins",
+    "1 Stamina potion(4)",
+    "3 Energy potion(4)",
+    "5 Tuna"
+   ],
+   "trophies": {
+    "bronze": "19:00",
+    "silver": "16:00",
+    "gold": "14:00",
+    "platinum": "13:00",
+    "diamond": "11:00"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Before starting, set the Grouping menu to teleport to Soul Wars, but do NOT teleport yet."
+      },
+      {
+       "text": "Talk to Willow.",
+       "notes": [
+        "Make sure to spacebar through almost the whole conversation, otherwise the quest will not progress. Once Willow says \"Lastly, if my hunch is correct, this place will be covered in traps,\" you will need to press spacebar once more, and then immediately run off to Falador."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Go to the Rising Sun Inn in Falador."
+      },
+      {
+       "text": "Buy an Asgarnian ale from Kaylee.",
+       "notes": [
+        "Do NOT buy from Emily, as the pathing when clicking her can send you to the outside of the building."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "One Asgarnian Ale, please."
+        }
+       ]
+      },
+      {
+       "text": "Use the Asgarnian ale on Burntof, and choose any option in the game of rock paper scissors."
+      },
+      {
+       "text": "Cast Home teleport."
+      },
+      {
+       "text": "Run to the kitchen and grab a knife and bowl, and fill the bowl at the sink."
+      },
+      {
+       "text": "Run west to the Draynor market.",
+       "notes": [
+        "Drink a sip of Stamina potion at the start, since you will be running a lot."
+       ]
+      },
+      {
+       "text": "Purchase a Chronicle and a teleport card from Diango.",
+       "notes": [
+        "Use the teleport card on the Chronicle."
+       ]
+      },
+      {
+       "text": "Run west to Port Sarim."
+      },
+      {
+       "text": "Run to Wydin's Food Store and purchase 5 raw beef, then 2+ pots of flour.",
+       "notes": [
+        "Bread has an 89.45% cook rate, and cooked meat has a 94.53% cook rate. There isn't enough money to buy 5 pots of flour."
+       ]
+      },
+      {
+       "text": "Use the Chronicle teleport."
+      },
+      {
+       "text": "While running to Charlie the Tramp, use the bowl of water on a pot of flour."
+      },
+      {
+       "text": "Speak to Charlie the Tramp south of the Varrock Swordshop.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I'm looking for a man named Marley. Have you seen him?"
+        }
+       ]
+      },
+      {
+       "text": "Speak to the cook in the east room of Blue Moon Inn in Varrock.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I was wondering if you'd be able to make me a Steak sandwich?"
+        }
+       ]
+      },
+      {
+       "text": "Use the range near the cook to cook your bread and meat.",
+       "notes": [
+        "If you burned the bread, use the house in west Edgeville to refill your bowl and cook a new bread."
+       ]
+      },
+      {
+       "text": "Use the Grouping menu to teleport to Soul Wars."
+      },
+      {
+       "text": "Use the portal there to travel to Edgeville."
+      },
+      {
+       "text": "While running to the Edgeville ruins, create a steak sandwich by using the knife on the cooked meat. Also take a sip of the stamina potion."
+      },
+      {
+       "text": "Use the steak sandwich on Marley and finish the dialogue."
+      },
+      {
+       "text": "Run south to Barbarian Village."
+      },
+      {
+       "text": "Speak to Checkal in Barbarian Village near the pottery oven building."
+      },
+      {
+       "text": "Grab the bronze pickaxe in the room with the spinning wheel (not the potter's wheel)."
+      },
+      {
+       "text": "Speak to Atlas in The Long Hall tavern in Barbarian Village and complete the (very long) training montage.",
+       "notes": [
+        "This cutscene does not require any interaction until after the screen fades to white after ~2 minutes."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Stand near Checkal and use the Flex emote, then finish the dialogue."
+      },
+      {
+       "text": "Go to the entrance of the Ruins of Camdozaal, at the west side of the Ice Mountain, and talk to Willow (dungeon icon on minimap).",
+       "notes": [
+        "Take a sip of stamina potion while running. Also equip the pickaxe."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "After the cutscene, kill the level 25 Ancient Guardian by mining the 4 pillars in the corners.",
+       "notes": [
+        "Simply mining all four pillars will be fast enough to get platinum.",
+        "To slightly speed up the kill, alternate between attacking the Ancient Guardian and mining a pillar.",
+        "Equip the bronze pickaxe, set it to Smash, and activate Superhuman Strength and Improved Reflexes.",
+        "Attacking will set your skilling timer favourably to allow you to mine the pillar in fewer than 5 ticks rather than 8 ticks."
+       ]
+      },
+      {
+       "text": "Complete the final cutscene."
+      }
+     ]
+    }
+   ],
+   "startStep": 1,
+   "kills": [
+    "Ancient Guardian <i>(level 25)</i>"
+   ]
+  },
+  {
+   "name": "Temple of the Eye",
+   "page": "Temple_of_the_Eye/Speedrun_guide",
+   "revision": 14640602,
+   "start": "Al Kharid, near the gate from Lumbridge",
+   "skills": [
+    "Runecraft 10",
+    "Mining 30",
+    "Agility 30"
+   ],
+   "items": [
+    "100 Coins",
+    "5 Energy potion(4)"
+   ],
+   "trophies": {
+    "bronze": "19:00",
+    "silver": "17:30",
+    "gold": "16:30",
+    "platinum": "16:00",
+    "diamond": "13:30"
+   },
+   "sections": [
+    {
+     "title": "Starting Off",
+     "steps": [
+      {
+       "text": "Speak with Wizard Persten. <b>Complete all dialogue until you receive the eye amulet.</b>",
+       "chat": [
+        {
+         "key": "2",
+         "text": "What's a wizard doing in Al Kharid?"
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Go west through the Al Kharid gate, then run towards the hops patch and purchase a bucket of compost from the farmer Vasquen.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Can you sell me something?"
+        },
+        {
+         "key": "2",
+         "text": "A bucket of compost."
+        },
+        {
+         "key": "1",
+         "text": "Yes, that sounds like a fair price."
+        }
+       ]
+      },
+      {
+       "text": "Run towards south-eastern Varrock, using the fence shortcut along the way, and empty the bucket of compost."
+      },
+      {
+       "text": "Use the eye amulet on the Mage of Zamorak at the Altar of Chaos in south-eastern Varrock."
+      },
+      {
+       "text": "Speak to the Tea Seller at the eastern entrance to Varrock.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Could I have a strong cup of tea?"
+        }
+       ]
+      },
+      {
+       "text": "Run south and enter the gated area in south-eastern Varrock and fill your bucket at the well."
+      },
+      {
+       "text": "Use the strong cup of tea on the Mage of Zamorak and have him teleport you to the Abyss.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Use the eye amulet on the Dark Mage."
+      },
+      {
+       "text": "Now there will be runic energies surrounding the rift.",
+       "notes": [
+        "Touch each colour until they all turn white; the order is randomised every time the player resets the speedrun.",
+        "Remember the order as you try out different combinations, as it will reset with each failed order.",
+        "You will need to re-press the correct energies in the same order before you can guess what the next one will be."
+       ]
+      },
+      {
+       "text": "Speak to the Dark Mage to receive an abyssal incantation."
+      },
+      {
+       "text": "Head south-west and enter the fire rift."
+      },
+      {
+       "text": "Exit the Fire Altar and make your way west to Wizard Persten.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "At the Wizards' Tower, climb down into the basement and use the abyssal incantation on Archmage Sedridor."
+      },
+      {
+       "text": "Climb up the ladder, then the stairs once, and speak to Wizard Traiborn.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I need your apprentices to help with an incantation."
+        }
+       ]
+      },
+      {
+       "text": "Speak with Apprentice Felix, Tamara, and Cordelia in no particular order and *complete all dialogue* until you can view their riddles."
+      },
+      {
+       "text": "Speak to Traiborn, and answer 11 when prompted.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I think I know what a thingummywut is!"
+        }
+       ]
+      },
+      {
+       "text": "Speak to Archmage Sedridor or Wizard Persten in the basement.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's do it."
+        }
+       ]
+      },
+      {
+       "text": "Speak to each of the apprentices in no particular order."
+      },
+      {
+       "text": "Speak to Wizard Persten. The minigame tutorial begins after the cutscene.",
+       "notes": [
+        "If you get lost at any time, you can just follow the yellow arrow prompts () throughout the tutorial. The following guide will skip some steps and save you a bit of time.",
+        "You can move on to the next step as soon as the yellow arrow location changes, even if dialogue with an NPC is incomplete."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Guardians of the Rift Tutorial",
+     "steps": [
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Talk to Apprentice Felix."
+      },
+      {
+       "text": "Grab a weak cell from the table."
+      },
+      {
+       "text": "Grab the bronze pickaxe and chisel from the ground."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Place the weak cell in the slot on the ground."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Talk to Apprentice Felix."
+      },
+      {
+       "text": "Take a weak cell and use it to power up an elemental guardian."
+      },
+      {
+       "text": "Take another weak cell and use it to power up a catalytic guardian."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Run west and mine 5 guardian fragments.",
+       "notes": [
+        "Any of the guardian parts or guardian remains can be mined.",
+        "You can save some time running towards the table by starting to mine a rock, then running south and clicking another rock within 8 ticks."
+       ]
+      },
+      {
+       "text": "Craft 5 guardian essence at the west table."
+      },
+      {
+       "text": "Grab an uncharged cell from the east table."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Enter the Guardian of Mind, craft runes, and leave the mind altar."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Place the weak cell in the slot on the ground."
+      },
+      {
+       "text": "Talk to The Great Guardian."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Run west and mine 5 guardian fragments."
+      },
+      {
+       "text": "Craft 5 guardian essence at the west table."
+      },
+      {
+       "text": "Grab an uncharged cell from the east table."
+      },
+      {
+       "text": "Enter the Guardian of Water, craft runes, and leave the water altar."
+      },
+      {
+       "text": "Talk to The Great Guardian."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Run south and power up an elemental guardian."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Run west and mine 5 guardian fragments."
+      },
+      {
+       "text": "Craft 5 guardian essence at the west table."
+      },
+      {
+       "text": "Grab an uncharged cell from the east table."
+      },
+      {
+       "text": "Enter the water altar by using the portal talisman (water) on the Guardian of Water, craft runes, and leave the water altar."
+      },
+      {
+       "text": "Place the medium cell in the slot on the ground."
+      },
+      {
+       "text": "Talk to Apprentice Tamara."
+      },
+      {
+       "text": "Talk to The Great Guardian."
+      },
+      {
+       "text": "Upon completion of the tutorial, speak to Archmage Sedridor to finish the quest."
+      }
+     ]
+    }
+   ],
+   "startStep": 0
+  },
+  {
+   "name": "Dragon Slayer I",
+   "page": "Dragon_Slayer_I/Speedrun_guide",
+   "revision": 15150432,
+   "start": "Speak to the Guildmaster in the Champions' Guild.",
+   "skills": [
+    "Agility 40",
+    "Hitpoints 50",
+    "Attack 50",
+    "Strength 50",
+    "Defence 50",
+    "Ranged 50",
+    "Magic 50",
+    "Prayer 50",
+    "Mining 30",
+    "Smithing 34",
+    "Firemaking 30",
+    "Woodcutting 30",
+    "Crafting 8"
+   ],
+   "items": [
+    "16,000 coins",
+    "3 stamina potion(4)",
+    "8 lobsters (plus 20 in bank)"
+   ],
+   "trophies": {
+    "bronze": "37:00",
+    "silver": "28:00",
+    "gold": "22:00",
+    "platinum": "19:00",
+    "diamond": "16:00"
+   },
+   "sections": [
+    {
+     "title": "Pre-quest set-up",
+     "steps": [
+      {
+       "text": "If you haven't used the wilderness lever before, use it and select 'do not show this warning', in order to prevent the deep wilderness warning from showing during the speedrun."
+      },
+      {
+       "text": "Decide whether to use the adamant sword route or the maple shortbow route:",
+       "notes": [
+        "The adamant sword allows constant usage of the anti-dragon shield during the Elvarg fight, but will be slower and cannot be used to kill Wormbrain without spells. Its lower cost compared to the maple shortbow + 50 adamant arrows allows buying Crumble Undead runes, which negates the need to prepare Melzar's Maze for casual runs.",
+        "The maple shortbow has a higher damage output and can kill Wormbrain and Melzar's Maze NPCs at range, but requires constantly switching to the anti-dragon shield during the Elvarg fight to not get horribly burnt. The higher cost does not allow for Crumble Undead, making preparing Melzar's Maze highly encouraged (but not required)."
+       ]
+      },
+      {
+       "text": "Optional: Prepare all Melzar's Maze NPCs in advance (kill all except the lesser demon once for their key to go further, then get their Hitpoints as low as possible — they will regenerate to only 50%-60% health by the time you get back in the actual run, saving about a minute and reducing RNG for their kills).",
+       "notes": [
+        "Your unarmed max hit is 6 (7 with Ultimate Strength).",
+        "Your max hit with an adamant sword is 8 (9 with Ultimate Strength).",
+        "Your max hit with a maple shortbow and adamant arrows is 9 (10 with Eagle Eye)."
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Guildmaster in Champions' Guild.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Can I have a quest?"
+        }
+       ]
+      },
+      {
+       "text": "Minigame Teleport to Soul Wars, leave via the portal to Edgeville",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Edgeville"
+        }
+       ]
+      },
+      {
+       "text": "Go to the Edgeville General Store and buy a hammer, knife and bucket."
+      },
+      {
+       "text": "Trade with Oziach to skip some initial dialogue.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "The Guildmaster of the Champions' Guild told me."
+        },
+        {
+         "key": "1",
+         "text": "I thought you were going to give me a quest."
+        },
+        {
+         "key": "1",
+         "text": "A dragon, that sounds like fun."
+        }
+       ]
+      },
+      {
+       "text": "Fill your bucket up on the well."
+      },
+      {
+       "text": "Run to the lever and teleport to the Wilderness. Run to the Mage Arena, cutting webs as you go."
+      },
+      {
+       "text": "If using a maple shortbow, go to Lundail's Arena-side Rune Shop and buy:",
+       "notes": [
+        "5 fire runes",
+        "15 law runes",
+        "50 water runes",
+        "100 air runes",
+        "10 death runes",
+        "10 earth runes"
+       ]
+      },
+      {
+       "text": "If using an adamant sword, go to Lundail's Arena-side Rune Shop and buy:",
+       "notes": [
+        "5 fire runes",
+        "11 law runes",
+        "100 water runes",
+        "150 air runes",
+        "15 death runes",
+        "50 earth runes",
+        "20 chaos runes"
+       ]
+      },
+      {
+       "text": "Teleport to Varrock, then from Thessalia's Fine Clothes. buy 1 silk.",
+       "notes": [
+        "If choosing to use an adamant sword, buy it from the Varrock Swordshop now (Skip buying the studded armour, bow, and arrows later on)."
+       ]
+      },
+      {
+       "text": "Talk to Guildmaster in Champions' Guild.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I talked to Oziach..."
+        },
+        {
+         "key": "1",
+         "text": "How can I find the route to Crandor?"
+        },
+        {
+         "key": "1",
+         "text": "Where is Melzar's map piece?"
+        },
+        {
+         "key": "1",
+         "text": "Where is Thalzar's map piece?"
+        },
+        {
+         "key": "2",
+         "text": "Where is Lozar's map piece?"
+        },
+        {
+         "key": "3",
+         "text": "Where can I find the right ship?"
+        },
+        {
+         "key": "2",
+         "text": "How can I protect myself from the dragon's breath?"
+        }
+       ]
+      },
+      {
+       "text": "Teleport to Lumbridge, go to the roof of the castle and collect 3 logs, then speak to Duke Horacio.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I seek a shield that will protect me from dragonbreath."
+        },
+        {
+         "key": "1",
+         "text": "Elvarg, the dragon of Crandor island!"
+        },
+        {
+         "key": "1",
+         "text": "Yes"
+        },
+        {
+         "key": "2",
+         "text": "So, are you going to give me the shield or not?"
+        }
+       ]
+      },
+      {
+       "text": "Teleport to Varrock again, drop your knife and remaining fire runes.",
+       "notes": [
+        "<i>Optional:</i> Adamant sword - From Horvik's Armour Shop buy a studded body and studded chaps. Don't equip until after Melzar's Maze.",
+        "Maple shortbow - From Horvik's Armour Shop buy a studded body and studded chaps. Equip them.",
+        "Maple shortbow - From Lowe's Archery Emporium buy a maple shortbow and 50 adamant arrows. Equip them."
+       ]
+      },
+      {
+       "text": "Run to the Lumberyard, buy 3 planks and 100 steel nails."
+      },
+      {
+       "text": "Teleport to Falador, buy a wizard's mind bomb from the Rising Sun Inn",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I'll try the Mind Bomb."
+        }
+       ]
+      },
+      {
+       "text": "Run to the Estate Agent and buy a house",
+       "chat": [
+        {
+         "key": "1",
+         "text": "How can I get a house?"
+        },
+        {
+         "key": "1",
+         "text": "Yes please!"
+        }
+       ]
+      },
+      {
+       "text": "Teleport outside of your player-owned house, then run north-west to Melzar's Maze, drop the construction guide. Drop the maze key after entering."
+      },
+      {
+       "text": "Kill the small zombie rat with a long tail (melee/ranged works best) to get the key and enter the north-western door and climb up the ladder."
+      },
+      {
+       "text": "Kill the ghost wearing a hood, a tube top, and no cape (Crumble Undead works best) to get the key and enter the second door from the north on the eastern wall and climb up the ladder."
+      },
+      {
+       "text": "Kill the skeleton with the round shield (Crumble Undead works best) to get the key and enter the westmost door on the southern wall and climb down the ladder 3 times."
+      },
+      {
+       "text": "Kill the zombies (Crumble Undead works best) to get the key and enter the blue door."
+      },
+      {
+       "text": "Kill Melzar the Mad (melee/ranged works best) to get the key and enter the purple (magenta) door. Consider flicking Eagle Eye/Ultimate Strength + Incredible Reflexes to help kill him faster."
+      },
+      {
+       "text": "Kill the lesser demon with Water Blast to get the key and enter the green door (finish the kill with melee/ranged if needed). Search the chest for the map part."
+      },
+      {
+       "text": "Teleport to House, run south-east and take the bronze pickaxe from on top of the table in the building.",
+       "notes": [
+        "Adamant sword - Equip studded body and chaps if purchased earlier."
+       ]
+      },
+      {
+       "text": "Run north to Rimmington Mine and mine 1 clay, then use your bucket of water on it. Drop the empty bucket and pickaxe.",
+       "notes": [
+        "Maple shortbow - Drop any remaining chaos runes you have.",
+        "Adamant sword - Keep the chaos runes to use against Wormbrain, then drop them after grabbing his map part."
+       ]
+      },
+      {
+       "text": "From Gerrant's Fishy Business, buy a lobster pot."
+      },
+      {
+       "text": "Run south to the Port Sarim jail. Kill Wormbrain with ranged/bolt spells and Telekinetic Grab his map part."
+      },
+      {
+       "text": "Talk to Klarense in the southern docks of Port Sarim by the Void Outpost boat and pay him 2,000 coins.",
+       "chat": [
+        {
+         "key": "4",
+         "text": "I'd like to buy her."
+        },
+        {
+         "key": "1",
+         "text": "Yep, sounds good."
+        }
+       ]
+      },
+      {
+       "text": "Go on board, climb down the ladder and repair the hole 3 times."
+      },
+      {
+       "text": "Teleport to Lumbridge, head toward the cemetery while dropping your remaining coins, any remaining nails and your hammer."
+      },
+      {
+       "text": "Talk to Count Check and have him teleport you",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Is there somewhere I can learn more about account security?"
+        },
+        {
+         "key": "1",
+         "text": "Yes please, teleport me to the Stronghold of Security."
+        }
+       ]
+      },
+      {
+       "text": "At Barbarian Village use the pottery wheel to make an unfired bowl."
+      },
+      {
+       "text": "Run to the Oracle on Ice Mountain",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I seek a piece of the map to the island of Crandor."
+        }
+       ]
+      },
+      {
+       "text": "Enter the Dwarven mine and <b>use</b> silk, lobster pot, unfired bowl, wizard's mind bomb on the magic door at the north-east side of the mine. You should automatically enter the door."
+      },
+      {
+       "text": "Enter the magic door, open the chest, and <b>search</b> the chest to receive a map part. Press space or ensure that you finish the dialogue."
+      },
+      {
+       "text": "Teleport to Lumbridge, drop your empty beer glass. Run to Draynor Village."
+      },
+      {
+       "text": "Talk to Ned with the map in your inventory.",
+       "notes": [
+        "<i>Optional</i>: Consider withdrawing more lobsters from the bank."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "You're a sailor? Could you take me to Crandor?"
+        }
+       ]
+      },
+      {
+       "text": "Teleport to House and return to the boat you previously repaired in Port Sarim. Board the ship and talk to Captain Ned.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yep, sounds good."
+        }
+       ]
+      },
+      {
+       "text": "Climb on top of the volcano and enter the hole."
+      },
+      {
+       "text": "Head south and kill Elvarg.",
+       "notes": [
+        "Maple shortbow - Pray Protect from Magic and Eagle Eye, and alternate equipping your shield when Elvarg attacks in between bow shots to avoid taking high damage from the dragonfire. Stepping under her after attacking will give you more time to equip the shield.",
+        "Adamant sword - Equip your anti-dragon shield, and pray Protect from Magic, Ultimate Strength, and Incredible Reflexes.",
+        "<b>Note:</b> If you are not finished with the fight by <b>17:50:00</b>, you will have to restart the speedrun."
+       ]
+      },
+      {
+       "text": "Teleport to Falador as soon as Elvarg dies, before the animation of removing her head. Run to Edgeville."
+      },
+      {
+       "text": "Talk to Oziach in Edgeville."
+      }
+     ]
+    }
+   ],
+   "startStep": 3,
+   "kills": [
+    "Zombie rats <i>(level 3)</i>",
+    "Ghosts <i>(level 19)</i>",
+    "Skeletons <i>(level 22)</i>",
+    "Zombies <i>(level 24)</i>",
+    "Melzar the Mad <i>(level 43)</i>",
+    "Lesser demon <i>(level 82)</i>",
+    "Wormbrain <i>(level 2) - optional</i>",
+    "Elvarg <i>(level 83)</i>"
+   ]
+  },
+  {
+   "name": "A Taste of Hope",
+   "page": "A_Taste_of_Hope/Speedrun_guide",
+   "revision": 15316294,
+   "start": "Speak to Garth in Ver Sinhaza by the entrance to the Theatre of Blood.",
+   "skills": [
+    "Hitpoints 70",
+    "Attack 70",
+    "Strength 70",
+    "Defence 70",
+    "Ranged 70",
+    "Magic 70",
+    "Prayer 70",
+    "Crafting 48",
+    "Agility 55",
+    "Herblore 40",
+    "Slayer 38"
+   ],
+   "items": [
+    "Mid-level melee equipment",
+    "12,000 coins",
+    "1 Enchant emerald or jade",
+    "1 Emerald",
+    "1 Ghostspeak amulet",
+    "Ectophial",
+    "1 Rod of Ivandis",
+    "3 stamina potion(4)",
+    "2 super restore(4)",
+    "10 shark",
+    "In bank:",
+    "• 2 stamina potion(4)",
+    "• 2 super restore(4)",
+    "• 20 shark"
+   ],
+   "trophies": {
+    "bronze": "44:00",
+    "silver": "35:00",
+    "gold": "29:00",
+    "platinum": "26:00",
+    "diamond": "21:00"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "<b>Tip:</b> Whenever a Vyrewatch is nearby, open a chat interface by attempting to activate the Augury prayer while pathing to your desired destination. When an interface is open the Vyrewatch will not stop you.",
+       "note": true
+      },
+      {
+       "text": "Talk to Garth.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Run to the Myreque Hideout, taking the rooftop route."
+      },
+      {
+       "text": "Speak to Safalaan."
+      },
+      {
+       "text": "Minigame Teleport to the Burthorpe Games Room."
+      },
+      {
+       "text": "Run to the general store Burthorpe Supplies. Sell the dragon platelegs and buy a chisel."
+      },
+      {
+       "text": "Run to the Warriors' Guild and buy two attack and two strength potions from Lilly."
+      },
+      {
+       "text": "Use the Ectophial teleport, then run north and take Andras' boat back to Ver Sinhaza."
+      },
+      {
+       "text": "Attempt to climb up the rubble west of the bank, within Ver Sinhaza."
+      },
+      {
+       "text": "Speak to Harpert west of the bank and pay him 1,000 coins.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Fine, here's the money."
+        }
+       ]
+      },
+      {
+       "text": "Climb the rubble and make your way to the north-eastern red window, via climbing vents and jumping off roofs."
+      },
+      {
+       "text": "Look through the window. (Be sure you complete the dialogue once the cut-scene is finished; your health will be restored upon completing the dialogue.)"
+      },
+      {
+       "text": "Use the Ectophial teleport, then run north and take Andras' boat back to Ver Sinhaza."
+      },
+      {
+       "text": "Run to the Myreque Hideout, taking the rooftop route."
+      },
+      {
+       "text": "Return to Safalaan.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I do."
+        }
+       ]
+      },
+      {
+       "text": "Speak to Flaygian Screwte.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Anything to report?"
+        },
+        {
+         "key": "2",
+         "text": "Why?"
+        }
+       ]
+      },
+      {
+       "text": "Speak to Safalaan."
+      },
+      {
+       "text": "Go to Serafina's house. (You should have finished a full stamina potion at this point for the next step)"
+      },
+      {
+       "text": "Use an empty vial on the broken fountain."
+      },
+      {
+       "text": "Climb down the stairs of Serafina's house, south of the fountain."
+      },
+      {
+       "text": "Speak to Safalaan."
+      },
+      {
+       "text": "Search the crates and barrels around the basement to obtain mysterious meat, mysterious herb, and a pestle and mortar.",
+       "notes": [
+        "Use the mysterious herb on the vial of water.",
+        "Use the pestle and mortar on the mysterious meat.",
+        "Use the mysterious crushed meat on the unfinished potion."
+       ]
+      },
+      {
+       "text": "Use the finished potion on the door.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Speak to Safalaan.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Make the potion again, but this time use the ingredients on the vial of blood instead of a vial of water."
+      },
+      {
+       "text": "Use the blood potion on the door, open and search the chest to receive the old notes.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Safalaan with the notes.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Here you go."
+        }
+       ]
+      },
+      {
+       "text": "Run back to the Myreque Hideout and speak to Safalaan to start a cutscene."
+      },
+      {
+       "text": "Defeat the abomination.",
+       "notes": [
+        "Use a dose of your attack and strength potions, and pray Ultimate Strength and Incredible Reflexes."
+       ]
+      },
+      {
+       "text": "Use the Ectophial teleport, then run north and take Andras' boat back to Ver Sinhaza."
+      },
+      {
+       "text": "Run to Old Man Ral's house, and enter the trapdoor in the northern room."
+      },
+      {
+       "text": "Speak to Safalaan."
+      },
+      {
+       "text": "Speak to Vertida Sefalatis."
+      },
+      {
+       "text": "Read Flaygian's notes."
+      },
+      {
+       "text": "Search the nearby crates to find a silver sickle (b) and a chain."
+      },
+      {
+       "text": "Attach the emerald to the sickle to create an emerald sickle (b)."
+      },
+      {
+       "text": "Use the enchant emerald or jade tablet on it."
+      },
+      {
+       "text": "Use the chain on the Rod of Ivandis to create the Ivandis flail."
+      },
+      {
+       "text": "Equip the flail and speak to Safalaan."
+      },
+      {
+       "text": "Make your way to Ver Sinhaza, and resupply at the bank if necessary."
+      },
+      {
+       "text": "Speak to Kael Forshaw.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'm ready."
+        }
+       ]
+      },
+      {
+       "text": "Defeat Ranis Drakan. He will use melee and magic attacks that can hit up to 20. He can also cast Blood Barrage, which can heal him for half of the damage dealt. Occasionally, he will charge an attack and explode, hitting up to 30. The damage can be reduced by running away from him when he is charging the attack.",
+       "notes": [
+        "After he reaches 65% and 25% of his health, he'll summon two level 87 vyrewatch and will fly airborne. He will regularly launch blood bombs at your current square, which can hit up to 30; you can simply walk backwards one square to lure the vyrewatch to the affected square, so the bombs hurt them instead.",
+        "After killing them, he will go berserk and attack the player. During this last phase, his attacks are much faster and accurate, but only have a max hit of 6. Using Protect from Melee will easily defeat him in the last phase."
+       ]
+      },
+      {
+       "text": "Speak to Safalaan at Old Man Ral's house."
+      }
+     ],
+     "images": [
+      {
+       "file": "A Taste of Hope - speedrun routes.png",
+       "caption": "Various essential routes used during the speedrun."
+      }
+     ]
+    }
+   ],
+   "startStep": 1,
+   "kills": [
+    "Abomination (Level 149)",
+    "Ranis Drakan (level 233) (must be fought using melee)",
+    "4 vyrewatch (level 87)"
+   ]
+  },
+  {
+   "name": "Beneath Cursed Sands",
+   "page": "Beneath_Cursed_Sands/Speedrun_guide",
+   "revision": 15296159,
+   "start": "Speak to Jamila in Sophanem.",
+   "skills": [
+    "Agility 65",
+    "Hitpoints 85",
+    "Attack 85",
+    "Strength 85",
+    "Defence 85",
+    "Ranged 85",
+    "Magic 85",
+    "Prayer 85",
+    "Firemaking 55",
+    "Mining 60",
+    "Smithing 60",
+    "Crafting 65"
+   ],
+   "items": [
+    "Melee and ranged combat equipment",
+    "3 stamina potion(4)",
+    "4 Saradomin brew(4)",
+    "2 super restore(4)",
+    "1 superantipoison(4)",
+    "4 waterskin(4)",
+    "5 shark",
+    "In bank:",
+    "• 3 stamina potion(4)",
+    "• 8 Saradomin brew(4)",
+    "• 4 super restore(4)",
+    "• 8 waterskin(4)",
+    "• 25 shark"
+   ],
+   "trophies": {
+    "bronze": "45:00",
+    "silver": "36:00",
+    "gold": "30:00",
+    "platinum": "27:00",
+    "diamond": "22:00"
+   },
+   "sections": [
+    {
+     "title": "Pre-quest set-up and tips",
+     "steps": [
+      {
+       "text": "Disable the Ava's Accumulator from gathering junk by right-clicking \"Commune\" on it."
+      },
+      {
+       "text": "Change the attack style of the Rune Crossbow to \"rapid\"."
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Jamila.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "What's this special item?"
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Make your way to Maisa."
+      },
+      {
+       "text": "Take the spade at the north side of the campsite."
+      },
+      {
+       "text": "Search the camping equipment by the tent for a tinderbox."
+      },
+      {
+       "text": "Talk to Maisa.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's go."
+        }
+       ]
+      },
+      {
+       "text": "Talk to a citizen or Menaphite Guard."
+      },
+      {
+       "text": "Inspect the blocked entry at the Jaltevas Pyramid."
+      },
+      {
+       "text": "Fight the Head Menaphite Guard with Piety active. <b>Do not</b> use Protect from Melee."
+      },
+      {
+       "text": "Run back to the campsite, grabbing a bronze pickaxe on the way."
+      },
+      {
+       "text": "Talk to Maisa until she departs."
+      },
+      {
+       "text": "South of the campsite, mine 2-3 iron ore and 1 coal."
+      },
+      {
+       "text": "Use the coal and tinderbox on the furnace in the Ruins of Ullek.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Smelt the iron ore. There is a <b>50% chance</b> to fail smelting them, in which case you will want to <b>restart</b> the speedrun if you fail to refine all of them."
+      },
+      {
+       "text": "Search the well to receive a stone tablet. Read it."
+      },
+      {
+       "text": "Head back down the stairs and head south to the southernmost ritual pillar. Dig on the south side of it."
+      },
+      {
+       "text": "Open the chest with the passcode \"1118513\"."
+      },
+      {
+       "text": "Use the iron bar on the furnace."
+      },
+      {
+       "text": "Go further north to the pillar, and insert the scarab emblem.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Rotate the scarab on the emblem so that it faces downward (pincers facing upward). A 90 degree rotation is 8 clicks."
+      },
+      {
+       "text": "Climb down the stairs and defeat the two Scarab Mages with melee. Activate Protect from Magic and Piety during the cutscene to skip the dialogue."
+      },
+      {
+       "text": "Climb down the stairs again."
+      },
+      {
+       "text": "Avoid the projectiles and pull the levers on the north-east and south-east ends of the room."
+      },
+      {
+       "text": "Go through the door west of the junction."
+      },
+      {
+       "text": "Inspect the south-western plaque to get four emblems."
+      },
+      {
+       "text": "Inspect the north-western plaque and read it."
+      },
+      {
+       "text": "The solution to the puzzle is different for everyone. Refer to the table on the right to solve this puzzle. The emblems are listed in the same order they are in your inventory. The hints are arranged from north to south.",
+       "notes": [
+        "“[<b>God 1</b>] arrived just before [<b>god 2</b>]...” – Place the emblem corresponding to <b>god 1</b> in the <b>northernmost urn</b> and the emblem corresponding to <b>god 2</b> in the <b>centre-north urn</b>.",
+        "“To the one that arrived first, he offered [<b>item 1</b>].” – Place the emblem corresponding to <b>item 1</b> in the <b>centre-south urn</b>.",
+        "“The one that was offered [<b>item 2</b>] came from just south...” – Place the emblem corresponding to <b>item 2</b> in the <b>southernmost urn</b>."
+       ]
+      },
+      {
+       "text": "Pull the lever to the south-west and continue to the next area."
+      },
+      {
+       "text": "Speak to the Spirit."
+      },
+      {
+       "text": "Take the rusty key from the urn in the back of the room."
+      },
+      {
+       "text": "Hop worlds to leave the dungeon instance quickly. Re-enter the dungeon and open the door on the upper level."
+      },
+      {
+       "text": "Defeat the Champion of Scabaras with ranged, Protect from Magic, and Eagle Eye. Keep your distance, and destroy the Shadow Rift and Scarab Swarm as they appear."
+      },
+      {
+       "text": "Talk to the High Priest of Scabaras."
+      },
+      {
+       "text": "Hop worlds to leave the instance, or simply walk out of the dungeon."
+      },
+      {
+       "text": "Go to Nardah."
+      },
+      {
+       "text": "(Optional, but recommended) Resupply at the bank; you will no longer need ranged equipment."
+      },
+      {
+       "text": "Talk to Maisa or Zahur in the building directly south of the fountain."
+      },
+      {
+       "text": "Purchase a cooked meat from the Nardah General Store.",
+       "notes": [
+        "You can buy a full inventory of cooked meat and use the extra to heal up from the previous fight."
+       ]
+      },
+      {
+       "text": "Head west to the island with the lily. Attempt to jump to the stepping stones, and throw the meat to the crocodile.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Pick the Lily of the Elid and use the item on Zahur."
+      },
+      {
+       "text": "Warm up her chemistry equipment.",
+       "notes": [
+        "Increase the middle bar 15 times, then increase the right bar 15 times, then decrease the right bar 2 times, then decrease the middle bar 2 times.",
+        "(If it didn't work, keep decreasing the middle and right bars alternatingly.)"
+       ]
+      },
+      {
+       "text": "Receive the cure crate from Zahur."
+      },
+      {
+       "text": "Run south-west to the tent west of the Agility Pyramid, and enter the nearby rock to reach Sophanem quicker."
+      },
+      {
+       "text": "Use the cure crate on the High Priest."
+      },
+      {
+       "text": "Go to the necropolis and talk to Maisa, located directly south of the south-eastern gate of Sophanem by the bend in the path."
+      },
+      {
+       "text": "At the end of the cutscene, defeat the Menaphite Akh. The Menaphite Akh attacks using melee, and will occasionally use special attacks.",
+       "notes": [
+        "When she twitches, she will perform a lightning bolt attack and direct it in front of her. This attack can hit 70+ if not evaded. <b>Always be prepared to walk behind or beside her to avoid this attack.</b>",
+        "During the fight she will also summon a Menaphite Shadow that attacks with ranged or magic. Run to attack it quickly (but still watch out for the lightning attack). If not killed promptly, the shadow can switch places with the Akh, and the player must attack the real one or suffer large amounts of damage."
+       ]
+      },
+      {
+       "text": "Go back to Sophanem and talk to Maisa or the High Priest to finish the quest."
+      }
+     ]
+    }
+   ],
+   "startStep": 2,
+   "kills": [
+    "Head Menaphite Guard (level 174) without the use of protection prayers",
+    "Two Scarab Mages (level 119)",
+    "The Champion of Scabaras (level 379)",
+    "Menaphite Akh (level 351)"
+   ]
+  },
+  {
+   "name": "A Kingdom Divided",
+   "page": "A_Kingdom_Divided/Speedrun_guide",
+   "revision": 15369280,
+   "start": "Speak to Martin Holt at the entrance to Kourend Castle in Kingstown.",
+   "skills": [
+    "Hitpoints 70",
+    "Attack 70",
+    "Strength 70",
+    "Defence 70",
+    "Ranged 70",
+    "Magic 70",
+    "Prayer 70",
+    "Agility 65",
+    "Thieving 52",
+    "Woodcutting 52",
+    "Herblore 50",
+    "Mining 50",
+    "Crafting 40"
+   ],
+   "items": [
+    "Mid-level melee and ranged equipment",
+    "12,000 coins",
+    "Xeric's talisman (fully charged, Xeric's Honour teleport unlocked)",
+    "Kharedst's memoirs (fully charged, all pages added, including secret page)",
+    "1 defence potion(4)",
+    "4 stamina potion(4)",
+    "2 super restore(4)",
+    "1 superantipoison(4)",
+    "10 shark",
+    "In bank:",
+    "• 4 stamina potion(4)",
+    "• 2 super restore(4)",
+    "• 20 shark"
+   ],
+   "trophies": {
+    "bronze": "1:23:00",
+    "silver": "1:08:00",
+    "gold": "58:00",
+    "platinum": "53:00",
+    "diamond": "45:00"
+   },
+   "sections": [
+    {
+     "title": "Pre-quest set-up and tips",
+     "steps": [
+      {
+       "text": "Disable the Ava's Accumulator from gathering junk by right-clicking \"Commune\" on it."
+      },
+      {
+       "text": "Change the attack style of the Rune Crossbow to \"rapid\"."
+      },
+      {
+       "text": "Set the Grouping menu to teleport to Soul Wars."
+      },
+      {
+       "text": "If you haven't used the wilderness lever before, use it and select 'do not show this warning', in order to prevent the deep wilderness warning from showing during the speedrun."
+      },
+      {
+       "text": "You can only take 1 sip of the defence potion throughout the run."
+      }
+     ]
+    },
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Speak to Martin Holt.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Heart\".",
+       "chat": [
+        {
+         "key": "4",
+         "text": "Xeric's Heart"
+        }
+       ]
+      },
+      {
+       "text": "Run west to Kourend Castle and speak to Commander Fullore.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's get going."
+        }
+       ]
+      },
+      {
+       "text": "Go inside the house, go up the stairs, and search the drawers in the eastern room. Read the receipt."
+      },
+      {
+       "text": "Teleport to Lovakengj via the \"Reminisce\" option on Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "4",
+         "text": "'Jewellery of Jubilation' - Lovakengj"
+        }
+       ]
+      },
+      {
+       "text": "Run east to The Deeper Lode pub and speak to Fuggy.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Had any councillors stay here recently?"
+        }
+       ]
+      },
+      {
+       "text": "Teleport to Port Piscarilius via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "'The Fisher's Flute' - Piscarilius"
+        }
+       ]
+      },
+      {
+       "text": "Run south to Veos' ship and speak to Cabin Boy Herbert.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I'm looking for a councillor."
+        }
+       ]
+      },
+      {
+       "text": "Defeat the Judge of Yama; dodge the fire waves and run to the boss to attack him. Use Protect from Melee."
+      },
+      {
+       "text": "Go south-west to speak to Commander Fullore outside of the castle until she heads back in."
+      },
+      {
+       "text": "Use the Grouping menu to teleport to Soul Wars, leave via the portal to Edgeville."
+      },
+      {
+       "text": "Run to the lever and teleport to the Wilderness. Run to the Mage Arena, cutting webs as you go."
+      },
+      {
+       "text": "Free up seven inventory spaces, and buy the following runes from Lundail:",
+       "notes": [
+        "1 death",
+        "20 law",
+        "50 fire",
+        "50 air",
+        "50 earth"
+       ]
+      },
+      {
+       "text": "Cast Lumbridge Teleport and buy a bronze pickaxe and steel axe from Bob."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Heart\".",
+       "chat": [
+        {
+         "key": "4",
+         "text": "Xeric's Heart"
+        }
+       ]
+      },
+      {
+       "text": "Run east and speak to Martin Holt."
+      },
+      {
+       "text": "Cast Teleport to House."
+      },
+      {
+       "text": "Teleport to the Arceuus Library via the portal nexus.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Arceuus Library"
+        }
+       ]
+      },
+      {
+       "text": "Teleport to the Archive via Archeio."
+      },
+      {
+       "text": "Pickpocket Istoria for the bluish key."
+      },
+      {
+       "text": "Search the pink display case in the south-east corner of the room to retrieve Rose's diary."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Heart\".",
+       "chat": [
+        {
+         "key": "4",
+         "text": "Xeric's Heart"
+        }
+       ]
+      },
+      {
+       "text": "Use Rose's diary on Martin."
+      },
+      {
+       "text": "Read the note and speak to Martin again."
+      },
+      {
+       "text": "Teleport to Hosidius via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "'Lunch by the Lancalliums' - Hosidius"
+        }
+       ]
+      },
+      {
+       "text": "Run south-west to the Forthos Ruin and speak to Martin."
+      },
+      {
+       "text": "Search the Stone Piles around the ruins to find a combination of numbers for the panel. Note of these (changes every speedrun)."
+      },
+      {
+       "text": "Cut the vines to the west, squeeze-through the vines, and use the unique combination for 'ROSE' on the panel on the wall.",
+       "notes": [
+        "For example, if the piles tell you the following: R - 7, O - 3, S - 3, E - 5, your code will be '7335'."
+       ]
+      },
+      {
+       "text": "Cast Teleport to House, then use the ornate jewellery box; Press 9 to teleport to the Wintertodt Camp."
+      },
+      {
+       "text": "Go to the Settlement Ruins, south-west of Wintertodt. Drop the steel axe on the way."
+      },
+      {
+       "text": "Speak with Martin in the north-western building."
+      },
+      {
+       "text": "Kill the assassin that spawns."
+      },
+      {
+       "text": "Cast Fire Blast on the ice chunks south-west of Martin, search the melted ice chunks and open the panel on the western wall."
+      },
+      {
+       "text": "Read the note."
+      },
+      {
+       "text": "Teleport to Port Piscarilius via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "'The Fisher's Flute' - Piscarilius"
+        }
+       ]
+      },
+      {
+       "text": "Run south-west to The Legless Faun pub and speak to Martin."
+      },
+      {
+       "text": "Climb the pillar behind Martin."
+      },
+      {
+       "text": "Check the panel upstairs in the northern wall. Note the order of each city."
+      },
+      {
+       "text": "Go back down the wall and push the statue panels on the statues in the order specified from the panel."
+      },
+      {
+       "text": "Check the panel upstairs again."
+      },
+      {
+       "text": "After the cutscene, cast Camelot Teleport, then run south-east to the Catherby docks. Destroy Rose's note and drop your antipoison on the way."
+      },
+      {
+       "text": "Purchase a chisel, bucket of sand and soda ash from a Trader Crewmember."
+      },
+      {
+       "text": "Cast Teleport to House, use the Portal Nexus to teleport to Canifis",
+       "chat": [
+        {
+         "key": "H",
+         "text": "'Canifis'"
+        }
+       ]
+      },
+      {
+       "text": "Run north-east and buy a facemask from Mazchna"
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Inferno\".",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Xeric's Inferno"
+        }
+       ]
+      },
+      {
+       "text": "Make your way to the lovakite mine at the north-west corner of Lovakengj."
+      },
+      {
+       "text": "Wear your facemask and head further north to the sulphur mine."
+      },
+      {
+       "text": "Mine one volcanic sulphur."
+      },
+      {
+       "text": "Cast Teleport to House then use the Portal Nexus -&gt; Arceuus Library Teleport and run north."
+      },
+      {
+       "text": "Make your way towards the dense essence mine.",
+       "notes": [
+        "Re-equip the Helm of Neitiznot and drop the facemask on the way.",
+        "Swap to the Arceuus spellbook at Tyss (this unlocks the ability to swap spellbooks at home with the Occult altar later).",
+        "Use the east shortcut in the final stretch."
+       ]
+      },
+      {
+       "text": "Mine one dense essence block. Drop the chisel afterward."
+      },
+      {
+       "text": "Cast Battlefront Teleport and run north-west to a small shack."
+      },
+      {
+       "text": "Inspect the crates in the north-western corner; climb down the trap door and complete the cutscene.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Climb through it."
+        }
+       ]
+      },
+      {
+       "text": "Cast Battlefront Teleport and run south to Molch and enter the furthest east lizard dwelling."
+      },
+      {
+       "text": "At the eastern end of the Lizardman Temple, speak to Kaht B'alam.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Do you think you could help me find a mage?"
+        }
+       ]
+      },
+      {
+       "text": "Cast Arceuus Home Teleport."
+      },
+      {
+       "text": "Run east and swap your spellbook back to the Standard spellbook at Tyss."
+      },
+      {
+       "text": "Venerate the dense essence block at the Dark Altar."
+      },
+      {
+       "text": "Cast Teleport to House, then use the occult altar to swap back to the Arceuus Spellbook."
+      },
+      {
+       "text": "Use the ornate jewellery box and teleport to the Farming Guild.",
+       "chat": [
+        {
+         "key": "J",
+         "text": "Farming guild"
+        }
+       ]
+      },
+      {
+       "text": "Go south-west towards the Kebos Swamp and cross the stone bridge."
+      },
+      {
+       "text": "Search the south-eastern lizardman eggs."
+      },
+      {
+       "text": "Cast Battlefront Teleport and run south to Molch and enter the furthest east lizard dwelling.",
+       "notes": [
+        "Equip your ranging equipment on the way there."
+       ]
+      },
+      {
+       "text": "Use the egg on Kaht b'alam until you get the damp key."
+      },
+      {
+       "text": "Open the door that is located on the north wall of the main corridor. Go through the door and the gate.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Defeat Xamphur.",
+       "notes": [
+        "Pray Protect from Magic and Eagle Eye.",
+        "Kill the Phantom Hands when they spawn.",
+        "Avoid the crushing hands when he releases them by walking the entire length of the room north to south."
+       ]
+      },
+      {
+       "text": "Search the northern table in the lab."
+      },
+      {
+       "text": "Cast Battlefront Teleport and run north-west."
+      },
+      {
+       "text": "Return to the shack and speak to Commander Fullore."
+      },
+      {
+       "text": "Cast Arceuus Library Teleport and run west to the Tower of Magic, then climb upstairs and speak to Lord Trobin Arceuus."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Glade\".",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Xeric's Glade"
+        }
+       ]
+      },
+      {
+       "text": "Head east to the manor and speak to Lord Kandur Hosidius."
+      },
+      {
+       "text": "Teleport to Lovakengj via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "4",
+         "text": "'Jewellery of Jubilation' - Lovakengj"
+        }
+       ]
+      },
+      {
+       "text": "Head west to the <b>T-shaped building</b> and use the soda ash on the furnace to create molten glass."
+      },
+      {
+       "text": "Head west to the Lovakengj Assembly and speak to Lady Vulcana Lovakengj."
+      },
+      {
+       "text": "Teleport to Port Piscarilius via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "'The Fisher's Flute' - Piscarilius"
+        }
+       ]
+      },
+      {
+       "text": "Climb down to The Warrens via the manhole nearby."
+      },
+      {
+       "text": "Head west to the north-west tent, then go through the doorway and speak to Lady Shauna Piscarilius."
+      },
+      {
+       "text": "Teleport to Shayzien via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "'History and Hearsay' - Shayzien"
+        }
+       ]
+      },
+      {
+       "text": "Head north to the War Tent, then climb the ladder and speak to Lord Shiro Shayzien.",
+       "notes": [
+        "Switch to your melee equipment on the way"
+       ]
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Lookout\".",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Xeric's Lookout"
+        }
+       ]
+      },
+      {
+       "text": "Run east to the lookout and speak to Commander Fullore."
+      },
+      {
+       "text": "After the cutscene, finish the conversation with Commander Fullore."
+      },
+      {
+       "text": "Climb up the staircase once and speak to Lord Shayzien."
+      },
+      {
+       "text": "Climb up the staircase again and speak to Lady Lovakengj."
+      },
+      {
+       "text": "Climb up the staircase one more time and speak to Lady Piscarilius."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Lookout\".",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Xeric's Lookout"
+        }
+       ]
+      },
+      {
+       "text": "Speak to Lord Arceuus to receive the broken redirector."
+      },
+      {
+       "text": "Head inside the lookout and speak to Commander Fullore.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I need some help with Lady Lovakengj."
+        }
+       ]
+      },
+      {
+       "text": "Climb down the ladder and speak to Lord Hosidius."
+      },
+      {
+       "text": "Teleport to Shayzien via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "'History and Hearsay' - Shayzien"
+        }
+       ]
+      },
+      {
+       "text": "Head west and climb down the staircase to the Shayzien Prison."
+      },
+      {
+       "text": "Talk to Martin in the jail cells."
+      },
+      {
+       "text": "Teleport to Shayzien again via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "'History and Hearsay' - Shayzien"
+        }
+       ]
+      },
+      {
+       "text": "Head south-east and speak to Jorra.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Evil only triumphs when the good do nothing."
+        }
+       ]
+      },
+      {
+       "text": "Kill the assassin that spawns."
+      },
+      {
+       "text": "Speak to Jorra again to receive the declaration."
+      },
+      {
+       "text": "Cast Battlefront Teleport and run north-west."
+      },
+      {
+       "text": "Make your way to the summit of Mount Karuulm, climbing the rocks to the top."
+      },
+      {
+       "text": "Activate the elevator on the summit."
+      },
+      {
+       "text": "Head north and speak to the Tasakaal."
+      },
+      {
+       "text": "Use the volcanic sulphur on the defence potion, then speak to the Tasakaal again."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Honour\" at Mount Quidamortem.",
+       "chat": [
+        {
+         "key": "5",
+         "text": "Xeric's Honour"
+        }
+       ]
+      },
+      {
+       "text": "Talk to Stuliette and take the Lovakengj Minecart Network to Kourend Woodland.",
+       "chat": [
+        {
+         "key": "6",
+         "text": "Kourend Woodland"
+        }
+       ]
+      },
+      {
+       "text": "Run south to the Barbarian Camp and climb down the ladder."
+      },
+      {
+       "text": "Kill the Barbarian Warlord with melee, then speak to Phileas Rimor."
+      },
+      {
+       "text": "Exit the cave and run back north, then talk to Buneir and take the Lovakengj Minecart Network to the Wintertodt Camp.",
+       "chat": [
+        {
+         "key": "9",
+         "text": "Northern Tundras"
+        }
+       ]
+      },
+      {
+       "text": "Head north and use the shielding potion on the Doors of Dinh."
+      },
+      {
+       "text": "Teleport to Arceuus via Kharedst's memoirs.",
+       "chat": [
+        {
+         "key": "5",
+         "text": "'A Dark Disposition' - Arceuus"
+        }
+       ]
+      },
+      {
+       "text": "Head to the Arceuus Church. Climb the stairs, then head to the eastern end and climb the next stairs."
+      },
+      {
+       "text": "Speak to Mori to receive the dark nullifier."
+      },
+      {
+       "text": "Cast Battlefront Teleport and run south-east."
+      },
+      {
+       "text": "Head south-east to the Chasm of Fire and attempt to enter."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Glade\".",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Xeric's Glade"
+        }
+       ]
+      },
+      {
+       "text": "Head east to the vinery and inspect the wine barrel.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Climb through it."
+        }
+       ]
+      },
+      {
+       "text": "Picklock the chest to receive the Shayzien journal."
+      },
+      {
+       "text": "Use Xeric's talisman and teleport to \"Xeric's Lookout\".",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Xeric's Lookout"
+        }
+       ]
+      },
+      {
+       "text": "Speak to Lord Arceuus."
+      },
+      {
+       "text": "Head to the lookout's basement and speak to Lord Hosidius."
+      },
+      {
+       "text": "Head inside and speak to Lord Shayzien, Lady Lovakengj, and Lady Piscarilius as you climb up the lookout."
+      },
+      {
+       "text": "Climb back down and speak to Commander Fullore."
+      },
+      {
+       "text": "After the cutscene, finish the dialogue with Commander Fullore."
+      },
+      {
+       "text": "Climb back down and speak to Lord Hosidius."
+      },
+      {
+       "text": "Climb back up and speak to Commander Fullore for a long cutscene.",
+       "notes": [
+        "After pressing 1, you just hold space for 3:15 to finish the quest."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's do this."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "startStep": 5,
+   "kills": [
+    "Judge of Yama (Level 168)",
+    "2 assassins (Level 132)",
+    "Xamphur (level 239)",
+    "Barbarian Warlord (Level 91)"
+   ]
+  },
+  {
+   "name": "Sins of the Father",
+   "page": "Sins_of_the_Father/Speedrun_guide",
+   "revision": 14624209,
+   "start": "Speak to Veliaf Hurtz outside the church in Slepe.",
+   "skills": [
+    "Hitpoints 90",
+    "Attack 90",
+    "Strength 90",
+    "Defence 90",
+    "Ranged 90",
+    "Magic 90",
+    "Prayer 90",
+    "Woodcutting 70",
+    "Fletching 60",
+    "Crafting 65",
+    "Agility 65",
+    "Slayer 60"
+   ],
+   "items": [
+    "High-level melee equipment",
+    "15,000 coins",
+    "1 Drakan's medallion",
+    "1 Enchant ruby or topaz",
+    "1 Ruby",
+    "1 Ghostspeak amulet",
+    "Ectophial",
+    "1 Ivandis flail",
+    "3 stamina potion(4)",
+    "4 Saradomin brew(4)",
+    "2 super restore(4)",
+    "1 superantipoison(4)",
+    "5 shark",
+    "In bank:",
+    "• 50 adamant darts",
+    "• 3 stamina potion(4)",
+    "• 12 Saradomin brew(4)",
+    "• 6 super restore(4)",
+    "• 25 shark"
+   ],
+   "trophies": {
+    "bronze": "1:18:00",
+    "silver": "1:06:00",
+    "gold": "58:00",
+    "platinum": "54:00",
+    "diamond": "45:00"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Talk to Veliaf Hurtz.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Hameln the Jester inside the church.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Do you know how he fell ill?"
+        }
+       ]
+      },
+      {
+       "text": "Talk to Carl in the pub south-east of the church.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Where do you get your Bloody Bracers from?"
+        }
+       ]
+      },
+      {
+       "text": "Inspect the barrel south of the pub to follow Carl to his supplier.",
+       "notes": [
+        "Go through the church and hide at the north doors, wait there until he passes the doors.",
+        "Proceed to the hollow tree just north of the graves, and hide on the eastern side.",
+        "When he reaches the centre square of the town, hide at the northern side of the hollow tree directly next to the gallows.",
+        "Once he approaches the graveyard, hide at the western side of the hollow tree."
+       ]
+      },
+      {
+       "text": "After the cutscene, kill Kroy with the abyssal whip. Use Protect from Magic and Piety, and dodge his potion-throw attack."
+      },
+      {
+       "text": "Destroy <b>both</b> lab tables."
+      },
+      {
+       "text": "Leave the lab by clicking the southern gate."
+      },
+      {
+       "text": "Talk to Veliaf in the Slepe church graveyard.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Fair enough, so what now?"
+        }
+       ]
+      },
+      {
+       "text": "Home teleport to Lumbridge."
+      },
+      {
+       "text": "Run to Bob's Axes and purchase a Steel axe."
+      },
+      {
+       "text": "Use the ectophial and run westward to Paterdomus"
+      },
+      {
+       "text": "Talk to Veliaf Hurtz at Paterdomus.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "I see. So that's why you want to keep him safe, Veliaf?"
+        }
+       ]
+      },
+      {
+       "text": "Use the ectophial and run westwards to Fenkenstrain's Castle."
+      },
+      {
+       "text": "Talk to Ivan Strom south of the castle."
+      },
+      {
+       "text": "After the cutscene, run westwards to the Canifis General Store."
+      },
+      {
+       "text": "At the store, purchase a hammer, chisel, and knife. Sell your Bandos tassets (the coins are needed later)."
+      },
+      {
+       "text": "Return to east of Paterdomus and talk to Ivan.",
+       "notes": [
+        "Cut three vines from the swamp tree to the north-east.",
+        "Use the vines on each other to make a long vine.",
+        "Use the long vine on the swamp tree branch.",
+        "Swing across the water and continue the trek.",
+        "Kill the Nail beasts, use food on Ivan if his health becomes too low, and continue the trek.",
+        "Chop three logs and use them on the bridge.",
+        "Cross the bridge and continue the trek. <b>Keep the axe!</b>",
+        "Before the dialogue ends, attack the easternmost Vampyre (the one in-front of Ivan) so that it doesn't attack Ivan. Use your Ivandis Flail.",
+        "Continue the trek to end up in Burgh de Rott.",
+        "Talk to Ivan and complete the dialogue to send him to the boathouse."
+       ],
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'm ready."
+        }
+       ]
+      },
+      {
+       "text": "Head south-east of Burgh de Rott to the boat house and talk to Ivan Strom."
+      },
+      {
+       "text": "Board the boat and head to the Icyene graveyard.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "After the cutscene, finish the dialogue with Vanescula Drakan."
+      },
+      {
+       "text": "Unlock the mausoleum door north of you using this external website. Input the numbers as seen in-game."
+      },
+      {
+       "text": "Talk to everyone in this order:",
+       "notes": [
+        "Vertida Sefalatis.",
+        "Kael Forshaw.",
+        "Radigad Ponfit.",
+        "Polmafi Ferdygris.",
+        "Ivan Strom.",
+        "Veliaf Hurtz."
+       ]
+      },
+      {
+       "text": "Finish the conversation with Vanescula Drakan."
+      },
+      {
+       "text": "Use Drakan's medallion to teleport to Ver Sinhaza."
+      },
+      {
+       "text": "Exit westwards and purchase the vyrewatch outfit from Trader Sven."
+      },
+      {
+       "text": "Equip the vyrewatch outfit to minimise the chances of vyrewatch disruption."
+      },
+      {
+       "text": "Run to the laboratory entrance, using the shortcut doors on the rooftop route."
+      },
+      {
+       "text": "Head downstairs to the laboratory entrance (south-eastwards from the mine, in the house with the slashed tapestry)"
+      },
+      {
+       "text": "Re-equip your Bandos armour and primordial boots, then talk to Safalaan.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Shall we get going then?"
+        }
+       ]
+      },
+      {
+       "text": "Kill the Mutated Bloodveld."
+      },
+      {
+       "text": "Talk to Safalaan again."
+      },
+      {
+       "text": "Search the bookshelf on the western wall inside the room filled with mutated bloodvelds."
+      },
+      {
+       "text": "Talk to Safalaan.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Sure. Here you go."
+        }
+       ]
+      },
+      {
+       "text": "Teleport to Ver Sinhaza, then exit westwards."
+      },
+      {
+       "text": "Climb the wall at the south-west corner, climb the floor, and then the rocks to reach the boat."
+      },
+      {
+       "text": "Board the boat.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Veliaf at the eastern part of the graveyard."
+      },
+      {
+       "text": "Teleport to Ver Sinhaza, and go down the trapdoor in Old Man Ral's house to the west."
+      },
+      {
+       "text": "Talk to Polmafi Ferdygris.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Here you go."
+        }
+       ]
+      },
+      {
+       "text": "Return to the Icyene Graveyard via the Meiyerditch boat.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Vanescula Drakan."
+      },
+      {
+       "text": "Use the ectophial and travel to Slepe via Andras up north."
+      },
+      {
+       "text": "Wield your Ivandis Flail if you haven't already, and drink a dose of your superantipoison."
+      },
+      {
+       "text": "Talk to Veliaf at the graveyard.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's do this."
+        }
+       ]
+      },
+      {
+       "text": "Kill Damien Leucurte. Use Protect from Magic and Piety, and stomp out the magical fires that periodically spawn."
+      },
+      {
+       "text": "Talk to Veliaf."
+      },
+      {
+       "text": "Use the ectophial and travel to Slepe via Andras up north."
+      },
+      {
+       "text": "Upon arrival, return to the Icyene Graveyard via the other boat.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Vanescula Drakan."
+      },
+      {
+       "text": "Wear the vyre noble clothing."
+      },
+      {
+       "text": "Teleport to Ver Sinhaza."
+      },
+      {
+       "text": "Bank to clear 8 inventory spaces by depositing your potions and food. Keep the axe."
+      },
+      {
+       "text": "Ask the vyrewatch by the bank to send you to the mines.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Send me to the mines."
+        }
+       ]
+      },
+      {
+       "text": "Talk to a Vampyre Juvinate to exit the mine."
+      },
+      {
+       "text": "Go through the crack north of the mining hole."
+      },
+      {
+       "text": "Head to the Arboretum. (The tree icon east of the bank in Darkmeyer.)"
+      },
+      {
+       "text": "Finish the dialogue with the guard Desmodus Lasiurus."
+      },
+      {
+       "text": "Head to the house with a water symbol north-east of the furnace, along the east wall near the crack."
+      },
+      {
+       "text": "Talk to Mordan Nikazsi."
+      },
+      {
+       "text": "Head to the prison in the northern part of Darkmeyer, north of the Arboretum."
+      },
+      {
+       "text": "Talk to Maria Gadderanks."
+      },
+      {
+       "text": "Talk to Desmodus Lasiurus."
+      },
+      {
+       "text": "Enter the Arboretum."
+      },
+      {
+       "text": "Search the toppled shelves for an old note."
+      },
+      {
+       "text": "Read it, and take note of how many gallons the tree requires to be cut. Set the north and south valve to the given values in accordance to the table below."
+      },
+      {
+       "text": "Cut eight blisterwood logs."
+      },
+      {
+       "text": "Use the ectophial and travel to Slepe via Andras up north, then sail back to the Icyene Graveyard via the Slepe dock up north.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "Speak to Veliaf/Vanescula."
+      },
+      {
+       "text": "Teleport to Ver Sinhaza."
+      },
+      {
+       "text": "Exit westwards, and go down the trapdoor in Old Man Ral's house."
+      },
+      {
+       "text": "Talk to Vertida Sefalatis and give him 7 Blisterwood logs.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Here you go."
+        }
+       ]
+      },
+      {
+       "text": "Create the blisterwood flail.",
+       "notes": [
+        "Search the nearby crate for a silver sickle (b).",
+        "Use the ruby on the sickle.",
+        "Use the enchant ruby or topaz tablet on the ruby sickle (b).",
+        "Use the blisterwood log on the enchanted ruby sickle (b).",
+        "Use the Ivandis flail on the blisterwood sickle."
+       ]
+      },
+      {
+       "text": "Teleport to Ver Sinhaza. Withdraw the adamant darts and combat supplies from the bank. Do not deposit your coins."
+      },
+      {
+       "text": "Use the ectophial and travel to Slepe via Andras up north, then go back to the Icyene Graveyard via the Slepe dock.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Icyene Graveyard."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Veliaf Hurtz."
+      },
+      {
+       "text": "Talk to Safalaan Hallow, north-east of the graveyard.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'm ready."
+        }
+       ]
+      },
+      {
+       "text": "After the cutscene, kill Vanstrom Klause whilst using Protect from Magic and Piety. He uses three special attacks, doing so every 8-10 attacks, and never uses the same one twice in a row.",
+       "notes": [
+        "\"My pets will feast on your corpse!\" - Acidic Bloodveld is spawned and will explode on the player for high damage. Use your adamant darts to kill it quickly.",
+        "\"Blood will be my strength!\" - A blood orb spawns that periodically heals Vanstrom. Walking on top of it (3x3 area) damages the player, but Vanstrom can be lured on top to damage him.",
+        "\"Stare into darkness!\" - Heavy damage is taken if the player is facing Vanstrom. The attack gives very little warning and is near impossible to avoid on reaction. It is recommended that the player keep a count of how many attacks Vanstrom has done and turn around preemptively.",
+        "After you deplete his health, he will heal himself 200 hitpoints and stop using his special attacks.",
+        "Protection prayers are no longer effective; use Piety and Redemption.",
+        "Vanstrom summons lightning to strike tiles with a max hit of 46. Tiles that are about to be struck will have a dark circle on them and should be avoided."
+       ]
+      },
+      {
+       "text": "Watch the cutscene to complete the quest."
+      }
+     ]
+    }
+   ],
+   "startStep": 0,
+   "kills": [
+    "Kroy (level 133)",
+    "Nail beast (level 143 &amp; 67 twice)",
+    "Vampyre Juvinate (level 119) twice",
+    "Mutated Bloodveld (level 123)",
+    "Damien Leucurte (level 204)",
+    "Vampyre Juvenile (level 122)",
+    "Vanstrom Klause (level 459)"
+   ]
+  },
+  {
+   "name": "Dragon Slayer II",
+   "page": "Dragon_Slayer_II/Speedrun_guide",
+   "revision": 15359820,
+   "start": "Speak to Alec Kincade outside the Myths' Guild.",
+   "skills": [
+    "Hitpoints 95",
+    "Attack 95",
+    "Strength 95",
+    "Defence 95",
+    "Ranged 95",
+    "Magic 95",
+    "Prayer 95",
+    "Smithing 70",
+    "Mining 68",
+    "Crafting 62",
+    "Agility 80",
+    "Thieving 70",
+    "Construction 50"
+   ],
+   "items": [
+    "High-tier melee combat equipment",
+    "50,000 coins",
+    "15 Teleport to house tablets",
+    "Catspeak amulet(e)",
+    "Ghostspeak amulet",
+    "Ectophial",
+    "Seal of Passage",
+    "Lunar staff",
+    "3 stamina potion(4)",
+    "4 Saradomin brew(4)",
+    "2 super restore(4)",
+    "1 anti-venom+(4)",
+    "5 shark",
+    "In bank:",
+    "• High-tier ranged equipment, including the dragon hunter crossbow",
+    "• Salve amulet(ei)",
+    "• Anti-dragon shield",
+    "• Sarachnis cudgel",
+    "• Dragonstone",
+    "• 9 stamina potion(4)",
+    "• 24 Saradomin brew(4)",
+    "• 16 super restore(4)",
+    "• 35 shark"
+   ],
+   "trophies": {
+    "bronze": "2:20:00",
+    "silver": "1:50:00",
+    "gold": "1:30:00",
+    "platinum": "1:20:00",
+    "diamond": "1:00:00"
+   },
+   "sections": [
+    {
+     "title": "Speedrun",
+     "steps": [
+      {
+       "text": "Before beginning the speedrun, set up for the quest and use the catspeak amulet to locate Bob the Cat to quickly reach him later during the speedrun."
+      }
+     ]
+    },
+    {
+     "title": "Starting off",
+     "steps": [
+      {
+       "text": "Talk to Alec Kincade.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "How can I gain access to the Guild?"
+        },
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Use the Teleport to house tablet, then use the portal nexus and press P."
+      },
+      {
+       "text": "Head inside the Troll Stronghold, and run southwards towards the stone staircase."
+      },
+      {
+       "text": "Climb down and then climb down the next set of stairs north-east."
+      },
+      {
+       "text": "Head north to the storeroom and steal one goutweed; use this map for help."
+      },
+      {
+       "text": "Teleport to your house, then use the ornate jewellery box; Press P to teleport to Karamja."
+      },
+      {
+       "text": "Head south and talk to Dallas Jones at the Karamja pub at Musa Point.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Yes I know it well."
+        }
+       ]
+      },
+      {
+       "text": "Head east and drop your sharks."
+      },
+      {
+       "text": "Purchase the following from a Trader Crewmember: hammer, tinderbox, and x10 swamp paste."
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "Go to Baba Yaga's Magic Shop and purchase one astral rune, along with 50 of the following runes: air, water, earth, fire, law, blood."
+      },
+      {
+       "text": "At the Lunar Isle bank, deposit your inventory and withdraw the following items: Teleport runes, coins, house tablets, seal of passage, stamina potion, hammer, swamp paste, catspeak amulet, and lunar staff."
+      },
+      {
+       "text": "Teleport to your house, then right-click the ornate jewellery box and teleport back to Karamja."
+      },
+      {
+       "text": "Go to Elvarg's lair under Crandor. Before climbing over the wall, grab the pickaxe from the nearby rock."
+      },
+      {
+       "text": "Climb over into Elvarg's lair and talk to Dallas."
+      },
+      {
+       "text": "Right-click use the bronze pickaxe on the blockage in the northern wall of the room, then enter the tunnel."
+      },
+      {
+       "text": "Drop the bronze pickaxe."
+      },
+      {
+       "text": "Investigate the Ancient Mural by the pool. Kill the spawn."
+      },
+      {
+       "text": "Investigate the mural again."
+      },
+      {
+       "text": "Talk to Dallas."
+      }
+     ]
+    },
+    {
+     "title": "To Lithkren!",
+     "steps": [
+      {
+       "text": "Teleport to your house, and use the mounted digsite pendant in the portal nexus room to teleport to the House on the Hill.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Fossil Island"
+        }
+       ]
+      },
+      {
+       "text": "Climb down the trapdoor and talk to Dallas.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "So how do we know which island to go to?"
+        }
+       ]
+      },
+      {
+       "text": "Drop enough items to have 24 free inventory spaces (you will pick them back up later)."
+      },
+      {
+       "text": "Search the open chest north of the map for 5 pieces."
+      },
+      {
+       "text": "Go upstairs, search the open stone chest on the north wall for 3 pieces."
+      },
+      {
+       "text": "Climb back up, then climb down the west staircase. Search the fungi directly north of it for 4 pieces."
+      },
+      {
+       "text": "Search the hook briar directly north of the bridge for 7 pieces."
+      },
+      {
+       "text": "Run all the way east and search the large mushtree for 5 pieces."
+      },
+      {
+       "text": "Talk to Dallas Jones until he takes the map pieces, then <b>pick up your items</b> from the floor."
+      },
+      {
+       "text": "Solve the map puzzle; click to rotate, drag to swap.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Let's talk about the investigation."
+        },
+        {
+         "key": "1",
+         "text": "Let's do it!"
+        }
+       ]
+      },
+      {
+       "text": "Cast Lumbridge Teleport, and purchase a steel axe from Bob's Brilliant Axes."
+      },
+      {
+       "text": "Teleport to your house, then use the digsite pendant to teleport to the digsite",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Digsite"
+        }
+       ]
+      },
+      {
+       "text": "Run to the sawmill then chop the oak trees nearby for eight oak logs."
+      },
+      {
+       "text": "Head to the Sawmill Operator and purchase a saw and 50 steel nails."
+      },
+      {
+       "text": "Make 8 oak planks via the Buy-plank option on the Sawmill Operator."
+      },
+      {
+       "text": "Teleport to house then fairy ring to <b>ALP</b>."
+      },
+      {
+       "text": "Walk into the lighthouse and go up to the 1st floor"
+      },
+      {
+       "text": "Trade Jossik and purchase a pestle and mortar."
+      },
+      {
+       "text": "Teleport to your house, and use the mounted digsite pendant to teleport to the Digsite.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Digsite"
+        }
+       ]
+      },
+      {
+       "text": "Run east and select the \"Quick-Travel\" option on the barge guard."
+      },
+      {
+       "text": "Talk to Jardric at the Museum Camp."
+      },
+      {
+       "text": "Run north-west to the rowboat space ( map icon) and build the boat."
+      },
+      {
+       "text": "Talk to Dallas and board the boat.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "I'm ready."
+        }
+       ]
+      },
+      {
+       "text": "Drop your steel axe, saw, and any extra nails."
+      },
+      {
+       "text": "Head north-west from the boat to the ruined courtyard, and climb up the western stairs."
+      },
+      {
+       "text": "Climb down the trapdoor to the south, down the staircase to the north, and north down another staircase."
+      },
+      {
+       "text": "Talk to Dallas."
+      },
+      {
+       "text": "Search the skeleton to the east and read Aivas' diary."
+      },
+      {
+       "text": "Talk to Dallas again. Drop the diary."
+      }
+     ],
+     "images": [
+      {
+       "file": "Dragon Slayer II map puzzle solution.png",
+       "caption": "The solved map puzzle."
+      }
+     ]
+    },
+    {
+     "title": "Robert the Strong",
+     "steps": [
+      {
+       "text": "Teleport out and search for and speak to Bob the Cat.",
+       "notes": [
+        "It helps to pre-scout his location before starting the run. You can use the catspeak amulet(e) to help find him."
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the Spiritual Fairy Tree code <b>DLQ</b>."
+      },
+      {
+       "text": "Run south-west to the tent west of the Agility Pyramid, and enter the nearby rock to reach Sophanem."
+      },
+      {
+       "text": "Talk to the Sphinx.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Ask the Sphinx for help with Bob's memories."
+        }
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "Destroy the catspeak amulet."
+      },
+      {
+       "text": "Head to the Oneiromancer and talk to her.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Bob's memories."
+        },
+        {
+         "key": "2",
+         "text": "No."
+        }
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "Withdraw the following items from the bank: astral rune, tinderbox, goutweed, ghostspeak amulet, dragonstone, ectophial, and combat supplies. Swap your abyssal whip with Sarachnis cudgel."
+      },
+      {
+       "text": "Fill the dream vial with water in the building west of the bank."
+      },
+      {
+       "text": "Crush the astral rune with the hammer, then grind the astral rune shards with the pestle and mortar."
+      },
+      {
+       "text": "Use the goutweed and ground astral rune on the dream vial."
+      },
+      {
+       "text": "Drop the pestle and mortar."
+      },
+      {
+       "text": "Use the tinderbox on the Ceremonial Brazier and use the dream potion on it.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Not Bob."
+      },
+      {
+       "text": "Defeat Robert the Strong.",
+       "notes": [
+        "He can hit heavy damage through Protect from Missiles but it reduces damage taken. Using piety is recommended to speed up the fight, as the most challenging part about this fight is lasting long enough through the damage taken.",
+        "When he shouts \"See if you can hide from this!\", run behind one of the pillars to avoid his special attack. If it hits you, it can deal up to 60 damage and will knock off your prayers."
+       ]
+      },
+      {
+       "text": "Talk to Bob after exiting the dream."
+      }
+     ]
+    },
+    {
+     "title": "The Dragon Key",
+     "steps": [
+      {
+       "text": "Teleport to your house, then use the portal nexus and press 9."
+      },
+      {
+       "text": "Purchase the following from a Trader Crewmember in the Catherby dock: 1 glassblowing pipe, 2 soda ash, 2 buckets of sand"
+      },
+      {
+       "text": "Charter a ship to Brimhaven.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "Okay, don't ask again."
+        }
+       ]
+      },
+      {
+       "text": "Exit the docks and travel to Shilo Village via Hajedy."
+      },
+      {
+       "text": "Purchase a spade and candle from Obli's General Store just west. Light the candle and drop your tinderbox."
+      },
+      {
+       "text": "Right-click \"Coffer\" on the village furnace and deposit 40 coins.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Deposit coins"
+        }
+       ]
+      },
+      {
+       "text": "Make two pieces of molten glass at the furnace eastward.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Pay 20 coins and don't ask again."
+        }
+       ]
+      },
+      {
+       "text": "If you need more food/stamina, withdraw them from the bank."
+      },
+      {
+       "text": "Exit the village and climb the vine agility shortcut east of the entrance."
+      },
+      {
+       "text": "Run south-east towards the Karamjan Temple."
+      },
+      {
+       "text": "Take the key piece from the plinth."
+      },
+      {
+       "text": "Cast Varrock Teleport and make your way to Reldo in the Varrock Castle library.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Ask about Tristan."
+        }
+       ]
+      },
+      {
+       "text": "Search the second bookcase from the north on the west side of the central row (see picture)."
+      },
+      {
+       "text": "Use the Varrock census records on Reldo."
+      },
+      {
+       "text": "Go to Port Phasmatys and speak to Sarah, west of the bank."
+      },
+      {
+       "text": "Teleport to your house, then use the mounted xeric's talisman in the portal nexus and press 1. Use the restoration pool if needed."
+      },
+      {
+       "text": "Run west to the Graveyard of Heroes and enter the Shayzien Crypts. Drop your ghostspeak amulet."
+      },
+      {
+       "text": "Head to the bottom of the crypt and inspect the tomb to find the puzzle."
+      },
+      {
+       "text": "The solution to the puzzle is different for everyone. Refer to the table below to solve this puzzle.",
+       "notes": [
+        "\"The one from <b>[Location]</b> sat at the north of the table\": Place this statue <b>north</b>.",
+        "\"Opposite the one with <b>[Weapon]</b>\": Place this statue <b>south.</b>",
+        "\"The one with <b>[Weapon]</b> asked the.....\": Place this statue <b>west.</b>",
+        "Place the final statue <b>east</b>."
+       ]
+      },
+      {
+       "text": "Search the tomb to get the dragon key piece."
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press B to get to Draynor Manor. Drop your candle."
+      },
+      {
+       "text": "Make your way to Ava in Draynor Manor.",
+       "chat": [
+        {
+         "key": "3",
+         "text": "I need your help with a key piece."
+        }
+       ]
+      },
+      {
+       "text": "Use your glassblowing pipe on your dragonstone and use the inert locator orb on Ava to get a locator orb."
+      },
+      {
+       "text": "Teleport to your house, then use the Spiritual Fairy Tree code <b>BKR</b>."
+      },
+      {
+       "text": "Use the locator to find the buried key piece; the location is randomised every time the player resets the speedrun."
+      },
+      {
+       "text": "The closest teleport to most of the dig spots is the <b>BKR</b> fairy ring. <b>CKR</b> and <b>BIP</b> are marginally faster to get to one dig spot each, but it's not worth using them. <b>ALQ</b> can save 30 seconds getting to a single dig spot, the leftmost magenta one.",
+       "notes": [
+        "Start at <b>BKR</b> and feel your locator device.",
+        "If you get north-east, it will always be the lone purple spot that you need to cross the bridge to get to.",
+        "If you get south-west, south, or south-east, go to the centre of the subdivided area and scan again. For example, if you got west, go to the centre of the blue subdivision and scan there again. If you get west again, you've narrowed it down to a single dig spot.",
+        "If you get east, you want to figure out if going to <b>ALQ</b> would be faster. To do this, move a bit south-east to the centre of the black subdivision and scan. If it says north-east, go back to the <b>BKR</b> fairy ring and teleport to <b>ALQ</b>. Otherwise, run south-east and get to the centre of the magenta subdivision."
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "At the bank, deposit the seal of passage, locator orb, glassblowing pipe, spade, and ectophial.",
+       "notes": [
+        "You can bank at the eastern stall even without a seal of passage."
+       ]
+      },
+      {
+       "text": "Withdraw the blood runes, ranged equipment, salve amulet(ei), antivenom, and additional supplies."
+      },
+      {
+       "text": "Talk to the Sirsal Banker and get kicked out to Rellekka."
+      },
+      {
+       "text": "Make your way to Brundt the Chieftain.",
+       "chat": [
+        {
+         "key": "4",
+         "text": "Ask about the dragonkin fortress."
+        }
+       ]
+      },
+      {
+       "text": "Head north to Torfinn and sail to Ungael."
+      },
+      {
+       "text": "Defeat Vorkath.",
+       "notes": [
+        "Use ruby bolts (e) until he has 150 hp, then switch to diamond bolts (e).",
+        "The death spawn only deals around 20 damage - you can shoot it with a bolt or just tank it.",
+        "Near the end of the fight, start moving to the north side of the arena."
+       ]
+      },
+      {
+       "text": "Climb over the ice chunks in the north of the crater and walk along the path to the north-west of the island to enter the laboratory."
+      },
+      {
+       "text": "Pull the lever in the south-west section, then run to the room on the east wall."
+      },
+      {
+       "text": "Search the stone chest for a dragon key piece and an ancient key."
+      },
+      {
+       "text": "Teleport to your house, then use the ornate jewellery box; Press 6 to teleport to the Barbarian Outpost."
+      },
+      {
+       "text": "Go to the Ancient Cavern by running south to the whirlpool."
+      },
+      {
+       "text": "Descend the stairs and run south to another set of stairs which lead to the to the mithril dragon area."
+      },
+      {
+       "text": "Run west and open the mithril door in the middle of the area (with the three mithril dragons clumped together)."
+      },
+      {
+       "text": "Cast Fire Wave on the three dragon heads."
+      },
+      {
+       "text": "Leave the room and go east down the staircase, and then go to the south-western area of the caverns, and climb up the rough hewn steps there."
+      },
+      {
+       "text": "Use one of the anvils here to forge the dragon key.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Teleport to your house, and use the mounted digsite pendant in the portal nexus room to teleport to the House on the Hill.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Fossil Island"
+        }
+       ]
+      },
+      {
+       "text": "Use the Magic Mushtree to get to 4. Mushroom Meadow, then run to the boat you repaired earlier."
+      },
+      {
+       "text": "Return to Dallas on Lithkren. Use the dragon key on the ancient doors."
+      },
+      {
+       "text": "Enter the doors, head up north, and talk to Dallas to start the cutscene."
+      },
+      {
+       "text": "After the cutscene, make sure Jardric and Bob depart before continuing."
+      }
+     ],
+     "images": [
+      {
+       "file": "Dragon Slayer II - Karamjan Temple maze route.png",
+       "caption": "The route to the centre of the temple's maze. This map is flipped, making the top part south, and bottom part north."
+      },
+      {
+       "file": "Dragon Slayer II crypt map.png",
+       "caption": "Map of the crypt."
+      },
+      {
+       "file": "Dragon Slayer II - Morytania key piece dig strategy.png",
+       "caption": "A map of possible key piece locations, which splits Mort Myre Swamp into 6 sections, starting at the BKR fairy ring, then further subdivides sections past that."
+      }
+     ]
+    },
+    {
+     "title": "A World United",
+     "steps": [
+      {
+       "text": "Cast Varrock Teleport and make your way north to King Roald.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Talk about the dragon threat."
+        }
+       ]
+      },
+      {
+       "text": "Cast Falador Teleport and make your way south towards White Knights' Castle."
+      },
+      {
+       "text": "Climb up the western staircase and then another, then speak to Sir Amik Varze.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Talk about the dragon threat."
+        }
+       ]
+      },
+      {
+       "text": "Cast Ardougne Teleport and make your way west towards Ardougne Castle."
+      },
+      {
+       "text": "Climb up the staircase, then speak to King Thoros.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Talk about the dragon threat."
+        }
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "Talk to the Sirsal Banker and get kicked out to Rellekka. If Bouquet Mac Hyacinth is closer (on the east side of the bank), talk to her instead."
+      },
+      {
+       "text": "Make your way to Brundt the Chieftain.",
+       "chat": [
+        {
+         "key": "4",
+         "text": "Ask about the dragon threat."
+        }
+       ]
+      },
+      {
+       "text": "Return to Varrock and enter the dining room north of the throne room.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "It's a good plan."
+        }
+       ]
+      },
+      {
+       "text": "Talk to Bob after exiting the dining room."
+      }
+     ]
+    },
+    {
+     "title": "The Assault",
+     "steps": [
+      {
+       "text": "Teleport to your house, then use the portal nexus and press K."
+      },
+      {
+       "text": "At the bank, deposit your inventory and withdraw ranged combat supplies.",
+       "notes": [
+        "Bring one house tab to teleport out after Galvek.",
+        "Bring all three types of bolts. It is the best damage on average to use runite bolts for all of the weaker dragons up until the black dragon, then switch to ruby and diamond bolts (e).",
+        "Ruby bolts (e) are stronger until each dragon is at about 150hp, at which point diamond bolts (e) become stronger.",
+        "Bring an antivenom for the adamant dragon.",
+        "Leave four spaces open for the ship ride."
+       ]
+      },
+      {
+       "text": "Talk to the Sirsal Banker and get kicked out to Rellekka."
+      },
+      {
+       "text": "Talk to Torfinn.",
+       "chat": [
+        {
+         "key": "1",
+         "text": "Yes."
+        }
+       ]
+      },
+      {
+       "text": "Hold off the assault on your ship for 4 minutes.",
+       "notes": [
+        "Click leaks to fill them.",
+        "Click fires to douse them.",
+        "Click injured Fremennik warriors to heal them.",
+        "Click damaged masts to repair them."
+       ]
+      },
+      {
+       "text": "Make your way towards Varrock's grand ship, fighting a red dragon, iron dragon, and brutal green dragon on the way."
+      },
+      {
+       "text": "Kill the two green and two blue dragons battling the Varrockian soldiers.",
+       "notes": [
+        "Starting with the black dragon, switch to ruby and diamond bolts (e)."
+       ]
+      },
+      {
+       "text": "Kill the black, steel, and brutal red dragons that arrive on the ship one at a time.",
+       "notes": [
+        "When Galvek does a casting animation, <b>run away from your current location.</b>",
+        "Use protect from melee and stand in melee distance for the black and steel dragons, then switch back to protect from magic."
+       ]
+      },
+      {
+       "text": "Kill the mithril, adamant, and rune dragons that arrive on the ship one at a time.",
+       "notes": [
+        "These three dragons have a melee, ranged, magic, and dragonfire attack.",
+        "The adamant dragon also has two special attacks:",
+        "A ranged attack with the Blood Forfeit effect (hits through Protect from Missiles).",
+        "A poison attack that splashes and lands on nearby squares dealing lots of damage. Drink antivenom to lessen the damage.",
+        "The rune dragon also has two special attacks:",
+        "A ranged attack with the Life Leech effect (hits through Protect from Missiles).",
+        "An electric attack that hits nearby squares and arcs around the player, dealing rapid damage."
+       ]
+      },
+      {
+       "text": "Kill Galvek - he has four phases that have 300 hitpoints each.",
+       "notes": [
+        "Keep avoiding his ground-targeted fireballs.",
+        "Turn your prayers back on after his pink dragonfire knocks them off.",
+        "Setting your quick prayers to Protect from Magic and Eagle Eye is beneficial to counter this attack.",
+        "Use Protect from Magic in phase 1, use Protect from Missiles in phases 2, 3 and 4.",
+        "Phase 1: Drops eight fire traps- don't get near them or you will be hit for all your health. Stay along the north side of the ship, one square directly south of Galvek, and run two squares south from your location to avoid the fireball, and return to your original position once the attack has failed to hit you.",
+        "Phase 2: Launches transparent projectile which drains stats, especially run energy.",
+        "Phase 3: Summons waves from either the north or south end, avoid them by standing in the gap. Turn off auto retaliate to not get pulled away from the gap.",
+        "Phase 4: Launches earth projectiles. Avoid these or you will be bound, and probably die."
+       ]
+      },
+      {
+       "text": "Teleport to your house, then use the Spiritual Fairy Tree.",
+       "chat": [
+        {
+         "key": "5",
+         "text": "Feldip Hills"
+        }
+       ]
+      },
+      {
+       "text": "Return to Alec Kincade outside the Myths' Guild to finish the quest.",
+       "chat": [
+        {
+         "key": "2",
+         "text": "Let's talk about my quest."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "startStep": 1
+  }
+ ]
+}
