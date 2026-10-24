@@ -44,6 +44,7 @@ class GuidePanel extends PluginPanel
 	private static final String MUTED_HEX = "#a0a0a0";
 	private static final int TEXT_WIDTH = 150;
 	private static final Color DONE_COLOR = new Color(120, 120, 120);
+	private static final Color UNTESTED_COLOR = new Color(230, 160, 40);
 	private static final Border CURRENT_BORDER = BorderFactory.createCompoundBorder(
 		BorderFactory.createMatteBorder(0, 3, 0, 0, ColorScheme.BRAND_ORANGE),
 		BorderFactory.createEmptyBorder(5, 3, 5, 5));
@@ -53,6 +54,7 @@ class GuidePanel extends PluginPanel
 	private final JComboBox<String> questBox = new JComboBox<>();
 	private final JPanel trophies = new JPanel(new GridLayout(2, 5, 2, 0));
 	private final JLabel progress = new JLabel();
+	private final JLabel untested = new JLabel();
 	private final JPanel body = new JPanel();
 	private final List<JPanel> rows = new ArrayList<>();
 	private boolean updatingBox;
@@ -90,6 +92,13 @@ class GuidePanel extends PluginPanel
 		top.add(questBox);
 		top.add(gap(6));
 
+		untested.setAlignmentX(LEFT_ALIGNMENT);
+		untested.setFont(FontManager.getRunescapeSmallFont());
+		untested.setForeground(UNTESTED_COLOR);
+		untested.setToolTipText("Paths and highlights for this quest come from the wiki and Quest Helper and haven't been played through yet");
+		top.add(untested);
+		top.add(gap(4));
+
 		trophies.setAlignmentX(LEFT_ALIGNMENT);
 		trophies.setToolTipText("Trophy times from the wiki; beat them on the in-game timer");
 		top.add(trophies);
@@ -123,6 +132,8 @@ class GuidePanel extends PluginPanel
 
 	void showGuide(Guide guide, int step)
 	{
+		untested.setText(guide.isTested() ? "" : "Route not checked in game yet");
+		untested.setVisible(!guide.isTested());
 		updatingBox = true;
 		questBox.setSelectedItem(guide.getName());
 		updatingBox = false;

@@ -34,6 +34,8 @@ public class Guide
 	private List<Tip> tips = Collections.emptyList();
 	/** Index into {@link #steps()} of the step that starts the quest; earlier steps are set-up. */
 	private int startStep;
+	/** The route has been played through in game; others are marked as not checked yet. */
+	private boolean tested;
 	/** The variable holding the quest's progress, if the route has steps tied to it. */
 	@Nullable
 	private Progress progress;

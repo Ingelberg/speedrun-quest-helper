@@ -78,6 +78,10 @@ class RouteTracker
 
 	private WorldPoint pathFrom;
 	private List<WorldPoint> pathGoals;
+	/** The step whose waypoints {@link #viaReached} counts. */
+	@Nullable
+	private Guide.Step viaStep;
+	private int viaReached;
 
 	@Inject
 	RouteTracker(Client client, ItemManager itemManager)
@@ -174,7 +178,13 @@ class RouteTracker
 		{
 			to = step.getTarget().worldPoint();
 			label = step.getTarget().getLabel();
-			goals = goals(step, here, to);
+			if (step != viaStep)
+			{
+				viaStep = step;
+				viaReached = 0;
+			}
+			viaReached = reached(step, here, to, viaReached);
+			goals = goals(step, here, to, viaReached);
 		}
 		target = to;
 		targetLabel = label;
@@ -202,36 +212,61 @@ class RouteTracker
 	}
 
 	/**
-	 * The points the path should go through from here: on another floor, the first waypoint on
-	 * this floor (such as a ladder); on the target's floor, the waypoints not yet passed, then
-	 * the target. A waypoint counts as passed once you are closer to the target than it is.
+	 * The points the path should go through from here, starting at waypoint {@code from} (the
+	 * ones before it are reached). On another floor than the target, that is the next waypoint
+	 * on this floor (such as a ladder). Otherwise it is the waypoints on this floor in a row,
+	 * then the target, unless a waypoint on another floor comes first: routes like the Black
+	 * Knights' Fortress go up and down several times on the way.
 	 */
-	static List<WorldPoint> goals(Guide.Step step, WorldPoint here, WorldPoint to)
+	static List<WorldPoint> goals(Guide.Step step, WorldPoint here, WorldPoint to, int from)
 	{
+		List<Guide.Target> via = step.getVia();
 		if (to.getPlane() != here.getPlane())
 		{
-			for (Guide.Target via : step.getVia())
+			for (int i = from; i < via.size(); i++)
 			{
-				if (via.getPlane() == here.getPlane())
+				if (via.get(i).getPlane() == here.getPlane())
 				{
-					return Collections.singletonList(via.worldPoint());
+					return Collections.singletonList(via.get(i).worldPoint());
 				}
 			}
 			return Collections.emptyList();
 		}
 		List<WorldPoint> goals = new ArrayList<>();
-		int left = here.distanceTo2D(to);
-		for (Guide.Target via : step.getVia())
+		for (int i = from; i < via.size(); i++)
 		{
-			WorldPoint wp = via.worldPoint();
-			if (wp.getPlane() == here.getPlane() && wp.distanceTo2D(to) < left - WAYPOINT_REACH
-				&& wp.distanceTo2D(here) > WAYPOINT_REACH)
+			WorldPoint wp = via.get(i).worldPoint();
+			if (wp.getPlane() != here.getPlane())
 			{
-				goals.add(wp);
+				return goals;
 			}
+			goals.add(wp);
 		}
 		goals.add(to);
 		return goals;
+	}
+
+	/**
+	 * How many of the step's waypoints are behind you: one is reached when you get near it on
+	 * its floor, or, on the target's floor, once you are closer to the target than it is.
+	 */
+	static int reached(Guide.Step step, WorldPoint here, @Nullable WorldPoint to, int from)
+	{
+		List<Guide.Target> via = step.getVia();
+		int r = from;
+		while (r < via.size())
+		{
+			WorldPoint wp = via.get(r).worldPoint();
+			boolean near = wp.getPlane() == here.getPlane() && wp.distanceTo2D(here) <= WAYPOINT_REACH;
+			boolean passed = to != null && wp.getPlane() == here.getPlane() && to.getPlane() == here.getPlane()
+				&& wp.distanceTo2D(to) >= here.distanceTo2D(to) - WAYPOINT_REACH;
+			if (!near && !passed)
+			{
+				break;
+			}
+			r++;
+		}
+		return r;
 	}
 
 	/** Paths from one goal to the next, joined, stopping where a goal is outside the loaded area. */

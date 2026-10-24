@@ -348,11 +348,20 @@ ROUTE_FIELDS = ("npcs", "npcIds", "objectIds", "shop", "ground", "target", "done
 def apply_routes(name, sections, routes):
     """Merges the hand-checked extras from routes.json into the wiki steps."""
     for entry in routes.get(name, {}).get("steps", []):
-        for sec in sections:
-            found = next((i for i, st in enumerate(sec["steps"]) if plain(st["text"]).startswith(entry["match"])), None)
+        # 'occurrence' picks the nth step with that start, for steps the wiki repeats word for word
+        wanted = entry.get("occurrence", 1)
+        seen = 0
+        sec = found = None
+        for s in sections:
+            for i, st in enumerate(s["steps"]):
+                if plain(st["text"]).startswith(entry["match"]):
+                    seen += 1
+                    if seen == wanted:
+                        sec, found = s, i
+                        break
             if found is not None:
                 break
-        else:
+        if found is None:
             raise SystemExit(f"routes.json: no {name} step starts with {entry['match']!r}")
         step = sec["steps"][found]
         if "split" in entry:
@@ -394,6 +403,8 @@ def main():
         quest["startStep"] = start_step(sections)
         if "progress" in routes.get(q, {}):
             quest["progress"] = routes[q]["progress"]
+        if routes.get(q, {}).get("tested"):
+            quest["tested"] = True
         if d.get("kills") and d["kills"].strip().lower() != "none":
             kills = d["kills"]
             if "*" in kills:

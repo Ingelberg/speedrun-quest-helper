@@ -2,7 +2,7 @@
 
 > **This plugin is vibe coded.** Claude (an AI coding assistant) wrote it with my direction and in-game testing. Cook's Assistant and X Marks the Spot have been played through and tweaked in-game, but not every line has been hand-reviewed.
 
-A RuneLite plugin for [Quest Speedrunning](https://oldschool.runescape.wiki/w/Quest_Speedrunning). It walks you through the OSRS Wiki speedrun guide for a quest, one step at a time. For now it covers Cook's Assistant and X Marks the Spot. The other 13 speedrun quests are already converted from the wiki and will be added once their routes are checked. The game already keeps the time, so this plugin only tells you what to do next.
+A RuneLite plugin for [Quest Speedrunning](https://oldschool.runescape.wiki/w/Quest_Speedrunning). It walks you through the OSRS Wiki speedrun guide for a quest, one step at a time. It covers all 15 speedrun quests. Cook's Assistant and X Marks the Spot have been played through in game; the other 13 routes are built from the wiki guides and Quest Helper's data and are marked in the sidebar until they have been checked. The game already keeps the time, so this plugin only tells you what to do next.
 
 ## Features
 
@@ -43,7 +43,7 @@ The plugin only switches on while you are logged in to a speedrunning world. Els
 | `RouteOverlay` | Draws the path, the target tile, NPC outlines and ground item marks |
 | `ItemOverlay` | Outlines items to buy in shops, items to use in the inventory, and spells such as Home Teleport |
 | `DigLog` | Records whether each dig gave the step's item, and saves the good and missed tiles |
-| `tools/routes.json` | Hand-checked NPCs, shop items, ground items and coordinates, merged into the guides |
+| `tools/routes.json` | NPCs, objects, shop items, ground items, coordinates and quest progress values per step, merged into the guides |
 | `tools/fetch.py`, `tools/convert.py` | Download the wiki guides and convert them to `guides.json` |
 
 ## Updating the guides

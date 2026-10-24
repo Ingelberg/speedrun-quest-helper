@@ -30,12 +30,35 @@ public class GuideLibraryTest
 	}
 
 	@Test
-	public void onlyRoutedQuestsAreOffered()
+	public void everyQuestHasARouteNow()
 	{
-		assertEquals(2, library.all().size());
-		assertEquals("X Marks the Spot", library.all().get(0).getName());
-		assertEquals("Cook's Assistant", library.all().get(1).getName());
-		assertNull(library.byName("Dragon Slayer II"));
+		assertEquals(15, library.all().size());
+		for (Guide g : library.all())
+		{
+			assertNotNull(g.getName(), g.getProgress());
+		}
+		// only the routes played through in game are marked as tested
+		assertTrue(library.byName("Cook's Assistant").isTested());
+		assertTrue(library.byName("X Marks the Spot").isTested());
+		assertFalse(library.byName("Dragon Slayer II").isTested());
+	}
+
+	@Test
+	public void progressValuesPointAtStepsInOrder()
+	{
+		// a quest's progress only goes up, so the steps it is tied to have to come in the same order
+		for (Guide g : library.all())
+		{
+			int last = -1;
+			for (int i = 0; i < g.steps().size(); i++)
+			{
+				for (int value : g.steps().get(i).getProgress())
+				{
+					assertTrue(g.getName() + " progress " + value + " at step " + i, value > last);
+					last = value;
+				}
+			}
+		}
 	}
 
 	@Test
@@ -151,18 +174,19 @@ public class GuideLibraryTest
 		Guide.Step third = xMarks.steps().get(4);
 		WorldPoint dig = third.getTarget().worldPoint();
 		// from the castle, every waypoint is still ahead
-		List<WorldPoint> fromCastle = RouteTracker.goals(third, new WorldPoint(3203, 3213, 0), dig);
+		List<WorldPoint> fromCastle = RouteTracker.goals(third, new WorldPoint(3203, 3213, 0), dig, 0);
 		assertEquals(third.getVia().size() + 1, fromCastle.size());
 		// halfway there, the passed ones drop off
-		List<WorldPoint> halfway = RouteTracker.goals(third, new WorldPoint(3156, 3241, 0), dig);
+		WorldPoint middle = new WorldPoint(3156, 3241, 0);
+		List<WorldPoint> halfway = RouteTracker.goals(third, middle, dig, RouteTracker.reached(third, middle, dig, 0));
 		assertEquals(new WorldPoint(3139, 3253, 0), halfway.get(0));
 		assertEquals(dig, halfway.get(halfway.size() - 1));
 
 		Guide.Step hopper = library.byName("Cook's Assistant").steps().get(5);
 		WorldPoint top = hopper.getTarget().worldPoint();
-		assertEquals(Collections.singletonList(new WorldPoint(3164, 3307, 0)), RouteTracker.goals(hopper, new WorldPoint(3166, 3300, 0), top));
-		assertEquals(Collections.singletonList(new WorldPoint(3164, 3307, 1)), RouteTracker.goals(hopper, new WorldPoint(3165, 3307, 1), top));
-		assertEquals(Collections.singletonList(top), RouteTracker.goals(hopper, new WorldPoint(3164, 3307, 2), top));
+		assertEquals(Collections.singletonList(new WorldPoint(3164, 3307, 0)), RouteTracker.goals(hopper, new WorldPoint(3166, 3300, 0), top, 0));
+		assertEquals(Collections.singletonList(new WorldPoint(3164, 3307, 1)), RouteTracker.goals(hopper, new WorldPoint(3165, 3307, 1), top, 1));
+		assertEquals(Collections.singletonList(top), RouteTracker.goals(hopper, new WorldPoint(3164, 3307, 2), top, 2));
 	}
 
 	@Test
