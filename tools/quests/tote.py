@@ -1,0 +1,38 @@
+QUEST = "Temple of the Eye"
+PROGRESS = {"varbit": 13738}
+SEDRIDOR_DOWN = [T(3104, 3162, 0)]
+TRAIBORN_UP = [T(3103, 9576, 0), T(3103, 3159, 0)]
+STEPS = [
+    S(0, qh="talkToPersten1", progress=[0, 5], done={"have": "Eye amulet"}),
+    S(1, npc="Vasquen", done={"have": "Compost"}),
+    S(3, qh="talkToMage1", progress=[10], use=["Eye amulet"]),
+    S(4, qh="getTeaForMage", progress=[15], done={"have": "Strong cup of tea"}),
+    S(6, qh="talkToMage2", progress=[20], use=["Strong cup of tea"]),
+    S(7, qh="talkToDarkMage1", progress=[25], use=["Eye amulet"]),
+    S(9, qh="talkToDarkMage2", progress=[30, 35, 40], done={"have": "Abyssal incantation"}),
+    S(11, qh="talkToPersten2", progress=[45, 50, 55]),
+    S(12, qh="talktoArchmage1", progress=[60, 65], via=SEDRIDOR_DOWN, objectIds=[2147], use=["Abyssal incantation"]),
+    S(13, qh="talktoTrailborn1", progress=[70], via=TRAIBORN_UP, objectIds=[2148, 12536]),
+    S(14, qh=["talkToFelix", "talkToTamara", "talkToCordelia"], progress=[75]),
+    S(15, qh="talktoTrailborn2", progress=[80]),
+    S(16, qh="talktoArchmage2", progress=[85, 90], via=[T(3103, 3159, 1), T(3104, 3162, 0)], objectIds=[12537, 2147]),
+    S(17, qh=["talkToFelix2", "talkToTamara2", "talkToCordelia2"], progress=[95, 100]),
+    S(18, qh="talkToPersten3", progress=[105]),
+    S(19, qh="talkToTamara2", progress=[110, 115]),
+    S(20, qh="talkToFelix2"),
+    S(22, ground=["Bronze pickaxe", "Chisel"], done={"have": "Chisel"}),
+    S(23, qh="talkToTamara2"),
+    S(25, qh="talkToTamara2"),
+    S(26, qh="talkToFelix2"),
+    S(29, qh="talkToTamara2"),
+    S(33, qh="talkToTamara2"),
+    S(35, qh="talkToTamara2"),
+    S(37, npcs=["The Great Guardian"], progress=[120]),
+    S(38, qh="talkToTamara2"),
+    S(43, npcs=["The Great Guardian"]),
+    S(44, qh="talkToTamara2"),
+    S(46, qh="talkToTamara2"),
+    S(52, qh="talkToTamara2"),
+    S(53, npcs=["The Great Guardian"]),
+    S(54, qh="finishQuest", progress=[125], via=SEDRIDOR_DOWN, objectIds=[2147]),
+]

@@ -2271,10 +2271,7 @@
        ],
        "done": {
         "have": "Copper ore"
-       },
-       "objects": [
-        "Copper rocks"
-       ]
+       }
       },
       {
        "text": "Pick one bunch of redberries from the redberry bush north-west.",
@@ -2289,11 +2286,7 @@
        "text": "Run to the south-west Varrock mine and mine one tin ore and clay. You may pass north of the circle with dark wizards for a faster route.",
        "done": {
         "have": "Clay"
-       },
-       "objects": [
-        "Tin rocks",
-        "Clay rocks"
-       ]
+       }
       },
       {
        "text": "Purchase a pink skirt from Thessalia's Fine Clothes.",
@@ -2387,11 +2380,11 @@
       },
       {
        "text": "Run westwards and shear three sheep for wool.",
+       "npcs": [
+        "Sheep"
+       ],
        "use": [
         "Shears"
-       ],
-       "objects": [
-        "Sheep"
        ]
       },
       {
@@ -4510,10 +4503,7 @@
        ],
        "done": {
         "have": "Clay"
-       },
-       "objects": [
-        "Clay rocks"
-       ]
+       }
       },
       {
        "text": "From Gerrant's Fishy Business, buy a lobster pot.",
@@ -5761,10 +5751,6 @@
        },
        "progress": [
         26
-       ],
-       "objects": [
-        "Iron rocks",
-        "Coal rocks"
        ]
       },
       {
@@ -8399,13 +8385,13 @@
       {
        "text": "After the cutscene, run westwards to the Canifis General Store.",
        "npcs": [
-        "Rufus"
+        "Fidelio"
        ],
        "target": {
-        "x": 3508,
+        "x": 3478,
         "y": 3495,
         "plane": 0,
-        "label": "Rufus"
+        "label": "Fidelio"
        },
        "progress": [
         34
@@ -8414,7 +8400,7 @@
       {
        "text": "At the store, purchase a hammer, chisel, and knife. Sell your Bandos tassets (the coins are needed later).",
        "npcs": [
-        "Rufus"
+        "Fidelio"
        ],
        "shop": [
         "Hammer",
@@ -8422,10 +8408,10 @@
         "Knife"
        ],
        "target": {
-        "x": 3508,
+        "x": 3478,
         "y": 3495,
         "plane": 0,
-        "label": "Rufus"
+        "label": "Fidelio"
        },
        "done": {
         "have": "Knife"

@@ -53,6 +53,12 @@ python -I tools/fetch.py wiki
 python -I tools/convert.py wiki src/main/resources/com/speedrunguide/guides.json
 ```
 
+The routes for the 13 quests after Cook's Assistant and X Marks the Spot are written as short files in `tools/quests/`. Each file lists wiki steps by number, with Quest Helper step names, and is built into `tools/routes.json`:
+
+1. `tools/qh_extract.py` reads a [Quest Helper](https://github.com/Zoinkwiz/quest-helper) checkout and the wiki text. It writes a report per quest with Quest Helper's progress values, NPC and object ids, and coordinates next to the wiki steps.
+2. `tools/wiki_pages.py` looks up the coordinates of the wiki pages that the steps link to.
+3. `tools/build_routes.py` turns the quest files into `routes.json` entries.
+
 ## Credits
 
 The guide text comes from the [OSRS Wiki](https://oldschool.runescape.wiki/w/Quest_Speedrunning) speedrun guides and is licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).

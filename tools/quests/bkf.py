@@ -1,0 +1,25 @@
+QUEST = "Black Knights' Fortress"
+PROGRESS = {"varp": 130}
+STEPS = [
+    S(0, qh="speakToAmik", progress=[0], via=[T(2955, 3339, 0), T(2961, 3339, 1)], objectIds=[24072]),
+    S(1, progress=[1], objectIds=[24074]),
+    S(2, npc="Wayne", shop=["Iron chainbody"], done={"have": "Iron chainbody"}),
+    S(3, widget=14286854),
+    S(4, npc="Count Check"),
+    S(5, npc="Peksa", shop=["Bronze med helm"], done={"have": "Bronze med helm"}),
+    S(6, use=["Bronze med helm", "Iron chainbody"], done={"lack": "Iron chainbody"}),
+    S(7, objects=["Cabbage"], done={"have": "Cabbage"}),
+    S(8, target=T(3016, 3514, 0, "Sturdy door"), objectIds=[2337]),
+    S(9, qh="enterFortress"),
+    S(10, target=T(3017, 3516, 2, "Ladder"), via=[T(3016, 3517, 0), T(3015, 3519, 0), T(3016, 3519, 1)], objectIds=[2341, 17148]),
+    S(11, target=T(3025, 3513, 2, "Ladder"), via=[T(3017, 3516, 2), T(3023, 3513, 1)], objectIds=[17149, 17148]),
+    S(12, target=T(3021, 3510, 0, "Ladder"), via=[T(3025, 3513, 2), T(3021, 3510, 1)], objectIds=[17149]),
+    S(13, qh="listenAtGrill"),
+    S(14, progress=[2], target=T(3016, 3517, 0, "Entrance"),
+      via=[T(3021, 3510, 0), T(3025, 3513, 1), T(3023, 3513, 2), T(3017, 3516, 1), T(3016, 3519, 2), T(3015, 3519, 1)],
+      objectIds=[17148, 17149]),
+    S(15, target=T(3022, 3518, 0, "Ladder"), objectIds=[17159]),
+    S(16, qh="pushWall2", via=[T(3022, 3518, 0)], objectIds=[17159, 2341]),
+    S(17, qh="useCabbageOnHole", use=["Cabbage"]),
+    S(19, qh="returnToAmik", progress=[3], via=[T(2955, 3339, 0), T(2961, 3339, 1)], objectIds=[24072]),
+]

@@ -1,0 +1,26 @@
+QUEST = "Below Ice Mountain"
+PROGRESS = {"varbit": 12063}
+STEPS = [
+    S(1, qh="talkToWillowToStart", progress=[0, 5, 7]),
+    S(2, target=T(2956, 3367, 0, "Rising Sun Inn"), progress=[10, 15]),
+    S(3, qh="buyBeer", done={"have": "Asgarnian ale"}),
+    S(4, qh=["giveBeer", "playRPS"], use=["Asgarnian ale"]),
+    S(5, widget=14286854),
+    S(6, target=T(3209, 3214, 0, "Kitchen"), ground=["Knife", "Bowl"], objects=["Sink"]),
+    S(8, npc="Diango", shop=["Chronicle", "Teleport card"], done={"have": "Teleport card"}),
+    S(10, npc="Wydin", shop=["Raw beef", "Pot of flour"], done={"have": "Pot of flour"}),
+    S(11, use=["Chronicle"]),
+    S(12, use=["Bowl of water", "Pot of flour"]),
+    S(13, npc="Charlie the Tramp"),
+    S(14, qh="talkToCook"),
+    S(15, target=T(3230, 3401, 0, "Range"), objects=["Range"]),
+    S(18, use=["Knife", "Cooked meat"], done={"have": "Steak sandwich"}),
+    S(19, qh="feedMarley", use=["Steak sandwich"]),
+    S(21, qh="recruitCheckal"),
+    S(22, ground=["Bronze pickaxe"], done={"have": "Bronze pickaxe"}),
+    S(23, qh="talkToAtlas"),
+    S(24, qh="flexCheckal"),
+    S(25, qh="goToDungeon", progress=[20, 25]),
+    S(26, qh="defeatGuardian", progress=[30, 35]),
+    S(27, progress=[40]),
+]

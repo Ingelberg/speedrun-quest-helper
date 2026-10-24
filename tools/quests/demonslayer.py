@@ -1,0 +1,27 @@
+QUEST = "Demon Slayer"
+PROGRESS = {"varbit": 2561}
+STEPS = [
+    S(5, qh="talkToAris", progress=[0]),
+    S(6, target=T(3203, 3472, 0, "Sir Prysin")),
+    S(7, qh="talkToPrysin", progress=[1]),
+    S(8, qh="talkToRovin", progress=[2], via=[T(3203, 3498, 0), T(3203, 3498, 1)], objectIds=[11790, 11792]),
+    S(9, qh="pickupBucket", ground=["Bucket"], via=[T(3203, 3498, 2), T(3203, 3498, 1), T(3219, 3497, 0)],
+      objectIds=[11793, 11792, 11789], done={"have": "Bucket"}),
+    S(10, qh=["fillBucket", "useFilledBucketOnDrain"], via=[T(3219, 3497, 1)], objectIds=[11793]),
+    S(11, qh="goDownManhole"),
+    S(12, qh="pickupSecondKey"),
+    S(17, ground=["Bones"]),
+    S(18, ground=["Bones"]),
+    S(19, ground=["Bones"], widget=14286854),
+    S(22, target=T(3092, 3245, 0, "Bank")),
+    S(23, npc="Diango"),
+    S(24, npc="Diango", shop=["Chronicle", "Teleport card"]),
+    S(25, ground=["Bones"]),
+    S(26, qh="goUpstairsWizard"),
+    S(27, qh="talkToTraiborn", via=[T(3104, 3160, 0)], objectIds=[12536]),
+    S(28, qh="talkToTraiborn", use=["Bones"]),
+    S(30, qh="returnToPrysin"),
+    S(32, target=T(3227, 3370, 0, "Stone circle")),
+    S(34, qh="killDelrithStep"),
+    S(35, qh="killDelrithStep"),
+]
