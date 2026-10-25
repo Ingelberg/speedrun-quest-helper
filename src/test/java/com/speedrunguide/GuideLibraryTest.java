@@ -59,6 +59,13 @@ public class GuideLibraryTest
 			assertFalse(step.getDone().varbitDone(1 - position[i]));
 		}
 		assertEquals("Oil can", ernest.steps().get(15).getDone().getHave());
+
+		// searching the bookcase is done once you're in the secret room or the basement
+		Guide.Done bookcase = ernest.steps().get(5).getDone();
+		assertTrue(bookcase.inside(3093, 3358, 0));
+		assertTrue(bookcase.inside(3117, 9754, 0));
+		assertFalse(bookcase.inside(3098, 3358, 0));
+		assertFalse(bookcase.inside(3093, 3358, 1));
 	}
 
 	@Test

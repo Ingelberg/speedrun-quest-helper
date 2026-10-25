@@ -20,6 +20,11 @@ def lever(name, down, text=None, **extra):
     return part
 
 
+# Areas from Quest Helper's zones, as x1, y1, x2, y2, plane
+SECRET_ROOM = [3090, 3354, 3096, 3363, 0]
+BASEMENT = [3090, 9745, 3118, 9767, 0]
+MANOR_GROUND = [3097, 3354, 3119, 3373, 0]
+
 STEPS = [
     S(0, qh="talkToVeronica", progress=[0]),
     S(1, qh="enterManor", progress=[1], target=T(3108, 3353, 0, "Door")),
@@ -28,7 +33,7 @@ STEPS = [
     S(3, qh="pickupPoison", ground=["Poison"], target=T(3097, 3366, 0, "Poison"), via=[T(3109, 3365, 1)],
       objectIds=[11499], done={"have": "Poison"}),
     S(4, use=["Fish food", "Poison"], done={"have": "Poisoned fish food"}),
-    S(5, qh="searchBookcase"),
+    S(5, qh="searchBookcase", done={"inArea": [SECRET_ROOM, BASEMENT]}),
     S(6, split=[
         lever("A", True, "Climb down the ladder and pull down lever A.", via=[T(3092, 3362, 0)], objectIds=[133, 146]),
         lever("B", True),
@@ -42,7 +47,7 @@ STEPS = [
         {"text": "Pick up the oil can in the west room.", "target": T(3092, 9755, 0, "Oil can"), "ground": ["Oil can"],
          "done": {"have": "Oil can"}},
     ]),
-    S(7, target=T(3096, 3357, 0, "Lever"), via=[T(3117, 9754, 0)], objectIds=[132, 160]),
+    S(7, target=T(3096, 3357, 0, "Lever"), via=[T(3117, 9754, 0)], objectIds=[132, 160], done={"inArea": [MANOR_GROUND]}),
     S(8, qh="pickupSpade", ground=["Spade"], target=T(3120, 3359, 0, "Spade"), done={"have": "Spade"}),
     S(10, target=T(3085, 3361, 0, "Compost heap"), objectIds=[152]),
     S(11, qh="searchCompost", done={"have": "Key"}),

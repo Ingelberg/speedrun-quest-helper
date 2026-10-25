@@ -60,7 +60,7 @@
    {"match": "Pick up the fish food on the 1st floor, in the room south of the stair", "target": {"x": 3108, "y": 3356, "plane": 1, "label": "Fish food"}, "ground": ["Fish food"], "via": [{"x": 3109, "y": 3364, "plane": 0}], "objectIds": [11498], "done": {"have": "Fish food"}},
    {"match": "Pick up poison from the room south of the kitchen, on the west side of", "target": {"x": 3097, "y": 3366, "plane": 0, "label": "Poison"}, "ground": ["Poison"], "via": [{"x": 3109, "y": 3365, "plane": 1}], "objectIds": [11499], "done": {"have": "Poison"}},
    {"match": "Use the fish food on the poison to make poisoned fish food.", "use": ["Fish food", "Poison"], "done": {"have": "Poisoned fish food"}},
-   {"match": "Search the bookcase on the western ground floor.", "objectIds": [155], "target": {"x": 3097, "y": 3358, "plane": 0, "label": "Bookcase"}},
+   {"match": "Search the bookcase on the western ground floor.", "objectIds": [155], "target": {"x": 3097, "y": 3358, "plane": 0, "label": "Bookcase"}, "done": {"inArea": [[3090, 3354, 3096, 3363, 0], [3090, 9745, 3118, 9767, 0]]}},
    {"match": "Climb down the ladder and complete the lever puzzle.", "split": [
     {"text": "Climb down the ladder and pull down lever A.", "target": {"x": 3108, "y": 9745, "plane": 0, "label": "Lever A"}, "objectIds": [133, 146], "done": {"varbit": 1788, "is": 1}, "via": [{"x": 3092, "y": 3362, "plane": 0}]},
     {"text": "Pull down lever B.", "target": {"x": 3118, "y": 9752, "plane": 0, "label": "Lever B"}, "objectIds": [147], "done": {"varbit": 1789, "is": 1}},
@@ -73,7 +73,7 @@
     {"text": "Pull up lever E.", "target": {"x": 3097, "y": 9767, "plane": 0, "label": "Lever E"}, "objectIds": [150], "done": {"varbit": 1792, "is": 0}},
     {"text": "Pick up the oil can in the west room.", "target": {"x": 3092, "y": 9755, "plane": 0, "label": "Oil can"}, "ground": ["Oil can"], "done": {"have": "Oil can"}}
    ]},
-   {"match": "Go up the ladder and pull the lever to exit the bookcases.", "target": {"x": 3096, "y": 3357, "plane": 0, "label": "Lever"}, "via": [{"x": 3117, "y": 9754, "plane": 0}], "objectIds": [132, 160]},
+   {"match": "Go up the ladder and pull the lever to exit the bookcases.", "target": {"x": 3096, "y": 3357, "plane": 0, "label": "Lever"}, "via": [{"x": 3117, "y": 9754, "plane": 0}], "objectIds": [132, 160], "done": {"inArea": [[3097, 3354, 3119, 3373, 0]]}},
    {"match": "Pick up the spade in the far eastern room on the ground floor.", "target": {"x": 3120, "y": 3359, "plane": 0, "label": "Spade"}, "ground": ["Spade"], "done": {"have": "Spade"}},
    {"match": "Go north around the back of the manor to the west to the compost heap.", "target": {"x": 3085, "y": 3361, "plane": 0, "label": "Compost heap"}, "objectIds": [152]},
    {"match": "Search the compost heap to get a key.", "objectIds": [152], "target": {"x": 3085, "y": 3361, "plane": 0, "label": "Compost heap"}, "done": {"have": "Key"}},

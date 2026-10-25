@@ -141,6 +141,22 @@ public class Guide
 		/** An exact value for {@link #varbit}, such as 0 for a lever pulled back up. */
 		@Nullable
 		private Integer is;
+		/** Areas, as {x1, y1, x2, y2, plane}, that finish the step once you are inside one, such as a secret room. */
+		private List<int[]> inArea = Collections.emptyList();
+
+		/** Whether a tile is inside one of {@link #inArea}. */
+		boolean inside(int x, int y, int plane)
+		{
+			for (int[] a : inArea)
+			{
+				if (plane == a[4] && x >= Math.min(a[0], a[2]) && x <= Math.max(a[0], a[2])
+					&& y >= Math.min(a[1], a[3]) && y <= Math.max(a[1], a[3]))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 
 		/** Whether the varbit check is met by this value. */
 		boolean varbitDone(int current)
