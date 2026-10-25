@@ -148,6 +148,10 @@ public class SpeedrunGuidePlugin extends Plugin
 	/** The dialogue options seen last tick, so one dialogue only moves the guide once. */
 	private List<String> shownOptions = Collections.emptyList();
 	private int ticks;
+	/** The tile you were on last tick and for how many ticks, for {@link #logStandingTile}. */
+	@Nullable
+	private WorldPoint lastTile;
+	private int stillTicks;
 
 	private final HotkeyListener nextListener = new HotkeyListener(() -> config.nextKey())
 	{
@@ -270,6 +274,7 @@ public class SpeedrunGuidePlugin extends Plugin
 		{
 			return;
 		}
+		logStandingTile();
 		if (config.autoSelect() && ++ticks % AUTO_SELECT_TICKS == 0)
 		{
 			selectRunningQuest();
@@ -294,6 +299,34 @@ public class SpeedrunGuidePlugin extends Plugin
 			advanceWhenDone(inventory);
 		}
 		route.update(currentStep(), config.showPath());
+	}
+
+	/**
+	 * Logs the tile you stop on (developer logs only), which is how route tiles such as "wait
+	 * here" spots are found: stand on the tile and read it from the log.
+	 */
+	private void logStandingTile()
+	{
+		Player player = client.getLocalPlayer();
+		if (!log.isDebugEnabled() || player == null)
+		{
+			return;
+		}
+		WorldPoint here = player.getWorldLocation();
+		if (here.equals(lastTile))
+		{
+			if (++stillTicks == 2)
+			{
+				Guide.Step now = currentStep();
+				log.debug("Standing at {}, {}, {} (step {}: {})", here.getX(), here.getY(), here.getPlane(), step,
+					now == null ? "-" : GuideText.plain(now.getText()));
+			}
+		}
+		else
+		{
+			lastTile = here;
+			stillTicks = 0;
+		}
 	}
 
 	/** Moves past steps whose item is now in the inventory, or whose spot has been reached. */

@@ -2,16 +2,20 @@ package com.speedrunguide;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import lombok.Getter;
 import lombok.Value;
+import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.CollisionData;
 import net.runelite.api.CollisionDataFlag;
@@ -24,6 +28,7 @@ import net.runelite.api.Tile;
 import net.runelite.api.TileItem;
 import net.runelite.api.TileObject;
 import net.runelite.api.WorldView;
+import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.client.game.ItemManager;
 
@@ -32,6 +37,7 @@ import net.runelite.client.game.ItemManager;
  * to pick up and objects to use that are in view, where to walk, and the path there. Runs and is read on the
  * client thread.
  */
+@Slf4j
 @Singleton
 class RouteTracker
 {
@@ -42,6 +48,8 @@ class RouteTracker
 		TileItem item;
 	}
 
+	/** Options that mark an object as a door or gate the path can go through. */
+	private static final Set<String> DOOR_OPTIONS = new HashSet<>(Arrays.asList("open", "walk-through", "go-through", "pass-through"));
 	/** Tiles from a waypoint that count as being there. */
 	private static final int WAYPOINT_REACH = 2;
 	/** How far around you ground items and objects are looked for. */
@@ -55,6 +63,9 @@ class RouteTracker
 	private final Map<Integer, String> objectNames = new HashMap<>();
 	/** Whether a wall object id is a door or gate, by id. */
 	private final Map<Integer, Boolean> doors = new HashMap<>();
+	/** The step whose unreachable path was last logged, so it's logged once. */
+	@Nullable
+	private Guide.Step blockedStep;
 
 	@Getter
 	private List<NPC> npcs = Collections.emptyList();
@@ -209,6 +220,13 @@ class RouteTracker
 		else if (!here.equals(pathFrom) || !goals.equals(pathGoals))
 		{
 			path = chainPath(view, flagsWithDoorsOpen(view), here, goals, reach);
+			WorldPoint end = path.isEmpty() ? here : path.get(path.size() - 1);
+			WorldPoint last = goals.get(goals.size() - 1);
+			if (last.getPlane() == here.getPlane() && end.distanceTo2D(last) > Math.max(reach, 1)
+				&& LocalPoint.fromWorld(view, last) != null)
+			{
+				logBlockers(view, step, here, last);
+			}
 			pathFrom = here;
 			pathGoals = goals;
 		}
@@ -297,16 +315,40 @@ class RouteTracker
 			for (int y = 0; y < tiles[x].length && y < flags[x].length; y++)
 			{
 				Tile tile = tiles[x][y];
-				if (tile != null && tile.getWallObject() != null && isDoor(tile.getWallObject().getId()))
+				if (tile == null)
+				{
+					continue;
+				}
+				if (tile.getWallObject() != null && isDoor(tile.getWallObject().getId()))
 				{
 					Pathfinder.openDoor(flags, x, y);
+				}
+				// Some doors and gates are scenery rather than walls; open every tile they cover
+				if (tile.getGameObjects() != null)
+				{
+					for (GameObject object : tile.getGameObjects())
+					{
+						if (object != null && object.getSceneMinLocation().equals(tile.getSceneLocation()) && isDoor(object.getId()))
+						{
+							for (int ox = object.getSceneMinLocation().getX(); ox <= object.getSceneMaxLocation().getX(); ox++)
+							{
+								for (int oy = object.getSceneMinLocation().getY(); oy <= object.getSceneMaxLocation().getY(); oy++)
+								{
+									Pathfinder.openDoor(flags, ox, oy);
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 		return flags;
 	}
 
-	/** Whether an object can be opened, by its Open option; objects that change with varbits aren't cached. */
+	/**
+	 * Whether an object is a door or gate, by an option such as Open or Walk-through, on the
+	 * object or on what it currently shows as. Objects that change with varbits aren't cached.
+	 */
 	private boolean isDoor(int id)
 	{
 		Boolean cached = doors.get(id);
@@ -319,29 +361,65 @@ class RouteTracker
 		{
 			return false;
 		}
-		boolean impostor = def.getImpostorIds() != null;
-		if (impostor)
+		boolean door = hasDoorOption(def);
+		if (def.getImpostorIds() != null)
 		{
-			def = def.getImpostor();
-			if (def == null)
-			{
-				return false;
-			}
+			ObjectComposition impostor = def.getImpostor();
+			return door || (impostor != null && hasDoorOption(impostor));
 		}
-		boolean door = false;
+		doors.put(id, door);
+		return door;
+	}
+
+	private static boolean hasDoorOption(ObjectComposition def)
+	{
+		if (def.getActions() == null)
+		{
+			return false;
+		}
 		for (String action : def.getActions())
 		{
-			if ("Open".equalsIgnoreCase(action))
+			if (action != null && DOOR_OPTIONS.contains(action.toLowerCase()))
 			{
-				door = true;
-				break;
+				return true;
 			}
 		}
-		if (!impostor)
+		return false;
+	}
+
+	/** Logs what is around you when a path can't reach its target, to see what blocks it (developer mode logs). */
+	private void logBlockers(WorldView view, Guide.Step step, WorldPoint here, WorldPoint goal)
+	{
+		if (!log.isDebugEnabled() || step == blockedStep)
 		{
-			doors.put(id, door);
+			return;
 		}
-		return door;
+		blockedStep = step;
+		int[][] flags = view.getCollisionMaps()[view.getPlane()].getFlags();
+		Tile[][] tiles = view.getScene().getTiles()[view.getPlane()];
+		int cx = here.getX() - view.getBaseX();
+		int cy = here.getY() - view.getBaseY();
+		StringBuilder sb = new StringBuilder();
+		for (int x = Math.max(0, cx - 4); x <= Math.min(tiles.length - 1, cx + 4); x++)
+		{
+			for (int y = Math.max(0, cy - 4); y <= Math.min(tiles[x].length - 1, cy + 4); y++)
+			{
+				Tile tile = tiles[x][y];
+				if (tile == null)
+				{
+					continue;
+				}
+				for (TileObject object : objectsOn(tile))
+				{
+					ObjectComposition def = client.getObjectDefinition(object.getId());
+					ObjectComposition shown = def != null && def.getImpostorIds() != null ? def.getImpostor() : def;
+					sb.append(String.format("%n  %d,%d %s id=%d name=%s actions=%s flags=0x%x",
+						x + view.getBaseX(), y + view.getBaseY(), object.getClass().getSimpleName(), object.getId(),
+						shown == null ? null : shown.getName(), shown == null ? null : Arrays.toString(shown.getActions()), flags[x][y]));
+				}
+			}
+		}
+		log.debug("Path from {} can't reach {}; objects within 4 tiles:{}", here, goal, sb);
 	}
 
 	private static List<WorldPoint> chainPath(WorldView view, @Nullable int[][] flags, WorldPoint from, List<WorldPoint> goals, int targetReach)

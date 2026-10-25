@@ -89,8 +89,9 @@ final class Pathfinder
 	}
 
 	/**
-	 * Treats a closed door on (x, y) as open: its tile loses its wall sides, and the tiles around
-	 * it lose the side facing it. Every side is opened, so the door's facing doesn't matter.
+	 * Treats a closed door on (x, y) as open: its tile loses its wall sides and its object block,
+	 * and the tiles around it lose the side facing it. Every side is opened, so the door's facing
+	 * doesn't matter.
 	 */
 	static void openDoor(int[][] flags, int x, int y)
 	{
@@ -100,7 +101,7 @@ final class Pathfinder
 		{
 			return;
 		}
-		flags[x][y] &= ~WALLS;
+		flags[x][y] &= ~(WALLS | CollisionDataFlag.BLOCK_MOVEMENT_OBJECT);
 		if (inside(x - 1, y, width, height))
 		{
 			flags[x - 1][y] &= ~CollisionDataFlag.BLOCK_MOVEMENT_EAST;
