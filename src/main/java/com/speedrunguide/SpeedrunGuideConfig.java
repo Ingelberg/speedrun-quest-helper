@@ -56,15 +56,40 @@ public interface SpeedrunGuideConfig extends Config
 
 	@Alpha
 	@ConfigItem(
-		keyName = "pathColor",
+		keyName = "currentPathColor",
 		name = "Path color",
-		description = "Color of the path and the spot it leads to",
+		description = "Color of the path to the current step",
 		section = route,
 		position = 1
 	)
 	default Color pathColor()
 	{
-		return new Color(255, 200, 0, 160);
+		return new Color(40, 200, 40, 90);
+	}
+
+	@ConfigItem(
+		keyName = "showNextPath",
+		name = "Show next step's path",
+		description = "Also draw where the next step goes, from where this step's path ends",
+		section = route,
+		position = 2
+	)
+	default boolean showNextPath()
+	{
+		return true;
+	}
+
+	@Alpha
+	@ConfigItem(
+		keyName = "nextPathColor",
+		name = "Next path color",
+		description = "Color of the next step's path",
+		section = route,
+		position = 3
+	)
+	default Color nextPathColor()
+	{
+		return new Color(255, 200, 0, 70);
 	}
 
 	@Alpha
@@ -73,7 +98,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Target tile color",
 		description = "Color of the exact tile the path leads to, such as where to dig",
 		section = route,
-		position = 2
+		position = 4
 	)
 	default Color targetColor()
 	{
@@ -85,7 +110,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Show dig area",
 		description = "Fill the tiles where digging for the current step works. The area grows as digs are learned",
 		section = route,
-		position = 3
+		position = 5
 	)
 	default boolean showDigTiles()
 	{
@@ -97,7 +122,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Report digs in chat",
 		description = "Say in chat whether each dig during a dig step worked, with the tile",
 		section = route,
-		position = 4
+		position = 6
 	)
 	default boolean logDigs()
 	{
@@ -109,7 +134,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Show arrows",
 		description = "Draw a bobbing arrow above the NPCs, objects, items and tiles the step points at",
 		section = route,
-		position = 5
+		position = 7
 	)
 	default boolean showArrows()
 	{
@@ -121,7 +146,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight NPCs",
 		description = "Outline the NPCs the step says to talk to",
 		section = route,
-		position = 6
+		position = 8
 	)
 	default boolean highlightNpcs()
 	{
@@ -133,7 +158,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight ground items",
 		description = "Outline the items the step says to pick up",
 		section = route,
-		position = 7
+		position = 9
 	)
 	default boolean highlightGroundItems()
 	{
@@ -145,7 +170,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight objects",
 		description = "Outline the objects the step says to use, such as the wheat, a ladder or the hopper",
 		section = route,
-		position = 8
+		position = 10
 	)
 	default boolean highlightObjects()
 	{
@@ -158,7 +183,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Outline color",
 		description = "Outline color for NPCs, ground items and objects",
 		section = route,
-		position = 9
+		position = 11
 	)
 	default Color npcColor()
 	{
@@ -170,7 +195,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight shop and inventory items",
 		description = "Outline the items the step says to buy in shops, and to use in your inventory",
 		section = route,
-		position = 10
+		position = 12
 	)
 	default boolean highlightShop()
 	{
@@ -182,7 +207,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Left-click shortcuts",
 		description = "Make Buy 1 the left click on the items the step says to buy, and the step's option the left click on its NPCs (such as Trade on Fayeth)",
 		section = route,
-		position = 11
+		position = 13
 	)
 	default boolean leftClickBuy()
 	{

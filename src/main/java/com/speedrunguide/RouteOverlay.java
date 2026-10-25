@@ -6,6 +6,8 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.Rectangle;
+import java.util.HashSet;
+import java.util.Set;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 import net.runelite.api.Client;
@@ -70,6 +72,18 @@ class RouteOverlay extends Overlay
 		Rectangle digArea = config.showDigTiles() ? digArea() : null;
 		if (config.showPath())
 		{
+			if (config.showNextPath())
+			{
+				Color next = config.nextPathColor();
+				Set<WorldPoint> current = new HashSet<>(route.getPath());
+				for (WorldPoint wp : route.getNextPath())
+				{
+					if (!current.contains(wp) && !wp.equals(route.getTarget()))
+					{
+						fill(graphics, wp, next);
+					}
+				}
+			}
 			Color path = config.pathColor();
 			for (WorldPoint wp : route.getPath())
 			{

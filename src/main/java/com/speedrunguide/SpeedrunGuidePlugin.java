@@ -298,7 +298,8 @@ public class SpeedrunGuidePlugin extends Plugin
 		{
 			advanceWhenDone(inventory);
 		}
-		route.update(currentStep(), config.showPath());
+		Guide g = guide;
+		route.update(currentStep(), g == null ? null : g.step(step + 1), config.showPath());
 	}
 
 	/**

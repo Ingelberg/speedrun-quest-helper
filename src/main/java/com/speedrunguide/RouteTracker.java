@@ -85,6 +85,11 @@ class RouteTracker
 	private boolean targetOutlined;
 	@Getter
 	private List<WorldPoint> path = Collections.emptyList();
+	/** Where the next step goes from where this one ends, drawn in its own color. */
+	@Getter
+	private List<WorldPoint> nextPath = Collections.emptyList();
+	private WorldPoint nextFrom;
+	private List<WorldPoint> nextGoals;
 	/** Within the step's {@link Guide.Step#getPathWithin()} range, such as after a teleport lands. */
 	@Getter
 	private boolean arrived = true;
@@ -122,9 +127,12 @@ class RouteTracker
 		path = Collections.emptyList();
 		pathFrom = null;
 		pathGoals = null;
+		nextPath = Collections.emptyList();
+		nextFrom = null;
+		nextGoals = null;
 	}
 
-	void update(@Nullable Guide.Step step, boolean wantPath)
+	void update(@Nullable Guide.Step step, @Nullable Guide.Step next, boolean wantPath)
 	{
 		Player player = client.getLocalPlayer();
 		WorldView view = client.getTopLevelWorldView();
@@ -229,6 +237,55 @@ class RouteTracker
 			}
 			pathFrom = here;
 			pathGoals = goals;
+		}
+		updateNextPath(view, next, wantPath);
+	}
+
+	/** The next step's path, carrying on from where this step's path ends. */
+	private void updateNextPath(WorldView view, @Nullable Guide.Step next, boolean wantPath)
+	{
+		Player player = client.getLocalPlayer();
+		WorldPoint from = !path.isEmpty() ? path.get(path.size() - 1) : player == null ? null : player.getWorldLocation();
+		if (!wantPath || next == null || from == null || (next.getTarget() == null && next.getNpcs().isEmpty() && next.getNpcIds().isEmpty()))
+		{
+			nextPath = Collections.emptyList();
+			nextFrom = null;
+			nextGoals = null;
+			return;
+		}
+		List<WorldPoint> goals = Collections.emptyList();
+		int reach = 0;
+		NPC npc = null;
+		if (!next.getNpcs().isEmpty() || !next.getNpcIds().isEmpty())
+		{
+			List<NPC> found = new ArrayList<>();
+			for (NPC n : view.npcs())
+			{
+				if (Guide.wantsNpc(next, n.getName(), n.getId()))
+				{
+					found.add(n);
+				}
+			}
+			npc = nearest(found, from);
+		}
+		if (npc != null)
+		{
+			goals = Collections.singletonList(npc.getWorldLocation());
+			reach = 1;
+		}
+		else if (next.getTarget() != null && next.getPathWithin() <= 0)
+		{
+			goals = goals(next, from, next.getTarget().worldPoint(), 0);
+		}
+		if (goals.isEmpty())
+		{
+			nextPath = Collections.emptyList();
+		}
+		else if (!from.equals(nextFrom) || !goals.equals(nextGoals))
+		{
+			nextPath = chainPath(view, flagsWithDoorsOpen(view), from, goals, reach);
+			nextFrom = from;
+			nextGoals = goals;
 		}
 	}
 
