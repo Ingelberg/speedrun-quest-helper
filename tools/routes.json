@@ -55,7 +55,7 @@
  "Ernest the Chicken": {
   "progress": {"varp": 32},
   "steps": [
-   {"match": "Talk to Veronica.", "npcIds": [3561], "npcs": ["Veronica"], "target": {"x": 3109, "y": 3329, "plane": 0, "label": "Veronica"}, "progress": [0]},
+   {"match": "Talk to Veronica.", "npcIds": [3561], "npcs": ["Veronica"], "target": {"x": 3109, "y": 3329, "plane": 0, "label": "Veronica"}, "progress": [0], "spot": {"x": 3110, "y": 3330, "plane": 0, "label": "Wait till Veronica is here"}},
    {"match": "Start moving towards the door and drop the two tuna in your inventory.", "objectIds": [134], "target": {"x": 3108, "y": 3353, "plane": 0, "label": "Door"}, "progress": [1], "done": {"inArea": [[3097, 3354, 3119, 3373, 0]]}},
    {"match": "Pick up the fish food on the 1st floor, in the room south of the stair", "target": {"x": 3108, "y": 3356, "plane": 1, "label": "Fish food"}, "ground": ["Fish food"], "via": [{"x": 3109, "y": 3364, "plane": 0}], "objectIds": [11498], "done": {"have": "Fish food"}},
    {"match": "Pick up poison from the room south of the kitchen, on the west side of", "target": {"x": 3097, "y": 3366, "plane": 0, "label": "Poison"}, "ground": ["Poison"], "via": [{"x": 3109, "y": 3365, "plane": 1}], "objectIds": [11499], "done": {"have": "Poison"}},

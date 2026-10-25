@@ -27,7 +27,8 @@ MANOR_GROUND = [3097, 3354, 3119, 3373, 0]
 TOP_FLOOR = [3090, 3350, 3126, 3374, 2]
 
 STEPS = [
-    S(0, qh="talkToVeronica", progress=[0]),
+    # the user's preferred tile for Veronica, so the quest starts right away
+    S(0, qh="talkToVeronica", progress=[0], spot=T(3110, 3330, 0, "Wait till Veronica is here")),
     S(1, qh="enterManor", progress=[1], target=T(3108, 3353, 0, "Door"), done={"inArea": [MANOR_GROUND]}),
     S(2, qh="pickupFishFood", ground=["Fish food"], target=T(3108, 3356, 1, "Fish food"), via=[T(3109, 3364, 0)],
       objectIds=[11498], done={"have": "Fish food"}),

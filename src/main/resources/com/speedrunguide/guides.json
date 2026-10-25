@@ -891,7 +891,13 @@
        },
        "progress": [
         0
-       ]
+       ],
+       "spot": {
+        "x": 3110,
+        "y": 3330,
+        "plane": 0,
+        "label": "Wait till Veronica is here"
+       }
       },
       {
        "text": "Start moving towards the door and drop the two tuna in your inventory.",
