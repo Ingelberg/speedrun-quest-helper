@@ -44,6 +44,24 @@ public class GuideLibraryTest
 	}
 
 	@Test
+	public void ernestLeversFollowQuestHelpersOrder()
+	{
+		Guide ernest = library.byName("Ernest the Chicken");
+		// steps 6-14 are the levers: down A, B, D, up B, A, down F, E, C, up E
+		String[] order = {"A", "B", "D", "B", "A", "F", "E", "C", "E"};
+		int[] position = {1, 1, 1, 0, 0, 1, 1, 1, 0};
+		for (int i = 0; i < order.length; i++)
+		{
+			Guide.Step step = ernest.steps().get(6 + i);
+			assertEquals("Lever " + order[i], step.getTarget().getLabel());
+			assertEquals(Integer.valueOf(position[i]), step.getDone().getIs());
+			assertTrue(step.getDone().varbitDone(position[i]));
+			assertFalse(step.getDone().varbitDone(1 - position[i]));
+		}
+		assertEquals("Oil can", ernest.steps().get(15).getDone().getHave());
+	}
+
+	@Test
 	public void progressValuesPointAtStepsInOrder()
 	{
 		// a quest's progress only goes up, so the steps it is tied to have to come in the same order

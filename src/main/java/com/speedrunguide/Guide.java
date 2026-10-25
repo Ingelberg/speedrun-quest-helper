@@ -134,10 +134,19 @@ public class Guide
 		/** An item that has left the inventory once the step is done, such as grain put in a hopper. */
 		@Nullable
 		private String lack;
-		/** A varbit that reaches {@link #value} once the step is done. */
+		/** A varbit that reaches {@link #value} (or equals {@link #is}) once the step is done. */
 		@Nullable
 		private Integer varbit;
 		private int value;
+		/** An exact value for {@link #varbit}, such as 0 for a lever pulled back up. */
+		@Nullable
+		private Integer is;
+
+		/** Whether the varbit check is met by this value. */
+		boolean varbitDone(int current)
+		{
+			return is != null ? current == is : current >= value;
+		}
 	}
 
 	@Data

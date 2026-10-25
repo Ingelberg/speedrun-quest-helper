@@ -901,7 +901,8 @@
        "target": {
         "x": 3108,
         "y": 3353,
-        "plane": 0
+        "plane": 0,
+        "label": "Door"
        },
        "progress": [
         1
@@ -918,7 +919,8 @@
        "target": {
         "x": 3108,
         "y": 3356,
-        "plane": 1
+        "plane": 1,
+        "label": "Fish food"
        },
        "done": {
         "have": "Fish food"
@@ -942,7 +944,8 @@
        "target": {
         "x": 3097,
         "y": 3366,
-        "plane": 0
+        "plane": 0,
+        "label": "Poison"
        },
        "done": {
         "have": "Poison"
@@ -978,7 +981,28 @@
        }
       },
       {
-       "text": "Climb down the ladder and complete the lever puzzle.",
+       "text": "Climb down the ladder and pull down lever A.",
+       "objectIds": [
+        133,
+        146
+       ],
+       "target": {
+        "x": 3108,
+        "y": 9745,
+        "plane": 0,
+        "label": "Lever A"
+       },
+       "done": {
+        "varbit": 1788,
+        "is": 1
+       },
+       "via": [
+        {
+         "x": 3092,
+         "y": 3362,
+         "plane": 0
+        }
+       ],
        "notes": [
         "Pull levers B then A down.",
         "Pull lever D down.",
@@ -988,17 +1012,146 @@
         "Pull lever E up.",
         "Pick up the oil can.",
         "Finish the Energy Potion at any point while completing the long runs to follow."
-       ],
+       ]
+      },
+      {
+       "text": "Pull down lever B.",
        "objectIds": [
-        133
+        147
        ],
+       "target": {
+        "x": 3118,
+        "y": 9752,
+        "plane": 0,
+        "label": "Lever B"
+       },
+       "done": {
+        "varbit": 1789,
+        "is": 1
+       }
+      },
+      {
+       "text": "Pull down lever D.",
+       "objectIds": [
+        149
+       ],
+       "target": {
+        "x": 3108,
+        "y": 9767,
+        "plane": 0,
+        "label": "Lever D"
+       },
+       "done": {
+        "varbit": 1791,
+        "is": 1
+       }
+      },
+      {
+       "text": "Pull up lever B.",
+       "objectIds": [
+        147
+       ],
+       "target": {
+        "x": 3118,
+        "y": 9752,
+        "plane": 0,
+        "label": "Lever B"
+       },
+       "done": {
+        "varbit": 1789,
+        "is": 0
+       }
+      },
+      {
+       "text": "Pull up lever A.",
+       "objectIds": [
+        146
+       ],
+       "target": {
+        "x": 3108,
+        "y": 9745,
+        "plane": 0,
+        "label": "Lever A"
+       },
+       "done": {
+        "varbit": 1788,
+        "is": 0
+       }
+      },
+      {
+       "text": "Pull down lever F.",
+       "objectIds": [
+        151
+       ],
+       "target": {
+        "x": 3096,
+        "y": 9765,
+        "plane": 0,
+        "label": "Lever F"
+       },
+       "done": {
+        "varbit": 1793,
+        "is": 1
+       }
+      },
+      {
+       "text": "Pull down lever E.",
+       "objectIds": [
+        150
+       ],
+       "target": {
+        "x": 3097,
+        "y": 9767,
+        "plane": 0,
+        "label": "Lever E"
+       },
+       "done": {
+        "varbit": 1792,
+        "is": 1
+       }
+      },
+      {
+       "text": "Pull down lever C.",
+       "objectIds": [
+        148
+       ],
+       "target": {
+        "x": 3112,
+        "y": 9760,
+        "plane": 0,
+        "label": "Lever C"
+       },
+       "done": {
+        "varbit": 1790,
+        "is": 1
+       }
+      },
+      {
+       "text": "Pull up lever E.",
+       "objectIds": [
+        150
+       ],
+       "target": {
+        "x": 3097,
+        "y": 9767,
+        "plane": 0,
+        "label": "Lever E"
+       },
+       "done": {
+        "varbit": 1792,
+        "is": 0
+       }
+      },
+      {
+       "text": "Pick up the oil can in the west room.",
        "ground": [
         "Oil can"
        ],
        "target": {
         "x": 3092,
-        "y": 3362,
-        "plane": 0
+        "y": 9755,
+        "plane": 0,
+        "label": "Oil can"
        },
        "done": {
         "have": "Oil can"
@@ -1011,10 +1164,18 @@
         160
        ],
        "target": {
-        "x": 3117,
-        "y": 9754,
-        "plane": 0
-       }
+        "x": 3096,
+        "y": 3357,
+        "plane": 0,
+        "label": "Lever"
+       },
+       "via": [
+        {
+         "x": 3117,
+         "y": 9754,
+         "plane": 0
+        }
+       ]
       },
       {
        "text": "Pick up the spade in the far eastern room on the ground floor.",
@@ -1024,7 +1185,8 @@
        "target": {
         "x": 3120,
         "y": 3359,
-        "plane": 0
+        "plane": 0,
+        "label": "Spade"
        },
        "done": {
         "have": "Spade"
@@ -1101,7 +1263,8 @@
        "target": {
         "x": 3111,
         "y": 3367,
-        "plane": 0
+        "plane": 0,
+        "label": "Rubber tube"
        },
        "done": {
         "have": "Rubber tube"

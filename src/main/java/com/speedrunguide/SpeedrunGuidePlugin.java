@@ -320,7 +320,7 @@ public class SpeedrunGuidePlugin extends Plugin
 			&& player.getWorldLocation().getPlane() == target.getPlane()
 			&& player.getWorldLocation().distanceTo2D(target) <= own.getArrive())
 			|| (own.getLack() != null && !names.contains(GuideText.normalize(own.getLack())))
-			|| (own.getVarbit() != null && client.getVarbitValue(own.getVarbit()) >= own.getValue())))
+			|| (own.getVarbit() != null && own.varbitDone(client.getVarbitValue(own.getVarbit())))))
 		{
 			setStep(current + 1);
 			return;
