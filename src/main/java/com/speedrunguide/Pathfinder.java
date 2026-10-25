@@ -18,6 +18,11 @@ final class Pathfinder
 	// The order the game's own pathing tries directions in: W, E, S, N, SW, SE, NW, NE
 	private static final int[] DX = {-1, 1, 0, 0, -1, 1, -1, 1};
 	private static final int[] DY = {0, 0, -1, 1, -1, -1, 1, 1};
+	/** Every wall side a tile can have. */
+	private static final int WALLS = CollisionDataFlag.BLOCK_MOVEMENT_NORTH | CollisionDataFlag.BLOCK_MOVEMENT_EAST
+		| CollisionDataFlag.BLOCK_MOVEMENT_SOUTH | CollisionDataFlag.BLOCK_MOVEMENT_WEST
+		| CollisionDataFlag.BLOCK_MOVEMENT_NORTH_EAST | CollisionDataFlag.BLOCK_MOVEMENT_NORTH_WEST
+		| CollisionDataFlag.BLOCK_MOVEMENT_SOUTH_EAST | CollisionDataFlag.BLOCK_MOVEMENT_SOUTH_WEST;
 
 	private Pathfinder()
 	{
@@ -81,6 +86,37 @@ final class Pathfinder
 		}
 		Collections.reverse(path);
 		return path;
+	}
+
+	/**
+	 * Treats a closed door on (x, y) as open: its tile loses its wall sides, and the tiles around
+	 * it lose the side facing it. Every side is opened, so the door's facing doesn't matter.
+	 */
+	static void openDoor(int[][] flags, int x, int y)
+	{
+		int width = flags.length;
+		int height = flags[0].length;
+		if (!inside(x, y, width, height))
+		{
+			return;
+		}
+		flags[x][y] &= ~WALLS;
+		if (inside(x - 1, y, width, height))
+		{
+			flags[x - 1][y] &= ~CollisionDataFlag.BLOCK_MOVEMENT_EAST;
+		}
+		if (inside(x + 1, y, width, height))
+		{
+			flags[x + 1][y] &= ~CollisionDataFlag.BLOCK_MOVEMENT_WEST;
+		}
+		if (inside(x, y - 1, width, height))
+		{
+			flags[x][y - 1] &= ~CollisionDataFlag.BLOCK_MOVEMENT_NORTH;
+		}
+		if (inside(x, y + 1, width, height))
+		{
+			flags[x][y + 1] &= ~CollisionDataFlag.BLOCK_MOVEMENT_SOUTH;
+		}
 	}
 
 	/** Chebyshev distance: steps when diagonals count as one. */

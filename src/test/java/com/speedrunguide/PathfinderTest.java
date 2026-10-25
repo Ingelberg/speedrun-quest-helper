@@ -62,6 +62,26 @@ public class PathfinderTest
 	}
 
 	@Test
+	public void pathsGoThroughOpenedDoors()
+	{
+		int[][] flags = open(5);
+		// a wall along x = 2 with a closed door at (2, 2): its west side blocks (1, 2) -> (2, 2)
+		for (int y = 0; y < 5; y++)
+		{
+			flags[2][y] = CollisionDataFlag.BLOCK_MOVEMENT_WEST;
+			flags[1][y] = CollisionDataFlag.BLOCK_MOVEMENT_EAST;
+		}
+		assertTrue(Pathfinder.find(flags, 0, 2, 4, 2, 0).stream().noneMatch(p -> p.x == 4));
+
+		Pathfinder.openDoor(flags, 2, 2);
+		List<Point> path = Pathfinder.find(flags, 0, 2, 4, 2, 0);
+		assertEquals(new Point(4, 2), path.get(path.size() - 1));
+		assertTrue(path.contains(new Point(2, 2)));
+		// the rest of the wall stays closed
+		assertFalse(Pathfinder.canMove(flags, 1, 0, 1, 0));
+	}
+
+	@Test
 	public void alreadyThereMeansNoPath()
 	{
 		assertTrue(Pathfinder.find(open(5), 2, 2, 2, 2, 0).isEmpty());

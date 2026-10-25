@@ -53,6 +53,8 @@ class RouteTracker
 	private final ItemManager itemManager;
 	/** Object names by id; objects that change with varbits (impostors) aren't cached. */
 	private final Map<Integer, String> objectNames = new HashMap<>();
+	/** Whether a wall object id is a door or gate, by id. */
+	private final Map<Integer, Boolean> doors = new HashMap<>();
 
 	@Getter
 	private List<NPC> npcs = Collections.emptyList();
@@ -93,6 +95,7 @@ class RouteTracker
 	void sceneCleared()
 	{
 		objectNames.clear();
+		doors.clear();
 		clear();
 	}
 
@@ -205,7 +208,7 @@ class RouteTracker
 		}
 		else if (!here.equals(pathFrom) || !goals.equals(pathGoals))
 		{
-			path = chainPath(view, here, goals, reach);
+			path = chainPath(view, flagsWithDoorsOpen(view), here, goals, reach);
 			pathFrom = here;
 			pathGoals = goals;
 		}
@@ -270,7 +273,78 @@ class RouteTracker
 	}
 
 	/** Paths from one goal to the next, joined, stopping where a goal is outside the loaded area. */
-	private static List<WorldPoint> chainPath(WorldView view, WorldPoint from, List<WorldPoint> goals, int targetReach)
+	/**
+	 * The current floor's collision flags with every closed door and gate (a wall with an Open
+	 * option) treated as open, so paths go through them. Null when there is no collision data.
+	 */
+	@Nullable
+	private int[][] flagsWithDoorsOpen(WorldView view)
+	{
+		CollisionData[] maps = view.getCollisionMaps();
+		if (maps == null || view.isInstance() || maps[view.getPlane()] == null)
+		{
+			return null;
+		}
+		int[][] original = maps[view.getPlane()].getFlags();
+		int[][] flags = new int[original.length][];
+		for (int x = 0; x < original.length; x++)
+		{
+			flags[x] = original[x].clone();
+		}
+		Tile[][] tiles = view.getScene().getTiles()[view.getPlane()];
+		for (int x = 0; x < tiles.length && x < flags.length; x++)
+		{
+			for (int y = 0; y < tiles[x].length && y < flags[x].length; y++)
+			{
+				Tile tile = tiles[x][y];
+				if (tile != null && tile.getWallObject() != null && isDoor(tile.getWallObject().getId()))
+				{
+					Pathfinder.openDoor(flags, x, y);
+				}
+			}
+		}
+		return flags;
+	}
+
+	/** Whether an object can be opened, by its Open option; objects that change with varbits aren't cached. */
+	private boolean isDoor(int id)
+	{
+		Boolean cached = doors.get(id);
+		if (cached != null)
+		{
+			return cached;
+		}
+		ObjectComposition def = client.getObjectDefinition(id);
+		if (def == null)
+		{
+			return false;
+		}
+		boolean impostor = def.getImpostorIds() != null;
+		if (impostor)
+		{
+			def = def.getImpostor();
+			if (def == null)
+			{
+				return false;
+			}
+		}
+		boolean door = false;
+		for (String action : def.getActions())
+		{
+			if ("Open".equalsIgnoreCase(action))
+			{
+				door = true;
+				break;
+			}
+		}
+		if (!impostor)
+		{
+			doors.put(id, door);
+		}
+		return door;
+	}
+
+	private static List<WorldPoint> chainPath(WorldView view, @Nullable int[][] flags, WorldPoint from, List<WorldPoint> goals, int targetReach)
 	{
 		List<WorldPoint> all = new ArrayList<>();
 		WorldPoint at = from;
@@ -279,7 +353,7 @@ class RouteTracker
 			WorldPoint goal = goals.get(i);
 			boolean last = i == goals.size() - 1;
 			int reach = last ? targetReach : WAYPOINT_REACH;
-			List<WorldPoint> leg = findPath(view, at, goal, reach);
+			List<WorldPoint> leg = flags == null ? Collections.emptyList() : findPath(view, flags, at, goal, reach);
 			all.addAll(leg);
 			if (!leg.isEmpty())
 			{
@@ -293,14 +367,8 @@ class RouteTracker
 		return all;
 	}
 
-	private static List<WorldPoint> findPath(WorldView view, WorldPoint from, WorldPoint to, int reach)
+	private static List<WorldPoint> findPath(WorldView view, int[][] flags, WorldPoint from, WorldPoint to, int reach)
 	{
-		CollisionData[] maps = view.getCollisionMaps();
-		if (maps == null || view.isInstance() || maps[view.getPlane()] == null)
-		{
-			return Collections.emptyList();
-		}
-		int[][] flags = maps[view.getPlane()].getFlags();
 		int baseX = view.getBaseX();
 		int baseY = view.getBaseY();
 		int goalX = to.getX() - baseX;
