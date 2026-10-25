@@ -24,10 +24,11 @@ def lever(name, down, text=None, **extra):
 SECRET_ROOM = [3090, 3354, 3096, 3363, 0]
 BASEMENT = [3090, 9745, 3118, 9767, 0]
 MANOR_GROUND = [3097, 3354, 3119, 3373, 0]
+TOP_FLOOR = [3090, 3350, 3126, 3374, 2]
 
 STEPS = [
     S(0, qh="talkToVeronica", progress=[0]),
-    S(1, qh="enterManor", progress=[1], target=T(3108, 3353, 0, "Door")),
+    S(1, qh="enterManor", progress=[1], target=T(3108, 3353, 0, "Door"), done={"inArea": [MANOR_GROUND]}),
     S(2, qh="pickupFishFood", ground=["Fish food"], target=T(3108, 3356, 1, "Fish food"), via=[T(3109, 3364, 0)],
       objectIds=[11498], done={"have": "Fish food"}),
     S(3, qh="pickupPoison", ground=["Poison"], target=T(3097, 3366, 0, "Poison"), via=[T(3109, 3365, 1)],
@@ -54,7 +55,8 @@ STEPS = [
     S(13, qh="useFishFoodOnFountain", use=["Poisoned fish food"]),
     S(14, qh="searchFountain", done={"have": "Pressure gauge"}),
     S(15, qh="getTube", ground=["Rubber tube"], target=T(3111, 3367, 0, "Rubber tube"), done={"have": "Rubber tube"}),
-    S(16, target=T(3116, 3364, 2, "Professor Oddenstein"), via=[T(3109, 3364, 0), T(3105, 3363, 1)], objectIds=[11498, 11511]),
+    S(16, target=T(3116, 3364, 2, "Professor Oddenstein"), via=[T(3109, 3364, 0), T(3105, 3363, 1)], objectIds=[11498, 11511],
+      done={"inArea": [TOP_FLOOR]}),
     S(17, qh="talkToOddenstein"),
     S(18, qh="talkToOddenteinAgain", progress=[2], use=["Pressure gauge", "Rubber tube", "Oil can"]),
 ]

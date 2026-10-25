@@ -56,7 +56,7 @@
   "progress": {"varp": 32},
   "steps": [
    {"match": "Talk to Veronica.", "npcIds": [3561], "npcs": ["Veronica"], "target": {"x": 3109, "y": 3329, "plane": 0, "label": "Veronica"}, "progress": [0]},
-   {"match": "Start moving towards the door and drop the two tuna in your inventory.", "objectIds": [134], "target": {"x": 3108, "y": 3353, "plane": 0, "label": "Door"}, "progress": [1]},
+   {"match": "Start moving towards the door and drop the two tuna in your inventory.", "objectIds": [134], "target": {"x": 3108, "y": 3353, "plane": 0, "label": "Door"}, "progress": [1], "done": {"inArea": [[3097, 3354, 3119, 3373, 0]]}},
    {"match": "Pick up the fish food on the 1st floor, in the room south of the stair", "target": {"x": 3108, "y": 3356, "plane": 1, "label": "Fish food"}, "ground": ["Fish food"], "via": [{"x": 3109, "y": 3364, "plane": 0}], "objectIds": [11498], "done": {"have": "Fish food"}},
    {"match": "Pick up poison from the room south of the kitchen, on the west side of", "target": {"x": 3097, "y": 3366, "plane": 0, "label": "Poison"}, "ground": ["Poison"], "via": [{"x": 3109, "y": 3365, "plane": 1}], "objectIds": [11499], "done": {"have": "Poison"}},
    {"match": "Use the fish food on the poison to make poisoned fish food.", "use": ["Fish food", "Poison"], "done": {"have": "Poisoned fish food"}},
@@ -80,7 +80,7 @@
    {"match": "Go south and use the poisoned fish food on the fountain in the south-w", "objectIds": [153], "target": {"x": 3088, "y": 3335, "plane": 0, "label": "Fountain"}, "use": ["Poisoned fish food"]},
    {"match": "Search the poisoned fountain to retrieve a pressure gauge. (There is d", "objectIds": [153], "target": {"x": 3088, "y": 3335, "plane": 0, "label": "Fountain"}, "done": {"have": "Pressure gauge"}},
    {"match": "Return to the manor and pick up the rubber tube in the room north of t", "target": {"x": 3111, "y": 3367, "plane": 0, "label": "Rubber tube"}, "ground": ["Rubber tube"], "done": {"have": "Rubber tube"}},
-   {"match": "Climb up the stairs, then climb up the spiral staircase to the west.", "target": {"x": 3116, "y": 3364, "plane": 2, "label": "Professor Oddenstein"}, "via": [{"x": 3109, "y": 3364, "plane": 0}, {"x": 3105, "y": 3363, "plane": 1}], "objectIds": [11498, 11511]},
+   {"match": "Climb up the stairs, then climb up the spiral staircase to the west.", "target": {"x": 3116, "y": 3364, "plane": 2, "label": "Professor Oddenstein"}, "via": [{"x": 3109, "y": 3364, "plane": 0}, {"x": 3105, "y": 3363, "plane": 1}], "objectIds": [11498, 11511], "done": {"inArea": [[3090, 3350, 3126, 3374, 2]]}},
    {"match": "Talk to Professor Oddenstein.", "npcIds": [3562], "npcs": ["Professor Oddenstein"], "target": {"x": 3116, "y": 3364, "plane": 2, "label": "Professor Oddenstein"}},
    {"match": "Talk to him again to give him the items.", "npcIds": [3562], "npcs": ["Professor Oddenstein"], "target": {"x": 3116, "y": 3364, "plane": 2, "label": "Professor Oddenstein"}, "progress": [2], "use": ["Pressure gauge", "Rubber tube", "Oil can"]}
   ]

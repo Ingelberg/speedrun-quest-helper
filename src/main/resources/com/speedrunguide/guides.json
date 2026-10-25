@@ -904,6 +904,17 @@
         "plane": 0,
         "label": "Door"
        },
+       "done": {
+        "inArea": [
+         [
+          3097,
+          3354,
+          3119,
+          3373,
+          0
+         ]
+        ]
+       },
        "progress": [
         1
        ]
@@ -1310,6 +1321,17 @@
         "y": 3364,
         "plane": 2,
         "label": "Professor Oddenstein"
+       },
+       "done": {
+        "inArea": [
+         [
+          3090,
+          3350,
+          3126,
+          3374,
+          2
+         ]
+        ]
        },
        "via": [
         {
