@@ -1,5 +1,6 @@
 package com.speedrunguide;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
@@ -32,6 +33,11 @@ class RouteOverlay extends Overlay
 	private static final int OUTLINE_WIDTH = 2;
 	private static final int OUTLINE_FEATHER = 4;
 	private static final int TARGET_FILL_ALPHA = 110;
+	/** Heights above the ground (in local units) the arrows point down from. */
+	private static final int NPC_ARROW_HEIGHT = 80;
+	private static final int OBJECT_ARROW_HEIGHT = 150;
+	private static final int TILE_ARROW_HEIGHT = 60;
+	private static final BasicStroke ARROW_OUTLINE = new BasicStroke(1.5f);
 
 	private final Client client;
 	private final SpeedrunGuidePlugin plugin;
@@ -123,7 +129,69 @@ class RouteOverlay extends Overlay
 				}
 			}
 		}
+
+		if (config.showArrows())
+		{
+			drawArrows(graphics);
+		}
 		return null;
+	}
+
+	/** Bobbing arrows, like Quest Helper's, over everything the step points at. */
+	private void drawArrows(Graphics2D graphics)
+	{
+		Color color = config.npcColor();
+		int plane = client.getTopLevelWorldView().getPlane();
+		if (config.highlightNpcs())
+		{
+			for (NPC npc : route.getNpcs())
+			{
+				LocalPoint local = npc.getLocalLocation();
+				arrow(graphics, local == null ? null : Perspective.localToCanvas(client, local, plane, npc.getLogicalHeight() + NPC_ARROW_HEIGHT), color);
+			}
+		}
+		if (config.highlightObjects())
+		{
+			for (TileObject object : route.getObjects())
+			{
+				arrow(graphics, object.getCanvasLocation(OBJECT_ARROW_HEIGHT), color);
+			}
+		}
+		if (config.highlightGroundItems())
+		{
+			for (RouteTracker.GroundItem g : route.getItems())
+			{
+				arrow(graphics, Perspective.localToCanvas(client, g.getTile().getLocalLocation(), plane, TILE_ARROW_HEIGHT), color);
+			}
+		}
+		// A target with nothing outlined on it, such as a dig spot, gets one too
+		WorldPoint target = route.getTarget();
+		if (!route.isTargetOutlined() && target != null && target.getPlane() == plane)
+		{
+			LocalPoint local = LocalPoint.fromWorld(client.getTopLevelWorldView(), target);
+			arrow(graphics, local == null ? null : Perspective.localToCanvas(client, local, plane, TILE_ARROW_HEIGHT), color);
+		}
+	}
+
+	/** A down arrow whose tip is at {@code tip}, bobbing up and down a few pixels. */
+	private static void arrow(Graphics2D graphics, @Nullable Point tip, Color color)
+	{
+		if (tip == null)
+		{
+			return;
+		}
+		int bob = (int) Math.round(Math.sin(System.currentTimeMillis() / 180.0) * 4);
+		int x = tip.getX();
+		int y = tip.getY() - 6 - bob;
+		Polygon shape = new Polygon(
+			new int[]{x, x - 9, x - 4, x - 4, x + 4, x + 4, x + 9},
+			new int[]{y, y - 11, y - 11, y - 24, y - 24, y - 11, y - 11},
+			7);
+		graphics.setColor(color);
+		graphics.fill(shape);
+		graphics.setColor(Color.BLACK);
+		graphics.setStroke(ARROW_OUTLINE);
+		graphics.draw(shape);
 	}
 
 	/** The dig step's area on this floor, or null when the step isn't a dig or is on another floor. */

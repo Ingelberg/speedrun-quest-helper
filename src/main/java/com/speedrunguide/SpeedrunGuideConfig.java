@@ -105,11 +105,23 @@ public interface SpeedrunGuideConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = "showArrows",
+		name = "Show arrows",
+		description = "Draw a bobbing arrow above the NPCs, objects, items and tiles the step points at",
+		section = route,
+		position = 5
+	)
+	default boolean showArrows()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		keyName = "highlightNpcs",
 		name = "Highlight NPCs",
 		description = "Outline the NPCs the step says to talk to",
 		section = route,
-		position = 5
+		position = 6
 	)
 	default boolean highlightNpcs()
 	{
@@ -121,7 +133,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight ground items",
 		description = "Outline the items the step says to pick up",
 		section = route,
-		position = 6
+		position = 7
 	)
 	default boolean highlightGroundItems()
 	{
@@ -133,7 +145,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight objects",
 		description = "Outline the objects the step says to use, such as the wheat, a ladder or the hopper",
 		section = route,
-		position = 7
+		position = 8
 	)
 	default boolean highlightObjects()
 	{
@@ -146,7 +158,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Outline color",
 		description = "Outline color for NPCs, ground items and objects",
 		section = route,
-		position = 8
+		position = 9
 	)
 	default Color npcColor()
 	{
@@ -158,7 +170,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Highlight shop and inventory items",
 		description = "Outline the items the step says to buy in shops, and to use in your inventory",
 		section = route,
-		position = 9
+		position = 10
 	)
 	default boolean highlightShop()
 	{
@@ -170,7 +182,7 @@ public interface SpeedrunGuideConfig extends Config
 		name = "Left-click shortcuts",
 		description = "Make Buy 1 the left click on the items the step says to buy, and the step's option the left click on its NPCs (such as Trade on Fayeth)",
 		section = route,
-		position = 10
+		position = 11
 	)
 	default boolean leftClickBuy()
 	{

@@ -21,7 +21,7 @@ The plugin only switches on while you are logged in to a speedrunning world. Els
   - It jumps to the end when the quest is complete.
   - When a dialogue from one of the next two steps opens, it moves on to that step.
 - **Route help**:
-  - The NPCs to talk to and the items to pick up are outlined.
+  - The NPCs to talk to, the items to pick up and the objects to use are outlined, with a bobbing arrow above them, like Quest Helper's.
   - A path on the ground leads to the step's NPC, item or spot, such as each X Marks dig tile. A target outside the loaded area gets a path to the edge closest to it.
   - In shops, the items to buy are outlined and Buy 1 becomes their left click.
   - Dig steps learn which tiles work. The game accepts more than the one tile on record, so each dig is reported in chat. The dig area is filled in green: the rectangle around every tile known to work, which grows as digs that work are learned.
